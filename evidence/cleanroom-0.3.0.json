@@ -1,0 +1,16 @@
+{
+  "schema": "kinegate.cleanroom-milestone.v1",
+  "verifiedAt": "2026-10-05T14:46:36.784Z",
+  "sourceCommit": "220a8c08aa2cc3a3b08075e15590cf85fa5dc7db",
+  "method": "Extract git archive into new clean directory; no environment/private files",
+  "commands": {
+    "npm ci": "PASS, 5 packages, 0 audit vulnerabilities",
+    "npm test": "PASS, 57/57",
+    "npm run typecheck": "PASS",
+    "npm run build": "PASS"
+  },
+  "environmentFilesPresent": false,
+  "privateApiEvidencePresent": false,
+  "privateSubmissionFieldsPresent": false,
+  "limitation": "Fresh checkout directory on the same Windows host, not a clean OS. Source changes after this commit are relocation/link/evidence edits."
+}

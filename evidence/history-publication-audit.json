@@ -1,0 +1,9 @@
+{
+  "schema": "kinegate.history-publication-audit.v1",
+  "verifiedAt": "2026-10-05T14:45:23.269Z",
+  "status": "PASS",
+  "commitCount": 8,
+  "distinctTextBlobs": 216,
+  "findings": [],
+  "limitation": "Bounded known-value and pattern scan of all current local refs; images separately reviewed, no blanket security guarantee."
+}

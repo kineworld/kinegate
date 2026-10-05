@@ -11,9 +11,9 @@
     "Tokenized-stock main track"
   ],
   "unsupportedSpecialPrizeClaims": [],
-  "publicRepo": "https://github.com/kineworld/kinegate",
-  "demoVideo": "https://github.com/kineworld/kinegate/releases/download/demo-polished-v1/kinegate-demo-polished.mp4",
-  "deployedOrRunnableInstructions": "Local runnable fixture: npm ci, npm start, open http://127.0.0.1:4173. No credentials or wallet needed. Historical Pages URL https://kineworld.github.io/kinegate/ is currently disabled/API404; repository is PRIVATE, so anonymous source access remains blocked.",
+  "publicRepo": "https://github.com/zoahdev/kinegate",
+  "demoVideo": "https://github.com/zoahdev/kinegate/releases/download/demo-polished-v1/kinegate-demo-polished.mp4",
+  "deployedOrRunnableInstructions": "Local runnable fixture: npm ci, npm start, open http://127.0.0.1:4173. No credentials or wallet needed. Historical Pages URL https://zoahdev.github.io/kinegate/ is currently disabled/API404; repository is PRIVATE, so anonymous source access remains blocked.",
   "humanDevExCompleted": false,
   "legalDeclarations": "HUMAN_FINAL_CONFIRMATION_REQUIRED",
   "eligibilityInformation": "Human personally confirmed competition/API region and sanctions qualifications on 2026-10-05; no final form declaration submitted. Issuer/venue eligibility for a real purchase remains separate.",
@@ -23,7 +23,7 @@
     "Human personally authored DevEx report and receipt",
     "Final human form declarations and actual registration/project submission receipts"
   ],
-  "demoVideoRelease": "https://github.com/kineworld/kinegate/releases/tag/demo-polished-v1",
+  "demoVideoRelease": "https://github.com/zoahdev/kinegate/releases/tag/demo-polished-v1",
   "demoVideoFacts": {
     "durationSeconds": 133.816667,
     "width": 1920,

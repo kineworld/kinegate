@@ -32,9 +32,9 @@ Registration is separate from project submission and asks for the API account id
 | Telegram | Optional, not supplied; omitted |
 | Product description | Updated factual draft: thirteen-gate partial REPLAY audit, controlled native gas/minimum comparison, exact-slippage/ABI blockers and zero actual transactions |
 | Tracks | Main tokenized-stock track prepared; optional-stack awards lack substantiated integration claims |
-| Repo | [Repository](https://github.com/kineworld/kinegate), currently PRIVATE: BLOCKED_BY_VISIBILITY_CHANGE |
-| Video | Historical [direct polished MP4](https://github.com/kineworld/kinegate/releases/download/demo-polished-v1/kinegate-demo-polished.mp4) and [release page](https://github.com/kineworld/kinegate/releases/tag/demo-polished-v1); local artifact 133.816667 seconds, 1080p/60fps, disclosed synthetic narration; anonymous release access currently blocked |
-| Deployment/run | Historical [Pages product](https://kineworld.github.io/kinegate/) now disabled/API404; local `npm ci`, `npm start` fixture experience needs no credentials or wallet |
+| Repo | [Repository](https://github.com/zoahdev/kinegate), currently PRIVATE: BLOCKED_BY_VISIBILITY_CHANGE |
+| Video | Historical [direct polished MP4](https://github.com/zoahdev/kinegate/releases/download/demo-polished-v1/kinegate-demo-polished.mp4) and [release page](https://github.com/zoahdev/kinegate/releases/tag/demo-polished-v1); local artifact 133.816667 seconds, 1080p/60fps, disclosed synthetic narration; anonymous release access currently blocked |
+| Deployment/run | Historical [Pages product](https://zoahdev.github.io/kinegate/) now disabled/API404; local `npm ci`, `npm start` fixture experience needs no credentials or wallet |
 | DevEx confirmation | False: personally authored report and actual receipt remain missing |
 
 Team/account/contact/prize details were subsequently supplied privately, and personal qualification/bounded budget already confirmed. Final eligibility declarations and registration receipt remain absent. The latest controlled native simulation succeeds at the bounded higher gas limit, but saved minimum rounding and incomplete source/facet ABI remain blockers; no actual transaction or settlement occurred. Prior qualification/budget confirmations are not final form declarations. Current private-repository/disabled-Pages status blocks judged accessibility; historical deployment evidence is stale. The final submitted commit must be frozen at the deadline and links kept available through October 23.
