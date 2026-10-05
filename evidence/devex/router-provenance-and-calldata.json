@@ -1,0 +1,108 @@
+{
+  "schema": "kinegate.router-provenance.v1",
+  "mode": "LIVE_AND_SOURCE",
+  "readOnly": true,
+  "recordedAt": "2026-10-05T12:30:03.844Z",
+  "rpcEvidence": "evidence/mainnet/router-readonly.json",
+  "unsignedEvidence": "evidence/devex/unsigned-swap-validation.json",
+  "target": "0xB44446b0c8E56988c34f7Ff73Ae904982b5FdDA5",
+  "officialVendorSource": {
+    "url": "https://docs.liquidmesh.io/docs/smart-contracts",
+    "documentedEvmRouter": "0x3d90f66B534Dd8482b181e24655A9e8265316BE9",
+    "documentedOrdinaryEvmApproveContract": "0x8157a9d65807521FBB8db8f37EEEcEfDD247E9B1",
+    "targetMatchesDocumentedRouter": false,
+    "targetMatchesDocumentedApproveContract": false,
+    "targetVendorAssociationIndependentlyVerified": false
+  },
+  "contractSource": {
+    "bscScan": {
+      "url": "https://bscscan.com/address/0xb44446b0c8e56988c34f7ff73ae904982b5fdda5#code",
+      "httpStatus": 403,
+      "result": "Source/ABI not retrieved; no bypass attempted"
+    },
+    "sourcifyFullMatch": {
+      "httpStatus": 404
+    },
+    "sourcifyPartialMatch": {
+      "httpStatus": 404
+    },
+    "verifiedSourceRetrieved": false,
+    "verifiedAbiRetrieved": false,
+    "selectedImplementationVerified": false
+  },
+  "calldata": {
+    "selector": "0xad43f73d",
+    "byteLength": 2756,
+    "sha256": "55e361868f2e4fe0e7b3bd6df5e548e6baa006e4d2b4581b9a5b346b5cf18bf9",
+    "rawCalldataPublished": false,
+    "inputToken": {
+      "contract": "0x55d398326f99059fF775485246999027B3197955",
+      "addressBytesFound": [
+        112,
+        564,
+        1172,
+        1524
+      ],
+      "abiMeaningVerified": false
+    },
+    "outputToken": {
+      "contract": "0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4",
+      "addressBytesFound": [
+        176,
+        596,
+        2548
+      ],
+      "abiMeaningVerified": false
+    },
+    "amount": {
+      "expected": "6000000000000000000",
+      "matchingUint256Words": [
+        {
+          "byteOffsetIncludingSelector": 132,
+          "alignedToArgumentWord": true
+        },
+        {
+          "byteOffsetIncludingSelector": 616,
+          "alignedToArgumentWord": false
+        },
+        {
+          "byteOffsetIncludingSelector": 840,
+          "alignedToArgumentWord": false
+        }
+      ],
+      "abiMeaningVerified": false
+    },
+    "minimumOutput": {
+      "apiReported": "17919528896587165",
+      "matchingUint256Words": [
+        {
+          "byteOffsetIncludingSelector": 196,
+          "alignedToArgumentWord": true
+        }
+      ],
+      "abiMeaningVerified": false
+    },
+    "receiver": {
+      "published": "REDACTED",
+      "senderMatchesRequestedReceiver": true,
+      "literalAddressBytesPresent": false,
+      "contractRecipientSemanticsVerified": false
+    }
+  },
+  "assessment": {
+    "routerTrust": "UNVERIFIED",
+    "abiSemanticValidation": "UNVERIFIED",
+    "executionReady": false,
+    "assetsAuthorizedOrMoved": false
+  },
+  "limitations": [
+    "API target/approveTarget equality does not establish independent spender provenance.",
+    "Official vendor addresses differ; no conclusion that the returned router is malicious or an API error, and no substitution of a different address.",
+    "180-byte runtime has selector-based storage lookup and DELEGATECALL behavior by opcode inspection. Zero EIP1967 slots do not exclude other proxy/dispatcher schemes.",
+    "Custom selector lookup at the pinned block returned RPC error -32000 missing trie node; selected implementation remains unverified.",
+    "Address/value byte matches establish literal occurrences only, not decoded input/output/recipient/minimum-return enforcement.",
+    "Receiver bytes are absent from the saved calldata. A possible msg.sender-based recipient cannot be assumed without verified source/ABI.",
+    "Historical quote/calldata are expired evidence and cannot be reused for execution. No quote/build/simulation or asset transaction was made during this provenance preparation."
+  ],
+  "standardReference": "https://eips.ethereum.org/EIPS/eip-1967"
+}

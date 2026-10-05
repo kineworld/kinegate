@@ -24,4 +24,6 @@ The captured swap estimate was 450000 gas × 66475545 wei/gas, approximately 0.0
 
 Minimal human actions after explicit approval is recorded: confirm wallet control and issuer/venue qualification; place the permitted input balance in the intended wallet through the person's own authorized workflow; request a fresh preflight; inspect and sign only the explicitly reviewed bounded transactions. The public demo never connects to or controls this wallet. The application currently has no signing/broadcast adapter; approval of this proposal does not imply that such an adapter exists.
 
-Until these prerequisites are met, mainnet execution remains BLOCKED. Product refinement, deployment, factual evidence and the human reproduction guide can continue independently.
+Actual additional blocker: the returned router/spender has code but its relationship to the independently documented LiquidMesh contracts and calldata ABI semantics remain unverified. Byte matches alone cannot establish the receiver, input amount or enforced minimum output. See `evidence/devex/router-provenance-and-calldata.json`. Do not substitute the direct LiquidMesh addresses into the Binance-built payload, or allowlist the returned address merely because it was returned.
+
+Until these prerequisites are met, mainnet execution remains BLOCKED even if input funds are available. Product refinement, deployment, factual evidence and the human reproduction guide can continue independently.

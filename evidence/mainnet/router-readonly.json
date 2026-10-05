@@ -1,0 +1,59 @@
+{
+  "schema": "kinegate.router-code.v1",
+  "mode": "LIVE",
+  "readOnly": true,
+  "observedAt": "2026-10-05T12:28:52.7753959Z",
+  "rpc": "https://bsc-dataseed.bnbchain.org",
+  "chainId": 56,
+  "block": "0x78097e5",
+  "address": "0xB44446b0c8E56988c34f7Ff73Ae904982b5FdDA5",
+  "bytecodePresent": true,
+  "bytecodeBytes": 180,
+  "bytecode": "0x60806040523615607c575f80356001600160e01b03191681527f5e12654f390e4153c4f63b3dfcc122cf7876a5cdfb496dccf7284c10517a35c560205260409020546001600160a01b03168015606b575f8091368280378136915af43d5f803e156067573d5ff35b3d5ffd5b631535ac5f60e31b60805260046080fd5b00fea264697066735822122064cea10a39befc7fc1296fd95931db8911c08cef49ac2b394b0bd530cb504c7e64736f6c63430008170033",
+  "storageSlots": {
+    "implementation": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+    "beacon": "0xa3f0ad74e5423aebfd80d3ef4346578335a9a72aeaee59ff6cb3582b35133d50",
+    "admin": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103"
+  },
+  "slotResponses": {
+    "implementation": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "beacon": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "admin": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "rawChain": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": "0x38"
+  },
+  "rawBlock": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": "0x78097e5"
+  },
+  "customSelectorDispatch": {
+    "interpretation": "Runtime opcode interpretation only, not verified source or ABI",
+    "selector": "0xad43f73d",
+    "preimage": "0xad43f73d000000000000000000000000000000000000000000000000000000005e12654f390e4153c4f63b3dfcc122cf7876a5cdfb496dccf7284c10517a35c5",
+    "slot": "0x7ddc1c45a5ae31800e181de98e8cb97525e9b89f99e5829d49f25a8ca4bac1d7",
+    "rawStorage": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "error": {
+        "code": -32000,
+        "message": "missing trie node"
+      }
+    }
+  }
+}

@@ -18,3 +18,5 @@
 - One real receiver-bound6USDT quote returned code0, LiquidMesh and actual SWAP mode: authenticated-quote-6usdt.json. Earlier1/5 inputs failed40375. Fee strings are not reinterpreted without unit evidence; no expiry/minimum output was declared. A quote is not a transaction.
 
 - Real fresh quote→unsigned SWAP builder→off-chain simulation completed; service code0, predicted status FAILED from insufficient balance: unsigned-swap-validation.json. API success is not predicted execution success. No signatures/approvals/broadcasts.
+
+- Returned router/spender provenance and calldata semantics remain UNVERIFIED: router-provenance-and-calldata.json and pinned-block router-readonly.json. Code presence and raw word matches cannot prove recipient/input/minimum-output enforcement. No source/ABI-based execution authorization is claimed.
