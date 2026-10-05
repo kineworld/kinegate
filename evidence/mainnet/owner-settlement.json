@@ -1,0 +1,76 @@
+{
+  "schema": "kinegate.owner-mainnet-settlement.v1",
+  "mode": "LIVE_SETTLEMENT",
+  "observedAt": "2026-10-05T17:52:33.3706234+00:00",
+  "chainId": 56,
+  "venue": "PancakeSwap X official UI with Binance Wallet, signed by the owner",
+  "transactionHash": "0x16682557ce0e9cb0bb266b0795fe94f88cfacd8bb552630f8b3f23d2559854d4",
+  "explorer": "https://bscscan.com/tx/0x16682557ce0e9cb0bb266b0795fe94f88cfacd8bb552630f8b3f23d2559854d4",
+  "blockNumber": "0x7813d47",
+  "blockHash": "0x5f48f0d1416f0cc9b3e93b9649d27f689c761a52edf8d468b3342cf1c4790d82",
+  "confirmationsAtObservation": "996",
+  "receiptStatus": "SUCCESS",
+  "inputToken": "0x55d398326f99059fF775485246999027B3197955",
+  "inputAtomic": "6000000000000000000",
+  "inputUSDT": "6",
+  "outputToken": "0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4",
+  "netOutputAtomic": "17913646647290058",
+  "netOutputAAPLon": "0.017913646647290058",
+  "effects": {
+    "exactOwnerUSDTDebit": true,
+    "positiveOwnerAAPLonCredit": true,
+    "currentOutputBalanceEqualsReceiptCredit": true
+  },
+  "relatedTransactions": [
+    {
+      "gasUsed": "706467",
+      "ownerPaid": false,
+      "effectiveGasPriceWei": "55000000",
+      "hash": "0x16682557ce0e9cb0bb266b0795fe94f88cfacd8bb552630f8b3f23d2559854d4",
+      "feeWei": "38855685000000",
+      "status": "0x1",
+      "selector": "0x2b793b69"
+    },
+    {
+      "gasUsed": "46506",
+      "ownerPaid": true,
+      "effectiveGasPriceWei": "71898607",
+      "hash": "0x3936b9111a7abc8718bc5f5daaf600e8c3895dd58fca10d5dc2bf0d557d025e2",
+      "feeWei": "3343716617142",
+      "status": "0x1",
+      "selector": "0x095ea7b3"
+    }
+  ],
+  "observedReceiptGasCostWei": "42199401617142",
+  "observedReceiptGasCostBNB": "0.000042199401617142",
+  "ownerDirectGasCostWei": "3343716617142",
+  "policy": {
+    "inputMaximumUSDT": 6,
+    "inputCheck": "PASS",
+    "allowanceMaximumUSDT": 6,
+    "actualPCSAllowanceAtomic": "115792089237316195423570985008687907853269984665640564039451584007913129639935",
+    "allowanceCheck": "FAIL_EXCEEDS_AUTHORIZED_CAP",
+    "slippageMaximumPercent": 0.5,
+    "uiSlippagePercent": 0.1,
+    "signingTimeExactSlippageCheck": "NOT_CAPTURED",
+    "gasBudgetWei": "100000000000000",
+    "observedReceiptGasBelowBudget": true,
+    "aggregateGasIncludingPendingRevocation": "NOT_FINAL"
+  },
+  "cleanup": {
+    "pcsPermit2": "0x31c2F6fcFf4F8759b3Bd5Bf0e1084A055615c768",
+    "status": "REVOKE_REQUIRED_NOT_YET_CONFIRMED"
+  },
+  "agentSigned": false,
+  "agentBroadcast": false,
+  "applicationExecutionGatesCleared": false,
+  "binanceTradingAPISettlement": false,
+  "limits": [
+    "This confirms an owner-completed external-venue trade, not execution through the KineGate application or Binance Trading API.",
+    "The owner approved uint256-max before signing-time review was captured; the original 6-USDT allowance cap failed. Cleanup cannot make the historical authorization compliant.",
+    "Rounded UI quotes are not exact signed minimum-output or expiry evidence.",
+    "A different Binance Permit2 allowance was also above the cap when read; its creation is not attributed to this trade. No unrelated approval is changed.",
+    "A receipt does not establish competition acceptance or award eligibility."
+  ],
+  "privacy": "Wallet/contact/account IDs, absolute balances, signed order, calldata and private form editing links withheld."
+}

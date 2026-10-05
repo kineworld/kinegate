@@ -11,3 +11,7 @@ The actual small BSC trade is still incomplete. Qualification, wallet control an
 No actual approval, wallet signature, broadcast or spending occurred. The public demo has no signing/broadcast capability. The original historical minimum still fails exact 0.5% arithmetic; a later 0.49% request passed the authorized exact 0.5% numerical bound in a counterfactual simulation only. The separate bounded Pancake path check did not produce a fully verified execution candidate and did not replace the Binance payload or change the thirteen gates.
 
 Keep the personal public repo, Pages and video available through judging. Frozen v0.3.0 archives retain their documented source commit; later submission-receipt documentation does not imply that archive source was rebuilt.
+
+## Later owner settlement
+
+See [the live settlement supplement](mainnet-settlement.md). A real external-venue purchase is now confirmed, with an excessive-allowance exception and pending cleanup. Prior zero-asset-action statements describe earlier checkpoints. This does not establish a Binance Trading API execution or organizer acceptance.

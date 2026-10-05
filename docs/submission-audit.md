@@ -30,3 +30,7 @@ Official forms/rules rechecked 2026-10-05 14:01 UTC: deadline and freeze unchang
 Native follow-up: evidence/mainnet/tight-slippage-native-comparison.json preserves a new 0.49% request and three controlled native results. Exact authorized 0.5% cap passes; this does not clear ABI/source, fresh execution or personal signature gates. All actual asset actions remain zero. Local verification is 58 tests / 33 browser checks.
 
 Publication restored outside the company organization at the human's explicit direction. Personal source, Pages and polished video are publicly accessible; see evidence/accessibility-current.json. Final verification includes 58 tests, 33 local browser checks, standalone-package smoke, Linux CI and anonymous personal Pages workflow. Contact/UID/prize fields remain private; actual registration, DevEx and project forms now have recorded confirmations.
+
+## Later owner settlement
+
+See [the live settlement supplement](mainnet-settlement.md). A real external-venue purchase is now confirmed, with an excessive-allowance exception and pending cleanup. Prior zero-asset-action statements describe earlier checkpoints. This does not establish a Binance Trading API execution or organizer acceptance.
