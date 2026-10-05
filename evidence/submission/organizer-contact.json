@@ -1,0 +1,24 @@
+{
+  "schema": "kinegate.organizer-contact.v1",
+  "observedAt": "2026-10-05T18:04:25.605Z",
+  "status": "CONTACT_FORM_SUBMITTED_UI_DELIVERY_NOT_CONFIRMED",
+  "recipient": "Owner of official BNB Hack Tokenized Stocks Edition project-submission Google Form",
+  "channel": "Official project form Contact form owner dialog",
+  "form": "https://docs.google.com/forms/d/e/1FAIpQLSdMtogkNnWzkI6xUifE78Ks4TohOM1YuWMuNgV-UPLVnpHD4Q/viewform",
+  "humanAuthorization": "User explicitly authorized contacting the form owner after showing its contact dialog",
+  "purpose": "Associate later live settlement and cleanup evidence with existing KineGate entry and ask whether external-venue settlement qualifies",
+  "subject": "KineGate - mainnet evidence supplement to existing submission",
+  "messageSHA256": "79355cd30934aef967beb1db78642977bf26e49abefa8a8078c966fc81a0d83c",
+  "sendClickedOnce": true,
+  "observedAfterClick": {
+    "dialogClosed": true,
+    "originalResponseRecordedPage": true,
+    "noSentConfirmationObserved": true,
+    "noLiveAlertOrStatusText": true
+  },
+  "deliveryConfirmed": false,
+  "organizerReplyReceived": false,
+  "existingProjectResponseEdited": false,
+  "duplicateProjectSubmission": false,
+  "privacy": "Contact identity shown by Google Forms omitted. Private post-submit screenshot retained locally; original message contains only approved public project and transaction evidence."
+}

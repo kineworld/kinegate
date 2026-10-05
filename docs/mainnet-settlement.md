@@ -13,3 +13,7 @@ This supplements the authenticated Binance API acquisition and counterfactual si
 [Owner revocation transaction](https://bscscan.com/tx/0xa5561739a7750a1a22deb209828d99bcc7353c90fac03299cd9b84dc588183c1) succeeded, with 161 confirmations observed at 2026-10-05T17:56:45.9268370+00:00. Calldata matches USDT approve(PCS Permit2, 0), native value is zero, and pinned-block allowance is zero. USDT and AAPLon balances are unchanged. [Cleanup evidence](../evidence/mainnet/owner-approval-cleanup.json).
 
 Revocation cost 0.000001455652215270 BNB. Approval, relayed fill and revocation together cost **0.000043655053832412 BNB**, below the original 0.0001-BNB aggregate cap. The original unlimited-approval exception and missing signing-time order review remain historical facts. No second purchase was made.
+
+## Organizer amendment request
+
+With the owner's explicit authorization, the official project-form contact dialog was used once to submit a request to associate this supplement with the original entry and confirm whether the external-venue trade qualifies. The dialog closed; no additional sent/delivery confirmation or response was observed. [Contact submission observation](../evidence/submission/organizer-contact.json). The original project form response was not changed or duplicated.
