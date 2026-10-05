@@ -4,3 +4,6 @@
 
 
 #rwa-checks{max-height:none;overflow:visible}
+
+/* Keep every observed gate visible; the partial audit must expose its blockers. */
+#observed-checks{max-height:none;overflow:visible}

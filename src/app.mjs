@@ -1,6 +1,7 @@
 import {evaluate,createReceipt,verifyReceipt,parseUnits,formatUnits,priceOnlyBaseline} from './engine.mjs';
 import {scenario,scenarios,FIXTURE_TIME} from './fixtures.mjs';
 import {inspectRwaEvidence} from './live-evidence.mjs';
+import {OBSERVED_SOURCES,OBSERVED_POLICY,observeSwap,observedIntent,evaluateObservedSwap,createObservedAudit,verifyObservedAudit} from './observed-swap.mjs';
 
 const $ = id => document.getElementById(id);
 const node = (tag,text,className) => {const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(className)el.className=className;return el;};
@@ -165,6 +166,51 @@ async function readDiscovery() {
   }catch(error){$('discovery-status').textContent='BLOCKED: '+errorText(error);}
   finally{$('read-discovery').disabled=false;}
 }
+let observedEvidence=null,observedAudit=null,observedRevision=0,observedAuditRevision=-1;
+function observedContext() {
+  if(!observedEvidence||observedEvidence.input.decimals===null)throw new Error('Verified input-token precision is unavailable.');
+  return {evidence:observedEvidence,intent:observedIntent(parseUnits($('observed-amount').value,observedEvidence.input.decimals),$('observed-rights').checked),policy:{...OBSERVED_POLICY,stopped:$('observed-stop').checked}};
+}
+function invalidateObserved() {
+  observedRevision++;
+  $('observed-export').disabled=true;
+  $('observed-audit-state').textContent=observedAudit?'INVALID · input, policy or source changed. Rerun observed preflight.':'No audit binding yet.';
+}
+async function verifyCurrentObserved() {
+  try {
+    if(observedAuditRevision!==observedRevision)throw new Error('Intention, policy or source changed; rerun observed preflight.');
+    const verification=await verifyObservedAudit(observedAudit,observedContext());
+    $('observed-audit-state').textContent=(verification.valid?'VALID HISTORICAL AUDIT · ':'INVALID · ')+verification.reason;
+    $('observed-export').disabled=!verification.valid;
+  }catch(error){$('observed-audit-state').textContent='INVALID · '+errorText(error);$('observed-export').disabled=true;}
+}
+async function runObservedPreflight() {
+  invalidateObserved();const revisionAtStart=observedRevision;
+  $('run-observed-preflight').disabled=true;$('observed-status').textContent='Loading four recorded sources; no live API request…';
+  try {
+    const records=await Promise.all(OBSERVED_SOURCES.map(async path=>{const response=await fetch(path,{signal:AbortSignal.timeout(8000),cache:'no-store'});if(!response.ok)throw new Error(path+' HTTP '+response.status);return response.json();}));
+    if(revisionAtStart!==observedRevision)return;
+    observedEvidence=observeSwap(...records);
+    const context=observedContext(),now=Date.now(),result=evaluateObservedSwap(context.evidence,context.intent,context.policy,now);
+    const audit=await createObservedAudit(context.evidence,context.intent,context.policy,now);
+    if(revisionAtStart!==observedRevision)return;
+    observedAudit=audit;observedAuditRevision=revisionAtStart;
+    $('observed-status').textContent='REPLAY · '+result.status+' · '+result.checks.length+' core gates · 6 USDT → AAPLon / LiquidMesh SWAP. Execution disabled.';
+    $('observed-sources').textContent='Original acquisition: '+String(observedEvidence.provenance[0].acquiredAt)+'. Reviewed now; this is not quote freshness. Quote expiry is unknown.';
+    $('observed-checks').replaceChildren(...result.checks.map(check=>{const li=node('li',undefined,'check '+check.status.toLowerCase()),top=node('div',undefined,'check-top');li.dataset.gate=check.id;top.append(node('span',check.label),node('span',check.status,'check-badge'));li.append(top,node('p',check.detail));return li;}));
+    $('observed-audit-raw').textContent=JSON.stringify(audit,null,2);
+    await verifyCurrentObserved();
+  }catch(error){observedEvidence=null;$('observed-status').textContent='UNAVAILABLE · '+errorText(error)+'. Execution disabled.';$('observed-checks').replaceChildren();$('observed-audit-state').textContent='INVALID · no validated source set.';$('observed-export').disabled=true;}
+  finally{$('run-observed-preflight').disabled=false;}
+}
+async function exportObservedAudit() {
+  if(!observedAudit)return;
+  if(observedAuditRevision!==observedRevision){await verifyCurrentObserved();return;}
+  const verification=await verifyObservedAudit(observedAudit,observedContext());
+  if(!verification.valid){await verifyCurrentObserved();return;}
+  const url=URL.createObjectURL(new Blob([JSON.stringify(observedAudit,null,2)],{type:'application/json'}));
+  const a=node('a');a.href=url;a.download='kinegate-observed-audit.json';a.click();URL.revokeObjectURL(url);
+}
 let recordedRwa;
 async function inspectRecordedSimulation() {
   $('read-simulation-replay').disabled=true;$('real-simulation-status').textContent='Loading unsigned build and off-chain simulation…';
@@ -241,5 +287,10 @@ $('read-rwa-replay').addEventListener('click',()=>inspectApiEvidence());
 $('read-rwa-live').addEventListener('click',()=>inspectApiEvidence(true));
 $('read-quote-replay').addEventListener('click',inspectRecordedQuote);
 $('read-simulation-replay').addEventListener('click',inspectRecordedSimulation);
+$('run-observed-preflight').addEventListener('click',runObservedPreflight);
+$('observed-amount').addEventListener('input',invalidateObserved);
+for(const id of ['observed-rights','observed-stop'])$(id).addEventListener('change',invalidateObserved);
+$('observed-verify').addEventListener('click',verifyCurrentObserved);
+$('observed-export').addEventListener('click',()=>exportObservedAudit().catch(error=>{$('observed-audit-state').textContent='INVALID · '+errorText(error);}));
 document.querySelectorAll('.nav-tab').forEach(el=>el.addEventListener('click',()=>tab(el.dataset.tab)));
 renderEvidence();

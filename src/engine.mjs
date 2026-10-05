@@ -46,11 +46,21 @@ export async function digest(value) {
   const bytes = new TextEncoder().encode(canonical(value));
   return [...new Uint8Array(await globalThis.crypto.subtle.digest('SHA-256',bytes))].map(x=>x.toString(16).padStart(2,'0')).join('');
 }
-/** @param {Snapshot} s @param {Intent} intent @param {Policy} policy @param {number} now */
-export function evaluate(s, intent, policy = DEFAULT_POLICY, now = Date.now()) {
+/** Shared gate collection for complete snapshots and explicitly partial observations. @param {string} [passDetail] */
+export function checkCollector(passDetail='Verified for this snapshot.') {
   /** @type {Check[]} */ const checks=[];
   /** @param {string} id @param {string} label @param {boolean} pass @param {string} detail @param {string} next @param {'WAIT'|'BLOCK'} [severity] */
-  const add=(id,label,pass,detail,next,severity='BLOCK')=>checks.push({id,label,status:pass?'PASS':severity,detail,next:pass?'Verified for this snapshot.':next});
+  const add=(id,label,pass,detail,next,severity='BLOCK')=>checks.push({id,label,status:pass?'PASS':severity,detail,next:pass?passDetail:next});
+  return {checks,add};
+}
+/** @param {Check[]} checks @param {number} now @param {DataMode} mode */
+export function gateSummary(checks,now,mode) {
+  const status=checks.some(c=>c.status==='BLOCK')?'BLOCKED':checks.some(c=>c.status==='WAIT')?'WAIT':'READY_FOR_LOCAL_SIMULATION';
+  return {status,checks,checkedAt:now,mode,canSign:false,canBroadcast:false};
+}
+/** @param {Snapshot} s @param {Intent} intent @param {Policy} policy @param {number} now */
+export function evaluate(s, intent, policy = DEFAULT_POLICY, now = Date.now()) {
+  const {checks,add}=checkCollector();
   try {
     if (!s || !intent || !policy || !Number.isSafeInteger(now)) throw new Error('Invalid snapshot or evaluation time');
     if (typeof policy.stopped!=='boolean' || typeof policy.allowClosed!=='boolean' || typeof intent.rightsAcknowledged!=='boolean' || !Array.isArray(policy.approvedAssets) || !Array.isArray(policy.approvedSpenders) || !policy.approvedAssets.every(x=>typeof x==='string') || !policy.approvedSpenders.every(x=>typeof x==='string')) throw new Error('Policy booleans and whitelist arrays must be explicit');
@@ -81,8 +91,7 @@ export function evaluate(s, intent, policy = DEFAULT_POLICY, now = Date.now()) {
   } catch (error) {
     checks.push({id:'schema',label:'Evidence schema',status:'BLOCK',detail:error instanceof Error?error.message:'Malformed evidence',next:'Acquire complete, canonical, validated evidence. Missing fields cannot be inferred.'});
   }
-  const status=checks.some(c=>c.status==='BLOCK')?'BLOCKED':checks.some(c=>c.status==='WAIT')?'WAIT':'READY_FOR_LOCAL_SIMULATION';
-  return {status,checks,checkedAt:now,mode:s?.mode??'FIXTURE',canSign:false,canBroadcast:false};
+  return gateSummary(checks,now,s?.mode??'FIXTURE');
 }
 /** @typedef {{schema:'kinegate.receipt.v1',snapshot:Snapshot,intent:Intent,policy:Policy,createdAt:number,expiresAt:number,result:ReturnType<typeof evaluate>,binding:string,mode:'SIMULATION',sourceMode:DataMode,executed:false}} Receipt */
 /** @param {Snapshot} snapshot @param {Intent} intent @param {Policy} policy @param {number} now @returns {Promise<Receipt>} */

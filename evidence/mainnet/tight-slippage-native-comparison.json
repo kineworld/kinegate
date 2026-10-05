@@ -1,0 +1,152 @@
+{
+  "requestedBuilderSlippagePercent": 0.49,
+  "requestedBoundaryMarginScaledAtomic": "-4209",
+  "schema": "kinegate.tight-slippage-native-comparison.v1",
+  "mode": "SIMULATION",
+  "observedAt": "2026-10-05T14:38:50.4258670+00:00",
+  "sourceCapture": "2026-10-05T14:38:43.446Z",
+  "chainId": 56,
+  "rpc": "https://bsc-dataseed.bnbchain.org",
+  "parentBlock": {
+    "number": "0x780dc4b",
+    "hash": "0x0d07ac154cc1050471fc5885050a4ad66d5b8d03adfc369bf9e5838a361819cb",
+    "timestamp": "0x6ac3b678"
+  },
+  "sampleCount": 3,
+  "method": "eth_simulateV1",
+  "validation": false,
+  "stateOverridesUsed": false,
+  "traceTransfers": true,
+  "callSequence": [
+    "USDT balance",
+    "AAPLon balance",
+    "USDT allowance",
+    "Counterfactual exact 6 USDT approval",
+    "Unsigned swap",
+    "USDT balance",
+    "AAPLon balance",
+    "USDT allowance"
+  ],
+  "samePayloadAndParentForGasComparison": true,
+  "quoteAgeAtBatchStartSeconds": 5.7475435,
+  "inputToken": "0x55d398326f99059fF775485246999027B3197955",
+  "outputToken": "0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4",
+  "router": "0xB44446b0c8E56988c34f7Ff73Ae904982b5FdDA5",
+  "selector": "0xad43f73d",
+  "inputAmountAtomic": "6000000000000000000",
+  "quoteOutputAtomic": "17934279890612159",
+  "gasPriceWei": "65067581",
+  "approvalGasLimit": 100000,
+  "reservedRevokeGas": 100000,
+  "maximumTotalGasCostWei": "99999957738403",
+  "gasBudgetWei": "100000000000000",
+  "minimumMutation": {
+    "wordIndex": 6,
+    "originalWordMatchedBuilderMinimum": true,
+    "counterfactualMinimumAtomic": "35868559781224318",
+    "interpretation": "Observed rejection for this payload/path after changing one matching header word; not a verified complete ABI."
+  },
+  "exactSlippage": {
+    "maximumBps": 50,
+    "marginScaledAtomic": "17934279890607950",
+    "withinExactCap": true,
+    "interpretation": "The fresh builder requested 0.49%; compare its returned minimum against the unchanged authorized 0.5% exact cross-product boundary. This numerical check does not authorize signing."
+  },
+  "results": [
+    {
+      "id": 10,
+      "variant": "BUILDER_ESTIMATE",
+      "swapGasLimit": 450000,
+      "callStatuses": [
+        "0x1",
+        "0x1",
+        "0x1",
+        "0x1",
+        "0x0",
+        "0x1",
+        "0x1",
+        "0x1"
+      ],
+      "swapStatus": "FAILED",
+      "approvalGasUsed": 46194,
+      "swapGasUsed": 434637,
+      "simulatedApprovalPlusSwapGasCostWei": "31286510039811",
+      "inputSpentAtomic": "0",
+      "outputReceivedAtomic": "0",
+      "allowanceBeforeAtomic": "0",
+      "allowanceAfterAtomic": "6000000000000000000",
+      "declaredMinimumAtomic": "17846401919148159",
+      "declaredMinimumReached": false,
+      "revertData": "0x1425ea42"
+    },
+    {
+      "id": 11,
+      "variant": "BOUNDED_HIGHER_GAS",
+      "swapGasLimit": 1336863,
+      "callStatuses": [
+        "0x1",
+        "0x1",
+        "0x1",
+        "0x1",
+        "0x1",
+        "0x1",
+        "0x1",
+        "0x1"
+      ],
+      "swapStatus": "SUCCESS",
+      "approvalGasUsed": 46194,
+      "swapGasUsed": 477319,
+      "simulatedApprovalPlusSwapGasCostWei": "34063724532053",
+      "inputSpentAtomic": "6000000000000000000",
+      "outputReceivedAtomic": "17933848689508824",
+      "allowanceBeforeAtomic": "0",
+      "allowanceAfterAtomic": "0",
+      "declaredMinimumAtomic": "17846401919148159",
+      "declaredMinimumReached": true,
+      "revertData": null
+    },
+    {
+      "id": 12,
+      "variant": "COUNTERFACTUAL_DOUBLE_QUOTE_MINIMUM",
+      "swapGasLimit": 1336863,
+      "callStatuses": [
+        "0x1",
+        "0x1",
+        "0x1",
+        "0x1",
+        "0x0",
+        "0x1",
+        "0x1",
+        "0x1"
+      ],
+      "swapStatus": "FAILED",
+      "approvalGasUsed": 46194,
+      "swapGasUsed": 588829,
+      "simulatedApprovalPlusSwapGasCostWei": "41319410489363",
+      "inputSpentAtomic": "0",
+      "outputReceivedAtomic": "0",
+      "allowanceBeforeAtomic": "0",
+      "allowanceAfterAtomic": "6000000000000000000",
+      "declaredMinimumAtomic": "35868559781224318",
+      "declaredMinimumReached": false,
+      "revertData": "0x6d9e7a9e000000000000000000000000000000000000000000000000007f6e43dc5d5f7e000000000000000000000000000000000000000000000000003fb6bd889801d8"
+    }
+  ],
+  "actualApprovals": 0,
+  "actualWalletSignatures": 0,
+  "actualBroadcasts": 0,
+  "actualFundsSpent": "0",
+  "executionReady": false,
+  "privacy": "Receiver, absolute wallet balances, full calldata, quote identifiers, generated transaction hashes and synthetic receipts omitted.",
+  "sources": {
+    "gasField": "https://web3.binance.com/en/dev-docs/catalog/web3-wallet/api/rest-api/trading-api",
+    "rpc": "https://docs.bnbchain.org/bnb-smart-chain/developers/json_rpc/json-rpc-endpoint/"
+  },
+  "limitations": [
+    "Each result is a counterfactual execution against one parent block, not a transaction or real settlement. validation=false does not establish nonce, signature validity or transaction-pool acceptance.",
+    "The higher gas limit isolates an execution difference for this payload, not the API estimator algorithm, a universal gas minimum or guaranteed future execution.",
+    "This saved minimum meets the exact authorized0.5%cap, but the original swap facet source/ABI and operator provenance remain incompletely verified.",
+    "Earlier different-payload experiments include both success and failure, including an adapter zero-output error at higher gas. Native success is not reliable across stale routes.",
+    "The raised-minimum experiment is deliberately constructed, labeled testing of a guard; it is not an actual API error or DevEx subjective feedback."
+  ]
+}
