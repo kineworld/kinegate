@@ -7,8 +7,8 @@ Updated 2026-10-05. States are separate, and passing fixtures do not count as ma
 | Kine name, runnable product | PASS local fixture milestone | README, source, browser-qa.json | Mainnet execution workflow still incomplete |
 | Official rules and real fields | PASS read-only verification | rules.md, submission-fields.md | Human declarations not supplied |
 | Tokenized-stock core | PASS fixture and authenticated data milestone | Ondo fixture; exact current AAPLon API identity and pinned-block chain read | Personal issuer access/liquidity/settlement unverified |
-| Binance Web3 integration | PASS authenticated RWA acquisition | Four signed RWA HTTP200/code0 responses; actual LIVE UI refresh; one successful6USDT quote | Quote/builder actual modeSWAP; predicted simulation FAILED for balance. Mainnet settlement and issuer qualification remain separate |
-| BSC mainnet small live demo | BLOCKED | mainnet read-only evidence is insufficient | Bounded approval tracked privately; no asset signatures or settled trade. Prediction failed for balance; router provenance/ABI semantics also unverified |
+| Binance Web3 integration | PASS authenticated RWA acquisition | Four signed RWA HTTP200/code0 responses; actual LIVE UI refresh; successful6USDT quote/build observations | Quote/builder actual modeSWAP; first simulation FAILED for balance, latest for allowance. Mainnet settlement and issuer qualification remain separate |
+| BSC mainnet small live demo | BLOCKED | mainnet read-only evidence is insufficient | Bounded authorization tracked privately; no asset signatures or settled trade. Latest prediction fails for allowance; router provenance/ABI semantics also unverified |
 | Public source / deployed experience | PASS | evidence/deployment.json, anonymous browser screenshot, public repository | Keep accessible through judging; public API deliberately disabled |
 | Tests and comparison | PASS bounded scope | tests-run.txt, fixture-benchmark.json, browser-qa.json | Not real-world accuracy or profitability evidence |
 | Independent review | PASS bounded review | review-independent.md | No security certification; provenance hashes cannot authenticate sources |
