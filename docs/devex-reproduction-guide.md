@@ -1,0 +1,14 @@
+# Human reproduction entry points
+
+These are factual reproduction instructions, not the final DevEx report. A human teammate must personally reproduce, assess and write their own report under the competition's AI rule.
+
+1. Read `docs/api-contracts.md` and the linked official authentication and region/issuer restrictions. Confirm eligibility personally before setting `KINE_API_ELIGIBILITY_CONFIRMED=true`. Do not infer legal eligibility from timezone, IP or a successful HTTP request.
+2. From the project directory, run `npm ci`, `npm test`, `npm run typecheck`, `node scripts/probe.mjs status`. Current expected status has no credentials and no signing/spending.
+3. With no credentials, `node scripts/probe.mjs discovery` exits 1 with `CREDENTIALS_MISSING` and **does not call the network**. This differs from the separately recorded one-time LIVE unauthenticated request, which returned HTTP401/API40101 in `evidence/devex/unauthenticated-probe.json`.
+4. After personally configuring an authorized local key/secret using environment facilities, run `node scripts/probe.mjs discovery` and `node scripts/probe.mjs asset`. Logs under ignored `evidence/local-api/` contain endpoint, parameter names, HTTP/API codes, latency and result. Review/redact before any public export.
+5. Read-only quote command: `node scripts/probe.mjs quote <positive base-unit amount> <from token contract> <to token contract> <actual receiver address>`. Check decimals from actual chain data. Do not use an invented receiver or claim a quote is an execution. This command does not sign assets or submit RFQ orders.
+6. Compare official field semantics with actual returned data and personally record reproducible observations. The simulation client accepts EVM calldata only; an RFQ order has a different flow. Do not describe RFQ typed data as simulated EVM execution.
+
+The one-time LIVE no-key probe and BSC read-only probe include UTC acquisition time, source, exact public request, response and elapsed time where measured. SDK clone/checkout used commit `a234ecedffcdded0e73c781344ea11bd6cf9c6ce`; Windows long filenames required repo-local `core.longpaths=true`. This was corrected locally and is not a Binance endpoint defect. The initial probe CLI invocation was attempted from the workspace parent instead of the project and failed `MODULE_NOT_FOUND`; correct project-directory invocation is the command above. That is operator configuration error, not API failure.
+
+Never deliberately manufacture errors to fill a report. Do not upload environment files, credentials, private logs, personal identity material or unrelated company data. Record sample count, timestamps, command/tool versions, exact expected vs actual behavior and limitations. The five unit tests use explicitly labeled FIXTURE fetch responses and establish local adapter behavior only.

@@ -1,0 +1,11 @@
+# Decision record
+
+- 2026-10-05: New project because this task workspace is empty and duplicate company searches found no related project. No unrelated repositories copied.
+- Current official rules override the mission's startup baseline. AI code permitted; final AI-generated DevEx is not accepted. Collect reproducible facts only.
+- Use no-wallet fixture experience to preserve zero-budget access; it cannot count as actual mainnet integration evidence.
+- Product selected: KineGate, evidence-bound preflight. Candidates.md compares 14 alternatives; the name used there is a research working name. Passport and RFQ lifecycle evidence strengthen this one workflow rather than becoming separate products.
+- Minimal probe across top three: preflight depends on Trading/RFQ and Transaction APIs; issuer passport depends on RWA tokens/profile; RFQ debugger depends on quote/order schemas. Official source modules are available, but authenticated runtime remains blocked for all three by missing credentials. One authentic unauthenticated request returned 40101, not data. This is an honest feasibility limitation, not a successful integration.
+- Official SDK inspection corrected two dangerous assumptions: RWA referencePrice derives from token price rather than an independent market quote; RWA RFQ typed-data signing cannot be called a successful EVM transaction simulation. Build mode-correct preparation, no invented settlement.
+- Fixture-only public judge path uses synthetic addresses and fixed time. Production integration remains local read-only, eligibility-gated; public server credential exposure is avoided.
+- Browser control inventory returned a provider error and in-app portal creation timed out. The user expressly authorized browser automation/recording, so use bundled Playwright for this new app's automated browser tests and recording. No unrelated browser profiles or personal sessions will be opened.
+- User requested Binance yellow/black visual colors. Applied black panels and yellow action/selection accents; no Binance logo, partnership or endorsement claim. Removed remote font dependency for offline reliability.

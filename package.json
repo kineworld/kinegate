@@ -1,0 +1,25 @@
+{
+  "name": "kinegate",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env server/server.mjs",
+    "start": "node --env-file-if-exists=.env server/server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "lint": "node scripts/check.mjs",
+    "typecheck": "tsc --noEmit",
+    "build": "node scripts/build.mjs",
+    "benchmark": "node scripts/benchmark.mjs",
+    "probe": "node scripts/probe.mjs",
+    "audit": "node scripts/audit.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "playwright": "1.63.0",
+    "typescript": "5.9.3"
+  }
+}

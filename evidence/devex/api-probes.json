@@ -1,0 +1,82 @@
+{
+  "kind": "machine-collected factual evidence",
+  "notFinalDevexReport": true,
+  "capturedAtUtc": "2026-10-05T19:31:01.1685639+08:00",
+  "toolVersions": {
+    "node": "v24.19.0",
+    "git": "git version 2.55.0.windows.5",
+    "powershell": "7.6.5"
+  },
+  "officialDocs": [
+    "https://web3.binance.com/en/dev-docs/authentication",
+    "https://web3.binance.com/en/dev-docs/catalog/web3-wallet/api/rest-api/rwa-data",
+    "https://web3.binance.com/en/dev-docs/catalog/web3-wallet/api/rest-api/transaction-api",
+    "https://web3.binance.com/en/dev-docs/products/trading-api/integration-flow"
+  ],
+  "probes": [
+    {
+      "requests": 1,
+      "mode": "LIVE",
+      "expected": "401/API40101 per authentication docs",
+      "request": {
+        "timeUtc": "2026-10-05T19:25:23.8539417+08:00",
+        "uri": "https://web3.binance.com/build/api/v1/dex/market/rwa/tokens?binanceChainId=56",
+        "method": "GET",
+        "authentication": "none",
+        "statusCode": 401,
+        "elapsedMs": 628,
+        "body": "{\"msg\":\"API Key is required\",\"timestamp\":1791199524177,\"code\":40101,\"data\":\"\"}"
+      },
+      "result": "matches documented missing-key behavior",
+      "name": "unauthenticated RWA tokens"
+    },
+    {
+      "reason": "No authorized API key/secret configured. EVM simulation is not RFQ order simulation.",
+      "name": "preflight quote and EVM simulation",
+      "actualAuthenticatedResponse": null,
+      "mode": "NOT_RUN",
+      "status": "BLOCKED_CREDENTIALS"
+    },
+    {
+      "sourceContractRead": "evidence/mainnet/bsc-readonly-probe.json",
+      "name": "issuer passport tokens/profile",
+      "actualAuthenticatedResponse": null,
+      "mode": "NOT_RUN",
+      "status": "BLOCKED_CREDENTIALS"
+    },
+    {
+      "reason": "Official status schema examined, no live current market status retrieved.",
+      "name": "underlying-market session and time",
+      "actualAuthenticatedResponse": null,
+      "mode": "NOT_RUN",
+      "status": "BLOCKED_CREDENTIALS"
+    }
+  ],
+  "localTests": {
+    "command": "node --test tests/binance.test.mjs",
+    "pass": 7,
+    "fail": 0,
+    "proves": "local adapter safety, canonical signing, bounded response parsing, success-envelope validation, quote input limits, and FIXTURE provenance only",
+    "mode": "FIXTURE"
+  },
+  "typecheck": {
+    "exitCode": 0,
+    "command": "npx tsc --noEmit"
+  },
+  "sdkInspection": {
+    "localResolution": "git config core.longpaths true in scratch repo, then git restore --source=HEAD --worktree -- .",
+    "repositoryPackageVersion": "13.0.1",
+    "repository": "https://github.com/binance/binance-web3-connector-js",
+    "cloneCheckoutIssue": "Windows filename-length errors",
+    "commit": "a234ecedffcdded0e73c781344ea11bd6cf9c6ce",
+    "installed": false,
+    "executed": false,
+    "classification": "environment issue; not API issue"
+  },
+  "limitations": [
+    "No authenticated success captured.",
+    "No public stock-market quote is independently verified.",
+    "No signing, spending, broadcast, trade receipt or reserves audit.",
+    "Personal eligibility remains unconfirmed."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "mode": "LIVE",
+  "observedAt": "2026-10-05T19:25:55.3729631+08:00",
+  "rpc": "https://bsc-dataseed.bnbchain.org",
+  "contract": "0x431a3bee82e2ca41e49895cbece5bb0f76a89b7a",
+  "chainIdHex": "0x38",
+  "blockNumberHex": "0x78077e1",
+  "bytecodePresent": true,
+  "symbol": "AAPLB",
+  "decimals": 18,
+  "limitations": [
+    "Read-only contract evidence; no liquidity verification.",
+    "No transaction signed, broadcast or confirmed.",
+    "Latest block tags can read different adjacent blocks."
+  ],
+  "source": "https://web3.binance.com/en/dev-docs/products/agentic-wallet/use-cases/campaigns/bstock-eligible-tokens"
+}

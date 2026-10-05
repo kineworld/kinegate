@@ -1,0 +1,9 @@
+{
+  "timeUtc": "2026-10-05T11:25:23.8539417+00:00",
+  "uri": "https://web3.binance.com/build/api/v1/dex/market/rwa/tokens?binanceChainId=56",
+  "method": "GET",
+  "authentication": "none",
+  "statusCode": 401,
+  "elapsedMs": 628,
+  "body": "{\"msg\":\"API Key is required\",\"timestamp\":1791199524177,\"code\":40101,\"data\":\"\"}"
+}

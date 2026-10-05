@@ -1,0 +1,38 @@
+{
+  "time": "2026-10-05T11:41:46.692Z",
+  "scope": "External product UI links, HTTP GET; page content and legal terms not certified.",
+  "results": [
+    {
+      "url": "https://docs.ondo.finance/global-markets",
+      "status": "NETWORK_UNVERIFIED",
+      "elapsedMs": 577
+    },
+    {
+      "url": "https://ondo.finance/ondo-stocks",
+      "status": "NETWORK_UNVERIFIED",
+      "elapsedMs": 1145
+    },
+    {
+      "url": "https://docs.xstocks.fi/docs/product-legal-overview",
+      "httpStatus": 200,
+      "finalUrl": "https://docs.xstocks.fi/docs/product-legal-overview",
+      "status": "PASS",
+      "elapsedMs": 1717
+    },
+    {
+      "url": "https://web3.binance.com/en/dev-docs/catalog/web3-wallet/api/rest-api/transaction-api",
+      "status": "NETWORK_UNVERIFIED",
+      "elapsedMs": 10692
+    },
+    {
+      "url": "https://web3.binance.com/en/dev-docs/catalog/web3-wallet/api/rest-api/trading-api",
+      "status": "NETWORK_UNVERIFIED",
+      "elapsedMs": 10693
+    },
+    {
+      "url": "https://web3.binance.com/en/dev-docs/catalog/web3-wallet/api/rest-api/rwa-data",
+      "status": "NETWORK_UNVERIFIED",
+      "elapsedMs": 10694
+    }
+  ]
+}

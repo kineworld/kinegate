@@ -1,0 +1,50 @@
+
+> kinegate@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ FIXTURE missing credentials and eligibility fail before network (1.1458ms)
+✔ FIXTURE canonical signing covers /build and exact encoding (14.8486ms)
+✔ FIXTURE 429 retries once, authorization denial never retries (0.9995ms)
+✔ FIXTURE failed business code at HTTP200 is not success (0.3044ms)
+✔ FIXTURE unknown assets denied and EVM simulation sends exactly one payload (0.8448ms)
+✔ FIXTURE malformed success envelopes and oversized bodies fail closed (5.1222ms)
+✔ FIXTURE injected fetch is labeled correctly and invalid quote inputs never network (0.7614ms)
+✔ Scenario: open (2.1028ms)
+✔ Scenario: closed (0.1993ms)
+✔ Scenario: issuer (0.1037ms)
+✔ Scenario: stale (0.119ms)
+✔ Scenario: liquidity (0.1026ms)
+✔ Scenario: balance (0.1095ms)
+✔ Scenario: permission (0.1037ms)
+✔ Scenario: timeout (0.0787ms)
+✔ Scenario: rate-limit (0.1212ms)
+✔ Scenario: simulation (0.1677ms)
+✔ Scenario: spender (0.1454ms)
+✔ Scenario: missing (0.0933ms)
+✔ Scenario: paused (0.0527ms)
+✔ Scenario: gas (0.241ms)
+✔ Scenario: future (0.0722ms)
+✔ Scenario: small (0.0614ms)
+✔ Fixed point preserves >2^53 and exact decimals (0.2651ms)
+✔ Malformed/ambiguous evidence never passes (0.2813ms)
+✔ Issuer and spender whitelist reject mutually matching forged identities (0.1068ms)
+✔ Minimum received and exact allowance boundaries (0.0994ms)
+✔ Closed market exception does not excuse stale independent reference (0.0632ms)
+✔ Receipt binds intention/policy/evidence and detects tampering (10.5904ms)
+✔ Receipt is independent of mutable source and expires at shortest clock (1.0374ms)
+✔ Blocked receipt cannot be relabeled as passing (1.1575ms)
+✔ Zero slippage uses exact minimum; stop overrides green fixture (0.2014ms)
+✔ Price-only comparison is insufficient for a permission-denied fixture (0.1358ms)
+✔ Review regressions: malformed policy and numeric inputs fail closed (0.2188ms)
+✔ Local runnable UI and core module actually served (73.1018ms)
+✔ Missing credentials are explicit and cannot sign/broadcast (59.903ms)
+✔ Static paths exclude local logs and private files (78.1871ms)
+✔ Cross-origin and DNS rebinding requests are denied (15.985ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 337.513

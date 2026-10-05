@@ -1,0 +1,171 @@
+{
+  "generatedAt": "2026-10-05T11:29:12.074Z",
+  "mode": "FIXTURE",
+  "fixtureTime": "2026-10-05T14:00:00.000Z",
+  "sampleSize": 16,
+  "baseline": "Accept if displayed quote cost/share <= independent displayed reference * 1.02; ignores clocks/permissions/costs. Deliberately simplified educational comparator, not a production broker.",
+  "priceOnlyUnsafeAccepts": 13,
+  "gateUnsafeAccepts": 0,
+  "priceOnlySafeRejects": 0,
+  "gateSafeRejects": 0,
+  "limitations": "Hand-authored cases designed around gate requirements; expectedSafe labels are policy-based. No estimate of real-world error rates, safety, profitability or API performance.",
+  "rows": [
+    {
+      "id": "open",
+      "expectedSafe": true,
+      "priceOnlyAccept": true,
+      "gateAccept": true,
+      "gateStatus": "READY_FOR_LOCAL_SIMULATION",
+      "reasons": []
+    },
+    {
+      "id": "closed",
+      "expectedSafe": false,
+      "priceOnlyAccept": true,
+      "gateAccept": false,
+      "gateStatus": "WAIT",
+      "reasons": [
+        "reference",
+        "market"
+      ]
+    },
+    {
+      "id": "issuer",
+      "expectedSafe": false,
+      "priceOnlyAccept": true,
+      "gateAccept": false,
+      "gateStatus": "BLOCKED",
+      "reasons": [
+        "identity"
+      ]
+    },
+    {
+      "id": "stale",
+      "expectedSafe": false,
+      "priceOnlyAccept": true,
+      "gateAccept": false,
+      "gateStatus": "WAIT",
+      "reasons": [
+        "quote"
+      ]
+    },
+    {
+      "id": "liquidity",
+      "expectedSafe": false,
+      "priceOnlyAccept": true,
+      "gateAccept": false,
+      "gateStatus": "BLOCKED",
+      "reasons": [
+        "liquidity"
+      ]
+    },
+    {
+      "id": "balance",
+      "expectedSafe": false,
+      "priceOnlyAccept": true,
+      "gateAccept": false,
+      "gateStatus": "BLOCKED",
+      "reasons": [
+        "budget"
+      ]
+    },
+    {
+      "id": "permission",
+      "expectedSafe": false,
+      "priceOnlyAccept": true,
+      "gateAccept": false,
+      "gateStatus": "BLOCKED",
+      "reasons": [
+        "eligibility"
+      ]
+    },
+    {
+      "id": "timeout",
+      "expectedSafe": false,
+      "priceOnlyAccept": true,
+      "gateAccept": false,
+      "gateStatus": "WAIT",
+      "reasons": [
+        "transport"
+      ]
+    },
+    {
+      "id": "rate-limit",
+      "expectedSafe": false,
+      "priceOnlyAccept": true,
+      "gateAccept": false,
+      "gateStatus": "WAIT",
+      "reasons": [
+        "transport"
+      ]
+    },
+    {
+      "id": "simulation",
+      "expectedSafe": false,
+      "priceOnlyAccept": true,
+      "gateAccept": false,
+      "gateStatus": "BLOCKED",
+      "reasons": [
+        "simulation"
+      ]
+    },
+    {
+      "id": "spender",
+      "expectedSafe": false,
+      "priceOnlyAccept": true,
+      "gateAccept": false,
+      "gateStatus": "BLOCKED",
+      "reasons": [
+        "spender"
+      ]
+    },
+    {
+      "id": "missing",
+      "expectedSafe": false,
+      "priceOnlyAccept": false,
+      "gateAccept": false,
+      "gateStatus": "WAIT",
+      "reasons": [
+        "reference"
+      ]
+    },
+    {
+      "id": "paused",
+      "expectedSafe": false,
+      "priceOnlyAccept": true,
+      "gateAccept": false,
+      "gateStatus": "WAIT",
+      "reasons": [
+        "market"
+      ]
+    },
+    {
+      "id": "gas",
+      "expectedSafe": false,
+      "priceOnlyAccept": true,
+      "gateAccept": false,
+      "gateStatus": "BLOCKED",
+      "reasons": [
+        "cost"
+      ]
+    },
+    {
+      "id": "future",
+      "expectedSafe": false,
+      "priceOnlyAccept": true,
+      "gateAccept": false,
+      "gateStatus": "WAIT",
+      "reasons": [
+        "quote"
+      ]
+    },
+    {
+      "id": "small",
+      "expectedSafe": true,
+      "priceOnlyAccept": true,
+      "gateAccept": true,
+      "gateStatus": "READY_FOR_LOCAL_SIMULATION",
+      "reasons": []
+    }
+  ]
+}

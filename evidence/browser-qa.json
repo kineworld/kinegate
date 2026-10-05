@@ -1,0 +1,119 @@
+{
+  "time": "2026-10-05T11:36:32.645Z",
+  "base": "http://127.0.0.1:4173",
+  "mode": "FIXTURE",
+  "tool": "Playwright 1.63.0 + isolated headless Edge on Windows",
+  "sampleSize": 27,
+  "tests": [
+    {
+      "name": "Fixture banner and no wallet path",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario open",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario closed",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario issuer",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario stale",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario liquidity",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario balance",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario permission",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario timeout",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario rate-limit",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario simulation",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario spender",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario missing",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario paused",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario gas",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario future",
+      "status": "PASS"
+    },
+    {
+      "name": "UI scenario small",
+      "status": "PASS"
+    },
+    {
+      "name": "Export and verify genuine local receipt",
+      "status": "PASS"
+    },
+    {
+      "name": "Single-session simulation deduplication",
+      "status": "PASS"
+    },
+    {
+      "name": "Edited amount invalidates and cannot synthesize a quote",
+      "status": "PASS"
+    },
+    {
+      "name": "Negative amount rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Virtual time expires a receipt",
+      "status": "PASS"
+    },
+    {
+      "name": "Explicit JSON recovery after reload and tamper rejection",
+      "status": "PASS"
+    },
+    {
+      "name": "Baseline comparison has actual sixteen rows",
+      "status": "PASS"
+    },
+    {
+      "name": "Integration status honestly blocks credentials",
+      "status": "PASS"
+    },
+    {
+      "name": "Keyboard input and action reachable",
+      "status": "PASS"
+    },
+    {
+      "name": "Narrow-screen workflow, long hash and no horizontal overflow",
+      "status": "PASS"
+    }
+  ],
+  "consoleErrors": [],
+  "limitations": "Local product browser flow only; not authenticated API or mainnet execution. Keyboard smoke, not full accessibility certification."
+}

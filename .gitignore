@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+coverage/
+test-results/
+*.webm
+*.mp4
+evidence/local-api/
+*.zip
+docs/mission.md
+docs/approvals.md
+docs/state.md
+docs/plan.md
