@@ -1,11 +1,19 @@
 {
-  "dateUtc":"2026-10-05",
-  "sourceCommit":"f9db005",
-  "source":"New local Git clone of the published commit, no untracked local files or environment copied",
-  "remoteCloneAttempt":"FAIL: public HTTPS Git clone connection reset. Local clone used for clean-checkout verification, no network bypass.",
-  "newCheckout":true,
-  "credentialsCopied":false,
-  "checks":{"npmCi":"PASS","unitIntegrationTests":"PASS 38/38","syntaxLint":"PASS","scopedTypecheck":"PASS","productionBuild":"PASS","localServerStartup":"PASS in integration tests"},
-  "nodeVersion":"24.19.0",
-  "limits":"A fresh Git checkout on the existing Windows host, not a fresh OS/container. npm registry cache is allowed. Public anonymous browser smoke and Linux GitHub CI provide independent deployment/platform checks."
+  "dateUtc": "2026-10-05T12:22:27.172Z",
+  "sourceCommit": "977fd6ecfcb1adc72e06c2f474b71813f2c7ca99",
+  "source": "New local Git clone of published977fd6e; npmci, tests, lint, typecheck, static build and actual local-server integration checks. No env/private wallet observations copied.",
+  "remoteCloneAttempt": "FAIL: public HTTPS Git clone connection reset. Local clone used for clean-checkout verification, no network bypass.",
+  "newCheckout": true,
+  "credentialsCopied": false,
+  "checks": {
+    "npmCi": "PASS",
+    "unitIntegrationTests": "PASS49/49",
+    "syntaxLint": "PASS",
+    "scopedTypecheck": "PASS",
+    "productionBuild": "PASS",
+    "localServerStartup": "PASS in integration tests"
+  },
+  "nodeVersion": "24.19.0",
+  "limits": "A fresh Git checkout on the existing Windows host, not a fresh OS/container. npm registry cache is allowed. Public anonymous browser smoke and Linux GitHub CI provide independent deployment/platform checks.",
+  "previousSourceCommit": "f9db005"
 }

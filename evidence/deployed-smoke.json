@@ -1,0 +1,23 @@
+{
+  "verifiedAt": "2026-10-05T12:23:31.921Z",
+  "base": "https://kineworld.github.io/kinegate/",
+  "httpStatus": 200,
+  "anonymous": true,
+  "developerCookies": false,
+  "wallet": false,
+  "fixtureReady": true,
+  "rwaReplay": "WAIT",
+  "quoteReplay": "LiquidMesh / SWAP / trading disabled",
+  "offChainPrediction": "FAILED: transfer amount exceeds balance",
+  "consoleErrors": [],
+  "releaseHttpStatus": 200,
+  "release": "https://github.com/kineworld/kinegate/releases/tag/v0.2.0",
+  "video": {
+    "name": "kinegate-demo.mp4",
+    "sizeBytes": 4705115,
+    "sha256": "7d1041bdfd8ecd5540c42b82bcbb209734ec248e52d10ec5c4dda0569ca534b6",
+    "publicDigest": "sha256:7d1041bdfd8ecd5540c42b82bcbb209734ec248e52d10ec5c4dda0569ca534b6",
+    "downloadUrl": "https://github.com/kineworld/kinegate/releases/download/v0.2.0/kinegate-demo.mp4"
+  },
+  "limits": "Anonymous verification at one time. Static production contains no credentials. No mainnet trade. Release verification uses public metadata/digest, not a playback compatibility test."
+}
