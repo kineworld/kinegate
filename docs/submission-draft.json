@@ -6,19 +6,18 @@
   "teamSize": null,
   "telegram": null,
   "prizeWalletOrBinanceUID": null,
-  "description": "KineGate is an evidence gate for an issuer-specific tokenized-stock purchase. Its no-wallet fixture engine evaluates thirteen deterministic checks and creates an expiring SHA-256-bound local receipt. The observed-evidence workflow applies the same thirteen gate identities to recorded Binance quote, unsigned SWAP, failed prediction and pinned-block token reads; unknown current eligibility, clocks, balance, costs, spender and execution evidence remain explicit WAIT/BLOCK. It exports a non-executable REPLAY audit and invalidates that binding when intention, policy or source changes. Hashes establish internal integrity, not issuer authenticity. Authenticated RWA discovery, price, issuer profile and underlying-market calls succeeded for the current Ondo AAPLon representation; LiquidMesh returned a real 6-USDT SWAP quote. A controlled BSC eth_simulateV1 comparison used an identical payload and parent block: the 450,000 swap-gas limit failed; a bounded 1,183,991 limit succeeded and used 935,818 swap gas; changing the matching minimum word to twice the quote output failed. These are counterfactual simulations with a simulated exact approval, not approvals or purchases. The saved builder minimum fails the strict 0.5% cross-product policy because of floor rounding, and router/facet source and full ABI verification remain incomplete. No actual approval, wallet signature, broadcast or funds spent is claimed. The no-wallet product cannot sign or broadcast. Current public access is BLOCKED_BY_VISIBILITY_CHANGE: the repository is PRIVATE and GitHub Pages is disabled; previous deployment and release links are historical references pending a contest visibility decision. A later fresh0.49%builder request returned a minimum meeting the unchanged exact authorized0.5%cap. A second three-way native comparison again recorded FAILED/SUCCESS/FAILED; all six controlled samples are preserved. This resolves the authorized numerical bound for that counterfactual payload, while full facet verification, a fresh final review, personal signature and actual settlement remain incomplete.",
+  "description": "KineGate is an evidence gate for an issuer-specific tokenized-stock purchase. Its no-wallet fixture engine evaluates thirteen deterministic checks and creates an expiring SHA-256-bound local receipt. The observed-evidence workflow applies the same thirteen gate identities to recorded Binance quote, unsigned SWAP, failed prediction and pinned-block token reads; unknown current eligibility, clocks, balance, costs, spender and execution evidence remain explicit WAIT/BLOCK. It exports a non-executable REPLAY audit and invalidates that binding when intention, policy or source changes. Hashes establish internal integrity, not issuer authenticity. Authenticated RWA discovery, price, issuer profile and underlying-market calls succeeded for the current Ondo AAPLon representation; LiquidMesh returned a real 6-USDT SWAP quote. A controlled BSC eth_simulateV1 comparison used an identical payload and parent block: the 450,000 swap-gas limit failed; a bounded 1,183,991 limit succeeded and used 935,818 swap gas; changing the matching minimum word to twice the quote output failed. These are counterfactual simulations with a simulated exact approval, not approvals or purchases. The saved builder minimum fails the strict 0.5% cross-product policy because of floor rounding, and router/facet source and full ABI verification remain incomplete. No actual approval, wallet signature, broadcast or funds spent is claimed. The no-wallet product cannot sign or broadcast. Public source and anonymously verified Pages are now hosted under the owner's personal GitHub account, outside the company organization. A later fresh0.49%builder request returned a minimum meeting the unchanged exact authorized0.5%cap. A second three-way native comparison again recorded FAILED/SUCCESS/FAILED; all six controlled samples are preserved. This resolves the authorized numerical bound for that counterfactual payload, while full facet verification, a fresh final review, personal signature and actual settlement remain incomplete.",
   "supportedTracks": [
     "Tokenized-stock main track"
   ],
   "unsupportedSpecialPrizeClaims": [],
   "publicRepo": "https://github.com/zoahdev/kinegate",
   "demoVideo": "https://github.com/zoahdev/kinegate/releases/download/demo-polished-v1/kinegate-demo-polished.mp4",
-  "deployedOrRunnableInstructions": "Local runnable fixture: npm ci, npm start, open http://127.0.0.1:4173. No credentials or wallet needed. Historical Pages URL https://zoahdev.github.io/kinegate/ is currently disabled/API404; repository is PRIVATE, so anonymous source access remains blocked.",
+  "deployedOrRunnableInstructions": "https://zoahdev.github.io/kinegate/ ; local: npm ci, npm start, open http://127.0.0.1:4173. No credentials or wallet needed for FIXTURE and recorded REPLAY. Standalone local package is available in v0.3.0 release.",
   "humanDevExCompleted": false,
   "legalDeclarations": "HUMAN_FINAL_CONFIRMATION_REQUIRED",
   "eligibilityInformation": "Human personally confirmed competition/API region and sanctions qualifications on 2026-10-05; no final form declaration submitted. Issuer/venue eligibility for a real purchase remains separate.",
   "blockingMissingRequirements": [
-    "Anonymous judged access blocked by repository PRIVATE and Pages disabled; human visibility exception decision pending",
     "Small BSC mainnet demonstration: full router/facet review, fresh passing policy/effects, personal wallet signing and actual settlement remain incomplete",
     "Human personally authored DevEx report and receipt",
     "Final human form declarations and actual registration/project submission receipts"
@@ -37,7 +36,7 @@
   "publicIdentityValuesWithheld": true,
   "qualificationAndBoundedBudget": "CONFIRMED_PRIVATELY_DO_NOT_REPEAT_REQUEST",
   "privateFieldPackStatus": "PREPARED_LOCALLY_NOT_PUBLISHED_NOT_SUBMITTED",
-  "publicAccessStatus": "BLOCKED_BY_VISIBILITY_CHANGE",
-  "deploymentStatus": "HISTORICAL_PASS_CURRENT_PAGES_DISABLED",
-  "videoAccessStatus": "LOCAL_ARTIFACT_PASS_CURRENT_ANONYMOUS_RELEASE_BLOCKED"
+  "publicAccessStatus": "PASS_ANONYMOUS_PERSONAL_PUBLICATION",
+  "deploymentStatus": "PASS_PERSONAL_PAGES_BROWSER",
+  "videoAccessStatus": "PASS_ANONYMOUS_RELEASE_METADATA_AND_HEAD"
 }

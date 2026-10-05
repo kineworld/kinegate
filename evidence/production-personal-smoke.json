@@ -1,0 +1,27 @@
+{
+  "schema": "kinegate.package-smoke.v1",
+  "verifiedAt": "2026-10-05T14:56:24.351Z",
+  "base": "https://zoahdev.github.io/kinegate",
+  "httpStatus": 200,
+  "anonymous": true,
+  "developerCookies": false,
+  "fixturePreflight": "READY_FOR_LOCAL_SIMULATION",
+  "observedGateCount": 13,
+  "observedDecision": "BLOCKED",
+  "strictMinimumBoundary": "BLOCK",
+  "editInvalidatesAudit": true,
+  "bothNativeComparisonRecordsAccessible": true,
+  "nativeModes": "SIMULATION / actual asset actions zero",
+  "apiAndEnvironmentPaths": 404,
+  "narrowScreenNoOverflow": true,
+  "consoleErrors": [],
+  "publishedSource": "2cdc8b224884a4aee8d7cc41abc8a7d1deae2a2c",
+  "video": {
+    "release": "https://github.com/zoahdev/kinegate/releases/tag/demo-polished-v1",
+    "download": "https://github.com/zoahdev/kinegate/releases/download/demo-polished-v1/kinegate-demo-polished.mp4",
+    "sizeBytes": 33325757,
+    "digest": "sha256:92ca9590a560012e501fcd82f58ceb2c55365201b93f59a3cec1bcc77b4fd15e",
+    "anonymousDownloadHeadStatus": 200
+  },
+  "limitation": "Actual isolated anonymous browser against personal Pages; availability checked at this timestamp, not guaranteed indefinitely. Video digest/anonymous HEAD verification, not a playback test. No mainnet transaction."
+}

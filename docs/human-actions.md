@@ -18,7 +18,7 @@ Final eligibility/applicable-law declarations, separate Google Forms collected e
 
 ## Access and execution blockers
 
-The parent verified the repository is currently PRIVATE, `has_pages=false`, and the Pages API returns404. Public submission access is **BLOCKED_BY_VISIBILITY_CHANGE**. Historical deployment/browser evidence passed when public and is now stale; a human decision on the contest visibility exception is pending. No automatic visibility restoration or policy waiver is implied.
+The human directed this competition project to move outside the company GitHub organization and become public. The repository is now zoahdev/kinegate, with verified anonymous personal Pages and public video download. Current evidence is accessibility-current.json / production-personal-smoke.json; the earlier company-host deployment is historical.
 
 The controlled BSC `eth_simulateV1` comparison at 14:21 UTC used an identical payload and parent block: 450,000 swap gas failed, 1,183,991 succeeded using 935,818 gas, and a doubled-minimum control failed. These calls include a counterfactual exact approval. Actual approvals, wallet signatures, broadcasts and funds spent remain zero. Saved minimum output fails the exact 0.5% slippage boundary because of floor rounding; router/facet source and full ABI verification remain incomplete. This evidence does not establish a settled small mainnet purchase. The no-wallet product cannot sign or broadcast.
 
