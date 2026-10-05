@@ -1,0 +1,19 @@
+{
+  "schema": "kinegate.package-smoke.v1",
+  "verifiedAt": "2026-10-05T14:42:43.508Z",
+  "base": "http://127.0.0.1:4175",
+  "httpStatus": 200,
+  "anonymous": true,
+  "developerCookies": false,
+  "fixturePreflight": "READY_FOR_LOCAL_SIMULATION",
+  "observedGateCount": 13,
+  "observedDecision": "BLOCKED",
+  "strictMinimumBoundary": "BLOCK",
+  "editInvalidatesAudit": true,
+  "bothNativeComparisonRecordsAccessible": true,
+  "nativeModes": "SIMULATION / actual asset actions zero",
+  "apiAndEnvironmentPaths": 404,
+  "narrowScreenNoOverflow": true,
+  "consoleErrors": [],
+  "limitation": "Actual isolated browser against the standalone local package, not an external deployment or mainnet transaction."
+}

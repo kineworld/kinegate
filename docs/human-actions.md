@@ -1,23 +1,25 @@
-# Minimal human gates
+# Remaining human actions
 
-## API credentials and qualification
+Updated 2026-10-05. These statuses separate private information already supplied from final legal declarations and verified completion.
 
-The developer portal is https://web3.binance.com/zh-CN/dev-portal/project . The user personally logged in on 2026-10-05. No login state or screenshots are exported publicly. Creating a persistent credential and any safety verification must be completed by the account holder. Prefer only the required read-only data/quote permissions offered by the portal. Do not grant signing, wallet transfers or broadcasting for this application.
+## Inputs already supplied privately
 
-Enter API Key and Secret locally into the ignored `.env`, using `OC_API_KEY` and `OC_SECRET_KEY`. Never paste keys/mnemonics in chat, commits or video. The file is opened in the local editor. `KINE_API_ELIGIBILITY_CONFIRMED` is enabled only after personal API qualification confirmation. The current user confirmed competition/API region and sanctions qualification; issuer/venue trading qualification remains separate. It is not a waiver and not proof of hackathon eligibility. Keep asset spending budget 0.
+The user logged into the developer portal, configured credentials locally, and personally confirmed competition/API region and sanctions qualification. Authenticated RWA data calls, quotes and unsigned SWAP builds have succeeded. Credentials remain private and ignored; no additional credential-entry request is needed.
 
-After saving, notify the coordinator that local credentials are configured; the coordinator will restart the loopback server and perform bounded read-only probes. Do not upload the file. Authentication failure, region denial and missing data must remain failures; no proxy bypass.
+Contact identity, Binance API account identifier, team size/choice and authorized prize destination were supplied privately. Optional Telegram is left empty. Actual-schema registration/project fields have been prepared in an ignored local field pack; no prefill URL was opened or sent and no POST occurred. Public null identity fields mean deliberately withheld. Do not repeat identity or qualification requests.
 
-## Report and legal fields
+The user also confirmed the bounded mainnet budget privately. The current boundaries and technical gates are maintained in `mainnet-operation-pack.md`; do not replace that confirmation with a new budget-zero statement or repeated authorization request. Issuer/venue eligibility at the moment of an actual trade and final form declarations remain distinct from prior personal qualification confirmation.
 
-Follow `submission-fields.md` for the actual official forms. The contact/account/team/prize identity fields are human supplied. All-member nationality/residency/current-location and applicable-law declarations must be personal and truthful; neither timezone nor HTTP success proves them.
+## Final report and form completion
 
-Use `devex-reproduction-guide.md` to personally reproduce objective evidence, then independently author the final DevEx report. This file intentionally contains no report answers, ratings or subjective onboarding narrative. Official rules reject AI-generated final reports. An approval click on generated prose would not remedy that restriction.
+The human must personally author the final DevEx report from actual experience and submit it before truthfully confirming completion in the project form. The official rules reject AI-generated final reports. `devex-reproduction-guide.md` provides objective reproduction evidence, without final report prose, ratings or invented experience.
 
-## Live transaction gate
+Final eligibility/applicable-law declarations, separate Google Forms collected email or sign-in, and the DevEx completion checkbox were omitted from the private field pack. Registration, DevEx and project submission receipts are absent. No form completion is claimed without an actual receipt.
 
-Not ready for authorization yet: an actual eligible receiver, authenticated fresh quote and exact RFQ/fee/allowance details are needed first. The default budget remains 0. Once available, prepare chain/asset/vendor/spender allowlists, maximum input and total loss, slippage/minimum output, fee/gas cap, order expiry, deduplication, stop switch and receipt/balance verification. Present that concrete bounded package for asset-signing authorization. Public static demo never controls that wallet.
+## Access and execution blockers
 
-No registration, final report or project submission is reported as complete without a real receipt. Current work can continue without these gates: fixture product, tests, source publication, deployment, video and factual documentation.
+The parent verified the repository is currently PRIVATE, `has_pages=false`, and the Pages API returns404. Public submission access is **BLOCKED_BY_VISIBILITY_CHANGE**. Historical deployment/browser evidence passed when public and is now stale; a human decision on the contest visibility exception is pending. No automatic visibility restoration or policy waiver is implied.
 
-Current mainnet prerequisites are concrete in `mainnet-operation-pack.md`: a proposed6USDT maximum input and total0.0001BNB gas ceiling, exact verified assets,0.5%slippage, bounded allowance and fresh successful effects before personal signing. Current authorization remains0, and the actual simulated call failed for token balance. Do not reuse historical calldata or treat API success as execution readiness.
+The controlled BSC `eth_simulateV1` comparison at 14:21 UTC used an identical payload and parent block: 450,000 swap gas failed, 1,183,991 succeeded using 935,818 gas, and a doubled-minimum control failed. These calls include a counterfactual exact approval. Actual approvals, wallet signatures, broadcasts and funds spent remain zero. Saved minimum output fails the exact 0.5% slippage boundary because of floor rounding; router/facet source and full ABI verification remain incomplete. This evidence does not establish a settled small mainnet purchase. The no-wallet product cannot sign or broadcast.
+
+A later fresh0.49%request meets the authorized exact0.5%cap in counterfactual simulation; see evidence/mainnet/tight-slippage-native-comparison.json. The original0.5%historical minimum remains blocked. ABI/source verification, fresh personal execution review and actual settlement remain incomplete; no repeated qualification/budget confirmation is requested.

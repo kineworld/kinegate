@@ -1,0 +1,396 @@
+{
+  "verifiedAt": "2026-10-05T14:03:09.026Z",
+  "officialPage": "https://www.bnbchain.org/en/hackathons/tokenized-stocks",
+  "officialBlog": "https://www.bnbchain.org/en/blog/bnb-hack-tokenized-stocks-edition-with-binance-web3-wallet",
+  "deadlineUtc": "2026-10-11T12:00:00Z",
+  "deadlineAsiaShanghai": "2026-10-11 20:00",
+  "repoFreezeAtDeadline": true,
+  "scoringPercent": [
+    30,
+    25,
+    25,
+    20
+  ],
+  "aiAssistedCodeAllowed": true,
+  "aiGeneratedDevexRejected": true,
+  "registrationNotProjectSubmission": true,
+  "humanDevexMustPrecedeProjectCompletionCheckbox": true,
+  "noObservedMaterialChange": "Against prior semantic field inventory; no archived old canonical schema hash exists for byte-for-byte comparison",
+  "forms": [
+    {
+      "kind": "project",
+      "officialShortUrl": "https://forms.gle/yToDUzaDMwWnq6R6A",
+      "actualUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdMtogkNnWzkI6xUifE78Ks4TohOM1YuWMuNgV-UPLVnpHD4Q/viewform?usp=send_form",
+      "httpStatus": 200,
+      "method": "Unauthenticated GET; no form interaction or response submission",
+      "htmlSha256": "8c46eb00ea6960ea43dc6c5b70726ea74aee5c24c274031323a9a4bc9591cdbf",
+      "publishedSchemaSha256": "c21b9ec5f24efb71a50bd1eeb5ec6afcfdb94a1b73d3ee5f744dac07d353cae5",
+      "answerFields": 10,
+      "requiredAnswerFields": 9,
+      "optionalAnswerFields": 1,
+      "sectionBreaks": 0,
+      "fieldIdsAndTypes": [
+        {
+          "itemId": 1890077331,
+          "type": 0,
+          "required": true
+        },
+        {
+          "itemId": 798328714,
+          "type": 0,
+          "required": true
+        },
+        {
+          "itemId": 1539491265,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 685776939,
+          "type": 0,
+          "required": false
+        },
+        {
+          "itemId": 542096353,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 1704636374,
+          "type": 4,
+          "required": true
+        },
+        {
+          "itemId": 1648807228,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 934985844,
+          "type": 0,
+          "required": true
+        },
+        {
+          "itemId": 1720961782,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 767551455,
+          "type": 4,
+          "required": true
+        }
+      ],
+      "separateEmailCollectionExcludedFromAnswerCount": true
+    },
+    {
+      "kind": "registration",
+      "officialShortUrl": "https://forms.gle/NEmy3FxYc4f5Dua47",
+      "actualUrl": "https://docs.google.com/forms/d/e/1FAIpQLScV9gD2wo4LBOI5IXqAX6P-Q3UeSwlChvAM3rHAAPtu6vISOA/viewform?usp=send_form",
+      "httpStatus": 200,
+      "method": "Unauthenticated GET; no form interaction or response submission",
+      "htmlSha256": "682f1fb629ad6b490b32fa5933d2181c7593423e8c1d6a881b7b480879c13c9a",
+      "publishedSchemaSha256": "c147a981b7ac908995de8f997ed72a0fe42c959ce19565a3ccda389e6f0a5ae3",
+      "answerFields": 7,
+      "requiredAnswerFields": 5,
+      "optionalAnswerFields": 2,
+      "sectionBreaks": 0,
+      "fieldIdsAndTypes": [
+        {
+          "itemId": 1785256392,
+          "type": 0,
+          "required": true
+        },
+        {
+          "itemId": 1961421820,
+          "type": 0,
+          "required": true
+        },
+        {
+          "itemId": 901451205,
+          "type": 0,
+          "required": false
+        },
+        {
+          "itemId": 2042230237,
+          "type": 0,
+          "required": true
+        },
+        {
+          "itemId": 1436831662,
+          "type": 2,
+          "required": true
+        },
+        {
+          "itemId": 1486340172,
+          "type": 0,
+          "required": false
+        },
+        {
+          "itemId": 1191558517,
+          "type": 4,
+          "required": true
+        }
+      ],
+      "separateEmailCollectionExcludedFromAnswerCount": true
+    },
+    {
+      "kind": "devex",
+      "officialShortUrl": "https://forms.gle/EUQ39xf54GHjC2ys5",
+      "actualUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfBkyWAYZ5JjzzUXRHlRgi7TjAIPUCkxPtV81eJgyBmGfrJiQ/viewform?usp=send_form",
+      "httpStatus": 200,
+      "method": "Unauthenticated GET; no form interaction or response submission",
+      "htmlSha256": "6433db8e86aaaa2a0a3526a8d33c85a11a6c72e74bc0f57e9920656baaaab69f",
+      "publishedSchemaSha256": "f53db75764a1efb55b77a2535debacaed517ac2974fabd7d22e558b5d9721f81",
+      "answerFields": 46,
+      "requiredAnswerFields": 31,
+      "optionalAnswerFields": 15,
+      "sectionBreaks": 7,
+      "fieldIdsAndTypes": [
+        {
+          "itemId": 1154863811,
+          "type": 0,
+          "required": true
+        },
+        {
+          "itemId": 604517169,
+          "type": 0,
+          "required": true
+        },
+        {
+          "itemId": 2109936410,
+          "type": 0,
+          "required": true
+        },
+        {
+          "itemId": 602575789,
+          "type": 4,
+          "required": true
+        },
+        {
+          "itemId": 90240639,
+          "type": 2,
+          "required": true
+        },
+        {
+          "itemId": 753898575,
+          "type": 2,
+          "required": true
+        },
+        {
+          "itemId": 807247059,
+          "type": 2,
+          "required": true
+        },
+        {
+          "itemId": 2064622491,
+          "type": 2,
+          "required": true
+        },
+        {
+          "itemId": 727479063,
+          "type": 2,
+          "required": true
+        },
+        {
+          "itemId": 171080326,
+          "type": 5,
+          "required": true
+        },
+        {
+          "itemId": 602483423,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 433420949,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 1217911436,
+          "type": 2,
+          "required": true
+        },
+        {
+          "itemId": 1395783960,
+          "type": 1,
+          "required": false
+        },
+        {
+          "itemId": 500544053,
+          "type": 5,
+          "required": true
+        },
+        {
+          "itemId": 297079411,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 971091743,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 1043220623,
+          "type": 2,
+          "required": true
+        },
+        {
+          "itemId": 1395108646,
+          "type": 1,
+          "required": false
+        },
+        {
+          "itemId": 370138667,
+          "type": 0,
+          "required": false
+        },
+        {
+          "itemId": 178812745,
+          "type": 5,
+          "required": true
+        },
+        {
+          "itemId": 709494185,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 929803566,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 873110370,
+          "type": 1,
+          "required": false
+        },
+        {
+          "itemId": 611390251,
+          "type": 2,
+          "required": true
+        },
+        {
+          "itemId": 253461125,
+          "type": 1,
+          "required": false
+        },
+        {
+          "itemId": 253846961,
+          "type": 1,
+          "required": false
+        },
+        {
+          "itemId": 1324800182,
+          "type": 1,
+          "required": false
+        },
+        {
+          "itemId": 1797542331,
+          "type": 4,
+          "required": true
+        },
+        {
+          "itemId": 1371074789,
+          "type": 2,
+          "required": true
+        },
+        {
+          "itemId": 1518496689,
+          "type": 1,
+          "required": false
+        },
+        {
+          "itemId": 1422703021,
+          "type": 1,
+          "required": false
+        },
+        {
+          "itemId": 265011794,
+          "type": 1,
+          "required": false
+        },
+        {
+          "itemId": 764663405,
+          "type": 1,
+          "required": false
+        },
+        {
+          "itemId": 114125998,
+          "type": 4,
+          "required": true
+        },
+        {
+          "itemId": 130202043,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 308950238,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 1614310164,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 883584062,
+          "type": 1,
+          "required": false
+        },
+        {
+          "itemId": 654368338,
+          "type": 1,
+          "required": false
+        },
+        {
+          "itemId": 1205508906,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 945597290,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 370626806,
+          "type": 1,
+          "required": true
+        },
+        {
+          "itemId": 648462239,
+          "type": 2,
+          "required": true
+        },
+        {
+          "itemId": 635043737,
+          "type": 1,
+          "required": false
+        },
+        {
+          "itemId": 535372118,
+          "type": 1,
+          "required": false
+        }
+      ],
+      "separateEmailCollectionExcludedFromAnswerCount": true
+    }
+  ],
+  "notDone": [
+    "Form filling",
+    "Login",
+    "Personal or legal declarations",
+    "DevEx final narrative",
+    "Registration or submission POST",
+    "Organizer communication"
+  ],
+  "limitations": [
+    "Published schemas and public GET verified; interactive validation, CAPTCHA, sign-in/submission acceptance and receipts remain untested",
+    "No eligibility certification or issuer trading qualification asserted"
+  ]
+}

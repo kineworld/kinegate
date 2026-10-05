@@ -9,6 +9,7 @@ const patterns=[/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/,/(?:gh[opusr
 let configuredValues=[];
 try { configuredValues=(await readFile(resolve(root,'.env'),'utf8')).split(/\r?\n/).filter(line=>/^(OC_API_KEY|OC_SECRET_KEY)=/.test(line)).map(line=>line.slice(line.indexOf('=')+1).trim()).filter(value=>value.length>=8); } catch(error) { if(error.code!=='ENOENT')throw error; }
 try { const wallet=JSON.parse(await readFile(resolve(root,'evidence/local-api/wallet-readonly.json'),'utf8')); if(typeof wallet.address==='string'&&/^0x[\da-fA-F]{40}$/.test(wallet.address))configuredValues.push(wallet.address); } catch(error) { if(error.code!=='ENOENT')throw error; }
+try { const identity=JSON.parse(await readFile(resolve(root,'evidence/local-api/submission-identity.json'),'utf8')); configuredValues.push(...[identity.contactEmail,identity.binanceApiAccountUID,identity.prizeWallet].filter(value=>typeof value==='string'&&value.length>=8)); } catch(error) { if(error.code!=='ENOENT')throw error; }
 for(const file of files){
   if(/(^|\/)(?:\.env(?:\..*)?|mission\.md|approvals\.md|state\.md|plan\.md)$/.test(file)&&file!=='.env.example')findings.push({file,issue:'Private execution file staged'});
   if(file.startsWith('evidence/local-api/'))findings.push({file,issue:'Private API log staged'});

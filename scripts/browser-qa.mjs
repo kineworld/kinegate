@@ -37,9 +37,35 @@ try {
   await check('Recorded authenticated API replay preserves missing execution evidence',async()=>{await page.click('#read-rwa-replay');await page.waitForFunction(()=>!document.querySelector('#read-rwa-replay').disabled);assert.match(await page.locator('#rwa-inspection-status').innerText(),/REPLAY.*WAIT.*AAPLon/);assert.equal(await page.locator('#rwa-checks li').count(),9);assert.match(await page.locator('#rwa-checks').innerText(),/Amount-bound executable quote.*WAIT/s);await page.screenshot({path:resolve(evidence,'api-replay-desktop.png'),fullPage:true});});
   await check('Successful real quote replay retains actual mode and disables trading',async()=>{await page.click('#read-quote-replay');await page.waitForFunction(()=>!document.querySelector('#read-quote-replay').disabled);assert.match(await page.locator('#quote-evidence-status').innerText(),/REPLAY.*6 USDT.*AAPLon.*LiquidMesh.*SWAP.*Trading disabled/s);assert.match(await page.locator('#quote-evidence-limit').innerText(),/no expiry timestamp or minimum output/);});
   await check('Real off-chain failed simulation is never shown as an execution success',async()=>{await page.click('#read-simulation-replay');await page.waitForFunction(()=>!document.querySelector('#read-simulation-replay').disabled);assert.match(await page.locator('#real-simulation-status').innerText(),/REPLAY.*SIMULATION.*FAILED.*exceeds balance.*No transaction executed/s);const evidence=JSON.parse(await page.locator('#real-simulation-raw').textContent());assert.equal(evidence.walletSignatures,0);assert.equal(evidence.broadcasts,0);});
+  await check('Actual partial SWAP flows through 13 gates with a non-executable bound audit',async()=>{
+    await page.click('#run-observed-preflight');await page.waitForFunction(()=>!document.querySelector('#run-observed-preflight').disabled);
+    assert.match(await page.locator('#observed-status').innerText(),/REPLAY.*BLOCKED.*13 core gates.*Execution disabled/);
+    assert.equal(await page.locator('#observed-checks li').count(),13);
+    assert.match(await page.locator('[data-gate="simulation"]').innerText(),/BLOCK.*FAILED.*exceeds allowance/s);
+    assert.match(await page.locator('[data-gate="liquidity"]').innerText(),/BLOCK.*exact policy boundary.*does not prove on-chain minimum enforcement/s);
+    for(const id of ['cost','spender','quote','reference'])assert.match(await page.locator('[data-gate="'+id+'"]').innerText(),/WAIT/);
+    const wait=page.waitForEvent('download');await page.click('#observed-export');const download=await wait;
+    const auditPath=resolve(evidence,'observed-audit.json');await download.saveAs(auditPath);const audit=JSON.parse(await readFile(auditPath,'utf8'));
+    assert.equal(audit.schema,'kinegate.observed-audit.v1');assert.equal(audit.purpose,'NON_EXECUTABLE_AUDIT');assert.equal(audit.canSign,false);assert.equal(audit.canBroadcast,false);assert.equal(audit.result.executable,false);assert.equal(audit.binding.length,64);
+    assert.equal(audit.evidence.quote.expiresAt,null);assert.equal(audit.evidence.wallet.allowanceAtomic,null);
+    for(const privateField of ['receiver','quoteId','REDACTED'])assert.equal(JSON.stringify(audit).includes(privateField),false);
+  });
+  await check('Observed amount and policy changes invalidate the existing audit without fabricating a quote',async()=>{
+    await page.fill('#observed-amount','7');assert.match(await page.locator('#observed-audit-state').innerText(),/INVALID/);assert.equal(await page.locator('#observed-export').isEnabled(),false);
+    await page.click('#observed-verify');assert.match(await page.locator('#observed-audit-state').innerText(),/INVALID.*changed/);
+    await page.fill('#observed-amount','6');await page.click('#observed-verify');assert.match(await page.locator('#observed-audit-state').innerText(),/INVALID.*rerun/);assert.equal(await page.locator('#observed-export').isEnabled(),false);await page.fill('#observed-amount','7');
+    await page.click('#run-observed-preflight');await page.waitForFunction(()=>!document.querySelector('#run-observed-preflight').disabled);
+    assert.match(await page.locator('[data-gate="budget"]').innerText(),/BLOCK.*does not match/s);
+    assert.equal(JSON.parse(await page.locator('#observed-audit-raw').textContent()).evidence.quote.inputAtomic,'6000000000000000000');
+    await page.check('#observed-stop');assert.match(await page.locator('#observed-audit-state').innerText(),/INVALID/);
+    await page.fill('#observed-amount','6');await page.uncheck('#observed-stop');await page.click('#run-observed-preflight');await page.waitForFunction(()=>!document.querySelector('#run-observed-preflight').disabled);
+    assert.match(await page.locator('#observed-audit-state').innerText(),/VALID HISTORICAL AUDIT/);
+    await page.screenshot({path:resolve(evidence,'observed-preflight-desktop.png'),fullPage:true});
+  });
   await page.click('[data-tab="workspace"]');await page.click('#run-preflight');await page.waitForFunction(()=>!document.querySelector('#run-preflight').disabled);await page.screenshot({path:resolve(evidence,'desktop-yellow.png'),fullPage:true});
   await check('Keyboard input and action reachable',async()=>{await page.locator('#amount').focus();await page.keyboard.press('Tab');assert.notEqual(await page.evaluate(()=>document.activeElement.tagName),'BODY');});
   await check('Narrow-screen workflow, long hash and no horizontal overflow',async()=>{await page.setViewportSize({width:360,height:800});await page.selectOption('#scenario','small');await page.click('#run-preflight');await page.waitForFunction(()=>!document.querySelector('#run-preflight').disabled);assert.equal(await page.locator('#simulate').isEnabled(),true);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(evidence,'mobile-yellow.png'),fullPage:true});});
+  await check('Partial evidence audit remains usable without overflow at 360px',async()=>{await page.click('[data-tab="evidence"]');await page.locator('#observed-preflight').scrollIntoViewIfNeeded();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);assert.equal(await page.locator('#observed-export').isEnabled(),true);await page.screenshot({path:resolve(evidence,'observed-preflight-mobile.png'),fullPage:true});});
   assert.deepEqual(errors,[]);
   await writeFile(resolve(evidence,'browser-qa.json'),JSON.stringify({time:new Date().toISOString(),base,mode:'FIXTURE',tool:'Playwright 1.63.0 + isolated headless Edge on Windows',sampleSize:tests.length,tests,consoleErrors:errors,limitations:'Local product browser flow only; not authenticated API or mainnet execution. Keyboard smoke, not full accessibility certification.'},null,2));
 } finally {await browser.close();}

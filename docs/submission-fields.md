@@ -4,6 +4,8 @@ Read-only verification: 2026-10-05 UTC. Links were obtained from the [official h
 
 Google Forms published HTML and public field definitions were inspected; this is not a successful interactive form run. Web extraction refused Google Forms; in-app browser binding timed out. Required flags below came from published field definitions and were cross-checked against available visible HTML. Field meanings are paraphrased; the live form remains authoritative.
 
+Rechecked 2026-10-05 14:01 UTC via the same official links and fresh public GET. The prior field inventory still matches: registration 7 answer fields (5 required), project 10 (9 required), DevEx 46 (31 required) plus 7 section breaks. Separate Google Forms email collection is excluded from these counts. This is a semantic comparison; no old canonical schema hash was archived. See submission-recheck.md.
+
 ## Official destinations and dependency order
 
 | Purpose | Official link | Actual destination |
@@ -16,17 +18,19 @@ Registration requests creation of the API account/key first at the [developer po
 
 ## Registration
 
+Current preparation: human identity, API account identifier and team choice were supplied privately. Personal competition/API qualification and the bounded budget were already confirmed. The ignored local field pack maps the supplied values to actual entry IDs without opening a prefill URL or sending a response. Final eligibility/legal declarations remain omitted.
+
 | Field meaning | Input | Required | Preparation/owner |
 | --- | --- | --- | --- |
 | Team/project name | Short text | Yes | Working Kine name may change later |
-| Matching contact email | Short text | Yes | Human supplies; reuse consistently |
-| Main contact Telegram | Short text | No | Human supplies optional @handle |
-| Binance UID or email for API-key Binance account | Short text | Yes | Human provides actual account identifier; never secret |
-| Team headcount | Single choice | Yes | Solo, 2, 3, 4, or 5+; human confirms |
+| Matching contact email | Short text | Yes | Supplied privately; mapped consistently, value withheld publicly |
+| Main contact Telegram | Short text | No | Not supplied; optional field omitted |
+| Binance UID or email for API-key Binance account | Short text | Yes | Actual identifier supplied privately and mapped; never expose credentials |
+| Team headcount | Single choice | Yes | Supplied privately and matched to the actual choice |
 | Initial build concept | Short text | No | One-line current product concept |
 | All-member eligibility declaration | Checkbox | Yes | Human confirms citizenship, residence and location for every member; plus applicable-law responsibility |
 
-Do not check the legal/eligibility declaration based on assumptions. The account identifier requirement may need organizer clarification for a wallet-only developer account.
+Do not check the legal/eligibility declaration based on assumptions. The actual API account identifier was supplied privately; no organizer contact is needed merely to prepare that field.
 
 ## Project submission
 
@@ -35,13 +39,13 @@ Do not check the legal/eligibility declaration based on assumptions. The account
 | Google Forms email collection | Email collection | Yes in HTML | Confirm email behavior in live form; no login attempted |
 | Team/project name | Short text | Yes | Final Kine name |
 | Matching contact email | Short text | Yes | Same registered/report contact |
-| Prize-receiving BSC address or Binance UID | Paragraph | Yes | Human supplies authorized address/UID; no private key |
+| Prize-receiving BSC address or Binance UID | Paragraph | Yes | Authorized destination supplied privately and mapped; no private key |
 | Telegram | Short text | No | Optional human @handle |
 | Product, audience, used APIs and stock assets | Paragraph | Yes | Evidence-backed product summary |
 | Applicable track(s) | Checkboxes | Yes | Main tokenized-stock track; Wallet/Skills special; Agent Studio special; select supported claims only |
-| Public code repository | Paragraph | Yes | Public at submission and through judging |
-| Demo video URL | Short text | Yes | At most four minutes, anonymously accessible; actual form makes this required |
-| Deployment URL or runnable judge instructions | Paragraph | Yes | Complete usable instructions; never credentials or wallet secrets |
+| Public code repository | Paragraph | Yes | Current repository is PRIVATE: BLOCKED_BY_VISIBILITY_CHANGE; must be public at submission and through judging |
+| Demo video URL | Short text | Yes | Local 133.816667-second polished artifact exists; historical release URL currently lacks anonymous access after visibility change |
+| Deployment URL or runnable judge instructions | Paragraph | Yes | Current Pages disabled/API404; local run instructions prepared, anonymous deployment access blocked |
 | DevEx completion confirmation | Checkbox | Yes | Only after a real report receipt exists |
 
 The form is one page. The required video field overrides the project's assumption that a video could be skipped; official homepage wording remains inconsistent. The prize identity field accepts a Binance UID as an alternative to the wallet address. A transaction hash is not requested as its own field; include verified evidence in the product/repo where appropriate.
@@ -103,6 +107,6 @@ Required text does not authorize invented experience. Where no failure or trade 
 
 ## Handoff and blockers
 
-Prepare product summary, repo link, deployment/run instructions and video URL automatically. Gather objective API evidence and reproduction steps automatically. Human-owned inputs remain contact identity, account/UID, team size/experience, eligibility, wallet receiving address and the final DevEx answers. Final forms must be reviewed against live fields before any authorized submission.
+Product summary, repository/video references and local run instructions are prepared. Contact identity, account/UID, team choice and prize destination were supplied privately; public null values deliberately withhold them. Personal qualification and bounded budget were already confirmed, so do not repeat those requests. The private registration/project field pack omits final eligibility/legal declarations and the DevEx completion checkbox. Human experience answers, the personally authored final DevEx and actual form receipts remain required. Current repository PRIVATE/Pages disabled state blocks judged public access; historical successful deployment evidence is stale.
 
 Status: NOT_REGISTERED, DEVEX_NOT_SUBMITTED, PROJECT_NOT_SUBMITTED. No receipt exists. Live Google Forms validation, sign-in requirements, CAPTCHA behavior, closed-form handling and subsequent pages were not interactively tested; published definitions are readable without authentication, but that does not prove unauthenticated submission is possible. Do not use this inventory to bypass login or legal confirmations.

@@ -1,9 +1,9 @@
 {
-  "time": "2026-10-05T12:17:41.466Z",
+  "time": "2026-10-05T14:42:41.161Z",
   "base": "http://127.0.0.1:4173",
   "mode": "FIXTURE",
   "tool": "Playwright 1.63.0 + isolated headless Edge on Windows",
-  "sampleSize": 30,
+  "sampleSize": 33,
   "tests": [
     {
       "name": "Fixture banner and no wallet path",
@@ -118,11 +118,23 @@
       "status": "PASS"
     },
     {
+      "name": "Actual partial SWAP flows through 13 gates with a non-executable bound audit",
+      "status": "PASS"
+    },
+    {
+      "name": "Observed amount and policy changes invalidate the existing audit without fabricating a quote",
+      "status": "PASS"
+    },
+    {
       "name": "Keyboard input and action reachable",
       "status": "PASS"
     },
     {
       "name": "Narrow-screen workflow, long hash and no horizontal overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "Partial evidence audit remains usable without overflow at 360px",
       "status": "PASS"
     }
   ],

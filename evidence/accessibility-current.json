@@ -1,0 +1,14 @@
+{
+  "schema": "kinegate.accessibility-status.v1",
+  "verifiedAt": "2026-10-05T14:37:28.055Z",
+  "source": "Authenticated GitHub REST GET /repos/kineworld/kinegate and GET /repos/kineworld/kinegate/pages",
+  "repositoryVisibility": "private",
+  "hasPages": false,
+  "pagesApiStatus": 404,
+  "previousDeploymentEvidence": "evidence/deployment.json",
+  "previousAnonymousEvidenceIsHistorical": true,
+  "currentPublicAccessibility": "BLOCKED_BY_VISIBILITY_CHANGE",
+  "restorePermission": "HUMAN_CLARIFICATION_PENDING",
+  "noVisibilityMutationPerformed": true,
+  "limitation": "Repository metadata and Pages configuration were checked; do not treat old public links or smoke results as current public access."
+}

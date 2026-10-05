@@ -84,11 +84,32 @@ test('FIXTURE unsigned validation refuses RFQ, unknown modes, receiver mismatch,
   assert.deepEqual(validateUnsignedSwap({ executionMode: 'SWAP', rfq: null, tx: { ...tx, signatureData: null } }, receiver), tx);
   for (const value of [{ executionMode: 'RFQ', rfq: { typedDataToSign: {} } }, { executionMode: 'UNKNOWN', tx }, { executionMode: 'SWAP', tx, rfq: {} }, ...[{ from: VERIFIED_ASSETS.AAPLB }, { value: '1' }, { to: '0x' + '0'.repeat(40) }, { data: '0x' }, { data: '0x123' }, { signatureData: ['approval'] }].map(patch => ({ executionMode: 'SWAP', tx: { ...tx, ...patch } }))]) assert.throws(() => validateUnsignedSwap(value, receiver), { code: 'INVALID_UNSIGNED_SWAP' });
 });
+test('FIXTURE unsigned builder validates exact integer-bps slippage before networking', async () => {
+  let calls = 0;
+  const client = createBinanceClient({ key: 'fixture', secret: 'fixture', eligible: true, now, fetchFn: async () => { calls++; return fixture({ executionMode: 'SWAP' }); } });
+  const input = { amount: '6000000000000000000', fromTokenAddress: '0x55d398326f99059fF775485246999027B3197955', toTokenAddress: VERIFIED_ASSETS.AAPLon, userWalletAddress: '0x0000000000000000000000000000000000000002', quoteId: 'fixture', slippagePercent: '0.49', approveTransaction: 'false' };
+  for (const slippagePercent of ['0', '0.0', '0.00', '0.51', '0.5001', '1', '-0.49', '+0.49', '.49', '00.49', '0.490', '4.9e-1', '5E-1', ' 0.49', '0.49 ', '0.5\n', '0.49\r\n', 'NaN', '', 0.49, null, undefined]) assert.throws(() => client.buildSwap({ ...input, slippagePercent }), { code: 'INVALID_BUILD_INPUT' });
+  assert.equal(calls, 0);
+  for (const slippagePercent of ['0.01', '0.05', '0.1', '0.10', '0.49', '0.5', '0.50']) await client.buildSwap({ ...input, slippagePercent });
+  assert.equal(calls, 7);
+});
+test('FIXTURE 0.49 percent preserves supplied query bytes, HMAC coverage and bounded builder surface', async () => {
+  const calls = [];
+  const client = createBinanceClient({ key: 'fixture', secret: 'fixture-secret', eligible: true, now, fetchFn: async (url, options) => { calls.push({ url, options }); return fixture({ executionMode: 'SWAP' }); } });
+  const input = { amount: '6000000000000000000', fromTokenAddress: '0x55d398326f99059fF775485246999027B3197955', toTokenAddress: VERIFIED_ASSETS.AAPLon, userWalletAddress: '0x0000000000000000000000000000000000000002', quoteId: 'fixture+quote/id=', slippagePercent: '0.49', approveTransaction: 'false' };
+  await client.buildSwap({ ...input, binanceChainId: '1', gas: '999999999', gasPrice: '1', sign: 'true', approveTransactionData: '0x1234' });
+  const path = '/build/api/v1/dex/aggregator/swap?binanceChainId=56&amount=6000000000000000000&fromTokenAddress=0x55d398326f99059fF775485246999027B3197955&toTokenAddress=' + VERIFIED_ASSETS.AAPLon + '&userWalletAddress=0x0000000000000000000000000000000000000002&quoteId=fixture%2Bquote%2Fid%3D&slippagePercent=0.49&approveTransaction=false';
+  assert.equal(calls.length, 1);assert.equal(calls[0].url, 'https://web3.binance.com' + path);
+  const expected = createHmac('sha256', 'fixture-secret').update(now().toISOString() + 'GET' + path, 'utf8').digest('base64');
+  assert.equal(calls[0].options.headers['X-OC-SIGN'], expected);assert.equal(calls[0].options.method, 'GET');assert.equal(calls[0].options.body, undefined);
+  assert.deepEqual(Object.fromEntries(new URL(calls[0].url).searchParams), { binanceChainId: '56', ...input });
+  await client.buildSwap({ ...input, slippagePercent: '0.50' });assert.match(calls[1].url, /slippagePercent=0\.50&/);
+});
 test('FIXTURE quote and unsigned builder never automatically repeat a short-lived input', async () => {
   let calls = 0; const responses = [];
   const client = createBinanceClient({ key: 'fixture', secret: 'fixture', eligible: true, onResponse: (endpoint, result) => { responses.push({ endpoint, result }); }, fetchFn: async () => { calls++; return new Response(JSON.stringify({ code: 50000, data: null }), { status: 500 }); } });
   const pair = { amount: '6000000000000000000', fromTokenAddress: '0x55d398326f99059fF775485246999027B3197955', toTokenAddress: VERIFIED_ASSETS.AAPLon, userWalletAddress: '0x0000000000000000000000000000000000000002' };
   await assert.rejects(client.quote(pair), { code: 'UPSTREAM_UNAVAILABLE' });
-  await assert.rejects(client.buildSwap({ ...pair, quoteId: 'fixture', slippagePercent: '0.5', approveTransaction: 'false' }), { code: 'UPSTREAM_UNAVAILABLE' });
+  await assert.rejects(client.buildSwap({ ...pair, quoteId: 'fixture', slippagePercent: '0.49', approveTransaction: 'false' }), { code: 'UPSTREAM_UNAVAILABLE' });
   assert.equal(calls, 2); assert.equal(responses.length, 2); assert.equal(responses[1].result.code, 50000);
 });

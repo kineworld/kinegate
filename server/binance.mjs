@@ -145,10 +145,13 @@ export function createBinanceClient(options = {}) {
     /** Narrow CLI only: unsigned 6 USDT -> AAPLon payload, never approval calldata or signing.
      * @param {{amount:string,fromTokenAddress:string,toTokenAddress:string,userWalletAddress:string,quoteId:string,slippagePercent:string,approveTransaction:string}} input */
     buildSwap: input => {
+      // A percent with at most two decimal places maps exactly to integer basis points.
+      const slippage = typeof input.slippagePercent === 'string' ? /^0\.([0-9]{1,2})$/.exec(input.slippagePercent) : null;
+      const slippageBps = slippage && slippage[0] === input.slippagePercent ? Number(slippage[1].padEnd(2, '0')) : 0;
       if (input.amount !== '6000000000000000000' || input.fromTokenAddress.toLowerCase() !== '0x55d398326f99059ff775485246999027b3197955' || input.toTokenAddress.toLowerCase() !== VERIFIED_ASSETS.AAPLon.toLowerCase()
         || !/^0x[\da-fA-F]{40}$/.test(input.userWalletAddress) || /^0x0{40}$/i.test(input.userWalletAddress)
-        || !/^[\x21-\x7e]{1,512}$/.test(input.quoteId) || input.slippagePercent !== '0.5' || input.approveTransaction !== 'false') throw new ApiError('INVALID_BUILD_INPUT', 'Unsigned building is limited to 6 USDT to current AAPLon with 0.5% slippage and approval disabled.', 400);
-      return request('GET', '/api/v1/dex/aggregator/swap', { binanceChainId: '56', amount: input.amount, fromTokenAddress: input.fromTokenAddress, toTokenAddress: input.toTokenAddress, userWalletAddress: input.userWalletAddress, quoteId: input.quoteId, slippagePercent: '0.5', approveTransaction: 'false' });
+        || !/^[\x21-\x7e]{1,512}$/.test(input.quoteId) || slippageBps <= 0 || slippageBps > 50 || input.approveTransaction !== 'false') throw new ApiError('INVALID_BUILD_INPUT', 'Unsigned building is limited to 6 USDT to current AAPLon with positive slippage up to 0.5% (at most two decimal places) and approval disabled.', 400);
+      return request('GET', '/api/v1/dex/aggregator/swap', { binanceChainId: '56', amount: input.amount, fromTokenAddress: input.fromTokenAddress, toTokenAddress: input.toTokenAddress, userWalletAddress: input.userWalletAddress, quoteId: input.quoteId, slippagePercent: input.slippagePercent, approveTransaction: 'false' });
     },
     /** CLI only, never RFQ typed data. @param {{from:string,to:string,value:string,data:string}} evmTx */
     simulate: evmTx => {

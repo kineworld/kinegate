@@ -1,0 +1,254 @@
+{
+  "schema": "kinegate.observed-audit.v1",
+  "evidence": {
+    "asset": {
+      "address": "0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4",
+      "chainId": 56,
+      "decimals": 18,
+      "issuer": "ondo",
+      "ticker": "AAPLon",
+      "verified": true
+    },
+    "builder": {
+      "executionMode": "SWAP",
+      "gas": "450000",
+      "gasPrice": "56468444",
+      "minOutputAtomic": "17978270924102419",
+      "slippagePercent": "0.5",
+      "target": "0xb44446b0c8e56988c34f7ff73ae904982b5fdda5"
+    },
+    "calls": [
+      {
+        "businessCode": 0,
+        "endpoint": "/api/v1/dex/aggregator/quote",
+        "httpStatus": 200,
+        "timestamp": "2026-10-05T12:38:41.930Z"
+      },
+      {
+        "businessCode": 0,
+        "endpoint": "/api/v1/dex/aggregator/swap",
+        "httpStatus": 200,
+        "timestamp": "2026-10-05T12:38:44.946Z"
+      },
+      {
+        "businessCode": 0,
+        "endpoint": "/api/v1/dex/pre-transaction/simulate",
+        "httpStatus": 200,
+        "timestamp": "2026-10-05T12:38:47.225Z"
+      }
+    ],
+    "canBroadcast": false,
+    "canSign": false,
+    "chainObservations": [
+      {
+        "block": "0x7808a02",
+        "chainId": "0x38",
+        "codePresent": true,
+        "contract": "0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4",
+        "decimals": 18,
+        "decimalsResult": "0x0000000000000000000000000000000000000000000000000000000000000012",
+        "symbol": "AAPLon",
+        "symbolResult": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000064141504c6f6e0000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "block": "0x7808c33",
+        "chainId": "0x38",
+        "codePresent": true,
+        "contract": "0x55d398326f99059ff775485246999027b3197955",
+        "decimals": 18,
+        "decimalsResult": "0x0000000000000000000000000000000000000000000000000000000000000012",
+        "symbol": "USDT",
+        "symbolResult": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000045553445400000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "executed": false,
+    "input": {
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "decimals": 18,
+      "symbol": "USDT",
+      "verified": true
+    },
+    "market": {
+      "independentObservedAt": null,
+      "independentPrice": null,
+      "recordedStatus": "premarket"
+    },
+    "mode": "REPLAY",
+    "provenance": [
+      {
+        "acquiredAt": "2026-10-05T12:38:49.696Z",
+        "path": "evidence/devex/unsigned-swap-allowance-validation.json"
+      },
+      {
+        "acquiredAt": "2026-10-05T12:00:13.194Z",
+        "path": "evidence/devex/authenticated-rwa.json"
+      },
+      {
+        "acquiredAt": "2026-10-05T12:00:43.5207534+00:00",
+        "path": "evidence/mainnet/current-api-asset-readonly.json"
+      },
+      {
+        "acquiredAt": "2026-10-05T12:04:58.5898832+00:00",
+        "path": "evidence/mainnet/settlement-usdt-readonly.json"
+      }
+    ],
+    "quote": {
+      "estimateGasFee": "450000",
+      "executionMode": "SWAP",
+      "expiresAt": null,
+      "feeCurrency": null,
+      "gasFeeCurrency": null,
+      "inputAtomic": "6000000000000000000",
+      "observedAt": "2026-10-05T12:38:41.930Z",
+      "outputAtomic": "18068613994072783",
+      "priceImpactPercent": "0.0039064023",
+      "tradeFee": "0.02408534",
+      "vendor": "LiquidMesh"
+    },
+    "requestedChainId": "56",
+    "requestedInputAtomic": "6000000000000000000",
+    "schema": "kinegate.observed-swap.v1",
+    "simulation": {
+      "effectsAuthenticated": false,
+      "reason": "execution reverted: BEP20: transfer amount exceeds allowance",
+      "status": "FAILED"
+    },
+    "sourceValid": true,
+    "wallet": {
+      "allowanceAtomic": null,
+      "approvedSpender": null,
+      "balanceAtomic": null,
+      "eligibility": null,
+      "gasBalance": null
+    }
+  },
+  "intent": {
+    "address": "0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4",
+    "chainId": 56,
+    "inputAtomic": "6000000000000000000",
+    "issuer": "ondo",
+    "rightsAcknowledged": false
+  },
+  "policy": {
+    "allowClosed": false,
+    "approvedAssets": [
+      "56:ondo:0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4"
+    ],
+    "approvedSpenders": [],
+    "maxCostMicros": "2000000",
+    "maxImpactBps": 100,
+    "maxQuoteAgeMs": 30000,
+    "maxReferenceAgeMs": 300000,
+    "maxSlippageBps": 50,
+    "maxSpendAtomic": "6000000000000000000",
+    "stopped": false
+  },
+  "createdAt": 1791211357859,
+  "result": {
+    "status": "BLOCKED",
+    "checks": [
+      {
+        "id": "stop",
+        "label": "Stop switch",
+        "status": "PASS",
+        "detail": "Policy stop switch is off.",
+        "next": "Verified in the historical record; no execution permission."
+      },
+      {
+        "id": "transport",
+        "label": "Evidence available",
+        "status": "PASS",
+        "detail": "Historical quote → unsigned SWAP → simulation records; acquisition time is not quote expiry.",
+        "next": "Verified in the historical record; no execution permission."
+      },
+      {
+        "id": "identity",
+        "label": "Issuer-bound identity",
+        "status": "PASS",
+        "detail": "BSC / Ondo / AAPLon and Binance-Peg USDT: exact recorded contracts and chain-read decimals.",
+        "next": "Verified in the historical record; no execution permission."
+      },
+      {
+        "id": "rights",
+        "label": "Rights reviewed",
+        "status": "WAIT",
+        "detail": "Personal acknowledgement only; AAPLon is not direct Apple stock ownership.",
+        "next": "Read issuer terms and acknowledge this representation."
+      },
+      {
+        "id": "eligibility",
+        "label": "Asset access permission",
+        "status": "WAIT",
+        "detail": "No current personal eligibility evidence is present.",
+        "next": "Confirm eligibility personally."
+      },
+      {
+        "id": "budget",
+        "label": "Spend cap & balance",
+        "status": "WAIT",
+        "detail": "6-USDT quote amount matches the intention and cap; current balance is unknown.",
+        "next": "Obtain current permitted-wallet balance."
+      },
+      {
+        "id": "quote",
+        "label": "Quote clock",
+        "status": "WAIT",
+        "detail": "Historical quote acquired 2026-10-05T12:38:41.930Z; no source expiry was captured.",
+        "next": "Fetch a fresh quote with documented validity."
+      },
+      {
+        "id": "reference",
+        "label": "Independent reference clock",
+        "status": "WAIT",
+        "detail": "RWA referencePrice is derived from token price; no independent stock quote is bound.",
+        "next": "Obtain independently timestamped underlying-market evidence."
+      },
+      {
+        "id": "market",
+        "label": "Market state",
+        "status": "WAIT",
+        "detail": "Historical API context: premarket. It does not establish current stock-market freshness.",
+        "next": "Refresh market context; a closed-session policy exception still needs fresh reference evidence."
+      },
+      {
+        "id": "liquidity",
+        "label": "Liquidity & minimum received",
+        "status": "BLOCK",
+        "detail": "Declared unsigned-builder minimum: 17978270924102419 atomic AAPLon; slippage 0.5%; impact 0.0039064023%. Known numeric fields violate the exact policy boundary; no floor-rounding tolerance. This does not prove on-chain minimum enforcement.",
+        "next": "Require complete, policy-bounded numerical fields and independently verify actual payload enforcement; this replay is not live liquidity."
+      },
+      {
+        "id": "cost",
+        "label": "Fees & gas cap",
+        "status": "WAIT",
+        "detail": "tradeFee 0.02408534 / estimateGasFee 450000: currency and USD conversion were not established.",
+        "next": "Verify fee units, conversion and current gas balance."
+      },
+      {
+        "id": "spender",
+        "label": "Vendor & exact allowance",
+        "status": "WAIT",
+        "detail": "Vendor LiquidMesh; builder target 0xb44446b0c8e56988c34f7ff73ae904982b5fdda5 is not an approved allowance spender. Current allowance is unknown.",
+        "next": "Independently verify the exact spender and bounded allowance."
+      },
+      {
+        "id": "simulation",
+        "label": "Transaction effects",
+        "status": "BLOCK",
+        "detail": "Recorded off-chain simulation FAILED: execution reverted: BEP20: transfer amount exceeds allowance. No transaction executed.",
+        "next": "Resolve the failure and re-simulate the exact authorized payload."
+      }
+    ],
+    "checkedAt": 1791211357859,
+    "mode": "REPLAY",
+    "canSign": false,
+    "canBroadcast": false,
+    "executable": false
+  },
+  "mode": "REPLAY",
+  "purpose": "NON_EXECUTABLE_AUDIT",
+  "executed": false,
+  "canSign": false,
+  "canBroadcast": false,
+  "binding": "595e48afa37ca2e372ad682f1fb362095a8cb99cef7c2ce627d2ccd88f0c938a"
+}

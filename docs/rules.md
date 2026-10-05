@@ -2,6 +2,8 @@
 
 Verified on 2026-10-05, starting at 11:20:48 UTC (19:20:48 Asia/Shanghai). This is a sourced rule checklist, not an eligibility certification or the final DevEx report.
 
+Rechecked 2026-10-05 14:01 UTC: deadline, repository freeze, scoring and AI/DevEx rules remain as summarized below. Actual public form schemas were re-read; see [recheck](submission-recheck.md) and evidence/submission-recheck-2026-10-05.json. Initial blocker observations below describe the original rules review; current project readiness is tracked in submission-audit.md. No final legal declaration or submission was made.
+
 ## Source register
 
 | ID | Official source | Access and scope |
