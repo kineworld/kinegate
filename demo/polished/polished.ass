@@ -1,0 +1,77 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 0
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Segoe UI,32,&H00EFECEA,&H000000FF,&H00201A18,&HCC11100B,0,0,0,0,100,100,0,0,1,2,0,2,150,150,57,1
+Style: Chapter,Segoe UI,28,&H00EFECEA,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,300,50,28,1
+Style: Mode,Consolas,22,&H000BB9F0,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,9,50,40,34,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.58,0:00:10.59,Chapter,,0,0,0,,{\fad(220,220)}Evidence before action
+Dialogue: 1,0:00:00.58,0:00:10.59,Mode,,0,0,0,,{\fad(220,220)}FIXTURE / LOCAL SIMULATION
+Dialogue: 2,0:00:00.58,0:00:06.52,Caption,,0,0,0,,{\fad(100,100)}Stock tokens look familiar. But a ticker and a good price don't tell you what you're buying.
+Dialogue: 2,0:00:06.52,0:00:08.62,Caption,,0,0,0,,{\fad(100,100)}This is KineGate, with synthetic narration.
+Dialogue: 1,0:00:10.59,0:00:17.72,Chapter,,0,0,0,,{\fad(220,220)}Know the mode
+Dialogue: 1,0:00:10.59,0:00:17.72,Mode,,0,0,0,,{\fad(220,220)}FIXTURE / LOCAL SIMULATION
+Dialogue: 2,0:00:10.59,0:00:14.27,Caption,,0,0,0,,{\fad(100,100)}You're seeing the actual product. These examples are fixtures.
+Dialogue: 2,0:00:14.27,0:00:17.54,Caption,,0,0,0,,{\fad(100,100)}The external API evidence is a recorded replay.
+Dialogue: 1,0:00:17.72,0:00:26.99,Chapter,,0,0,0,,{\fad(220,220)}One exact intention
+Dialogue: 1,0:00:17.72,0:00:26.99,Mode,,0,0,0,,{\fad(220,220)}FIXTURE / LOCAL SIMULATION
+Dialogue: 2,0:00:17.72,0:00:24.21,Caption,,0,0,0,,{\fad(100,100)}Start with fifty dollars. KineGate checks this exact issuer, amount, permission, and route,
+Dialogue: 2,0:00:24.21,0:00:25.71,Caption,,0,0,0,,{\fad(100,100)}before any action.
+Dialogue: 1,0:00:26.99,0:00:35.05,Chapter,,0,0,0,,{\fad(220,220)}Bind every reviewed input
+Dialogue: 1,0:00:26.99,0:00:35.05,Mode,,0,0,0,,{\fad(220,220)}FIXTURE / LOCAL SIMULATION
+Dialogue: 2,0:00:26.99,0:00:31.32,Caption,,0,0,0,,{\fad(100,100)}That decision gets a receipt. Every reviewed input is bound together.
+Dialogue: 2,0:00:31.32,0:00:34.87,Caption,,0,0,0,,{\fad(100,100)}Change the inputs, and the receipt no longer applies.
+Dialogue: 1,0:00:35.05,0:00:41.63,Chapter,,0,0,0,,{\fad(220,220)}Local simulation only
+Dialogue: 1,0:00:35.05,0:00:41.63,Mode,,0,0,0,,{\fad(220,220)}FIXTURE / LOCAL SIMULATION
+Dialogue: 2,0:00:35.05,0:00:37.46,Caption,,0,0,0,,{\fad(100,100)}The local simulation is recorded once.
+Dialogue: 2,0:00:37.46,0:00:39.87,Caption,,0,0,0,,{\fad(100,100)}It sends nothing to the blockchain.
+Dialogue: 1,0:00:41.63,0:00:50.27,Chapter,,0,0,0,,{\fad(220,220)}An edit invalidates the receipt
+Dialogue: 1,0:00:41.63,0:00:50.27,Mode,,0,0,0,,{\fad(220,220)}FIXTURE / LOCAL SIMULATION
+Dialogue: 2,0:00:41.63,0:00:45.55,Caption,,0,0,0,,{\fad(100,100)}Now change the amount. The old receipt turns invalid.
+Dialogue: 2,0:00:45.55,0:00:48.16,Caption,,0,0,0,,{\fad(100,100)}We don't quietly manufacture another quote.
+Dialogue: 1,0:00:50.27,0:00:58.95,Chapter,,0,0,0,,{\fad(220,220)}Market clocks matter
+Dialogue: 1,0:00:50.27,0:00:58.95,Mode,,0,0,0,,{\fad(220,220)}FIXTURE / LOCAL SIMULATION
+Dialogue: 2,0:00:50.27,0:00:53.49,Caption,,0,0,0,,{\fad(100,100)}Over the weekend, the displayed price may be stale.
+Dialogue: 2,0:00:53.49,0:00:57.42,Caption,,0,0,0,,{\fad(100,100)}This case waits for fresh evidence, rather than trusting the gap.
+Dialogue: 1,0:00:58.95,0:01:06.07,Chapter,,0,0,0,,{\fad(220,220)}Issuer-specific rights
+Dialogue: 1,0:00:58.95,0:01:06.07,Mode,,0,0,0,,{\fad(220,220)}FIXTURE / LOCAL SIMULATION
+Dialogue: 2,0:00:58.95,0:01:02.34,Caption,,0,0,0,,{\fad(100,100)}The same ticker can name a different issuer's claim.
+Dialogue: 2,0:01:02.34,0:01:04.97,Caption,,0,0,0,,{\fad(100,100)}Those rights can't be treated as interchangeable.
+Dialogue: 1,0:01:06.07,0:01:14.79,Chapter,,0,0,0,,{\fad(220,220)}Receipts expire
+Dialogue: 1,0:01:06.07,0:01:14.79,Mode,,0,0,0,,{\fad(220,220)}FIXTURE / LOCAL SIMULATION
+Dialogue: 2,0:01:06.07,0:01:12.06,Caption,,0,0,0,,{\fad(100,100)}Time matters, too. Advance this virtual clock by a minute, and the receipt expires.
+Dialogue: 2,0:01:12.06,0:01:14.21,Caption,,0,0,0,,{\fad(100,100)}Fresh evidence is needed again.
+Dialogue: 1,0:01:14.79,0:01:24.38,Chapter,,0,0,0,,{\fad(220,220)}The same sixteen fixtures
+Dialogue: 1,0:01:14.79,0:01:24.38,Mode,,0,0,0,,{\fad(220,220)}FIXTURE / AUTHORED BASELINE
+Dialogue: 2,0:01:14.79,0:01:19.02,Caption,,0,0,0,,{\fad(100,100)}We tested both approaches on the same sixteen fixtures.
+Dialogue: 2,0:01:19.02,0:01:22.32,Caption,,0,0,0,,{\fad(100,100)}The price-only shortcut missed thirteen unsafe cases.
+Dialogue: 2,0:01:22.32,0:01:24.20,Caption,,0,0,0,,{\fad(100,100)}KineGate blocked all thirteen.
+Dialogue: 1,0:01:24.38,0:01:34.16,Chapter,,0,0,0,,{\fad(220,220)}Read-only API evidence
+Dialogue: 1,0:01:24.38,0:01:34.16,Mode,,0,0,0,,{\fad(220,220)}REPLAY / READ-ONLY ACQUISITION
+Dialogue: 2,0:01:24.38,0:01:29.18,Caption,,0,0,0,,{\fad(100,100)}Now the real integration evidence. Four recorded Binance calls succeeded.
+Dialogue: 2,0:01:29.18,0:01:33.98,Caption,,0,0,0,,{\fad(100,100)}The issuer and contract match. Missing execution evidence stays unresolved.
+Dialogue: 1,0:01:34.16,0:01:43.81,Chapter,,0,0,0,,{\fad(220,220)}A recorded quote
+Dialogue: 1,0:01:34.16,0:01:43.81,Mode,,0,0,0,,{\fad(220,220)}REPLAY / READ-ONLY ACQUISITION
+Dialogue: 2,0:01:34.16,0:01:36.90,Caption,,0,0,0,,{\fad(100,100)}This six dollar quote was actually returned.
+Dialogue: 2,0:01:36.90,0:01:41.98,Caption,,0,0,0,,{\fad(100,100)}But it is historical evidence, not a current offer, or authorization to trade.
+Dialogue: 1,0:01:43.81,0:01:52.43,Chapter,,0,0,0,,{\fad(220,220)}A failed real simulation
+Dialogue: 1,0:01:43.81,0:01:52.43,Mode,,0,0,0,,{\fad(220,220)}REPLAY / READ-ONLY ACQUISITION
+Dialogue: 2,0:01:43.81,0:01:47.71,Caption,,0,0,0,,{\fad(100,100)}The real off-chain simulation failed: insufficient balance.
+Dialogue: 2,0:01:47.71,0:01:52.16,Caption,,0,0,0,,{\fad(100,100)}The transaction was never approved, signed, or broadcast.
+Dialogue: 1,0:01:52.43,0:01:59.97,Chapter,,0,0,0,,{\fad(220,220)}Existence is not settlement
+Dialogue: 1,0:01:52.43,0:01:59.97,Mode,,0,0,0,,{\fad(220,220)}REPLAY / READ-ONLY ACQUISITION
+Dialogue: 2,0:01:52.43,0:01:56.59,Caption,,0,0,0,,{\fad(100,100)}A pinned-block read confirms the token contract and its decimals.
+Dialogue: 2,0:01:56.59,0:01:59.51,Caption,,0,0,0,,{\fad(100,100)}That proves existence, not a settled trade.
+Dialogue: 1,0:01:59.97,0:02:06.52,Chapter,,0,0,0,,{\fad(220,220)}Settlement remains unverified
+Dialogue: 1,0:01:59.97,0:02:06.52,Mode,,0,0,0,,{\fad(220,220)}REPLAY / READ-ONLY ACQUISITION
+Dialogue: 2,0:01:59.97,0:02:02.79,Caption,,0,0,0,,{\fad(100,100)}Settlement is unverified. Signing needs permission.
+Dialogue: 2,0:02:02.79,0:02:05.61,Caption,,0,0,0,,{\fad(100,100)}A human must write the report.
+Dialogue: 1,0:02:06.52,0:02:13.68,Chapter,,0,0,0,,{\fad(220,220)}Inspect it without a wallet
+Dialogue: 1,0:02:06.52,0:02:13.68,Mode,,0,0,0,,{\fad(220,220)}REPLAY / READ-ONLY ACQUISITION
+Dialogue: 2,0:02:06.52,0:02:11.64,Caption,,0,0,0,,{\fad(100,100)}Try it without a wallet. Inspect the receipts, tests, and limits.
+Dialogue: 2,0:02:11.64,0:02:13.50,Caption,,0,0,0,,{\fad(100,100)}KineGate. Evidence before action.

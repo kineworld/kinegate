@@ -1,0 +1,107 @@
+{
+  "schema": "kinegate.router-research-status.v1",
+  "mode": "SOURCE_AND_LOCAL_ANALYSIS",
+  "readOnly": true,
+  "recordedAt": "2026-10-05T13:10:47.0979384Z",
+  "recordedAtMeaning": "Actual file save time after source reads and local analysis, not API or chain data freshness",
+  "target": "0xB44446b0c8E56988c34f7Ff73Ae904982b5FdDA5",
+  "facet": "0xa9fa1b56f4d7bd25375c2d40b4c8e36a9509e603",
+  "findings": {
+    "proxySource": "Diamond source retrieved through documented Sourcify v2, Ethereum same-address deployment",
+    "localCompilation": "Official compiler binary SHA256 checked; all 127 execution-code bytes match BSC; 53 CBOR bytes differ; not a full metadata match",
+    "storageNamespace": "com.binance.w3w.diamond.storage",
+    "baseSelectorRead": "Base same router/same selector storage points to same a9fa facet, read through the documented official Base RPC",
+    "facetVerifiedSource": false,
+    "facetVerifiedAbi": false,
+    "candidateEncodingSignature": null,
+    "errorSelector": "0x1425ea42",
+    "upstreamErrorName": "FailedInnerCall()",
+    "rootCauseDetermined": false,
+    "executionReadyEstablishedByThisResearch": false
+  },
+  "sourceReads": [
+    {
+      "url": "https://sourcify.dev/server/v2/contract/1/0xB44446b0c8E56988c34f7Ff73Ae904982b5FdDA5?fields=all",
+      "httpStatus": 200,
+      "result": "Diamond sources, standard JSON input, ABI and bytecode obtained"
+    },
+    {
+      "url": "https://etherscan.io/address/0xb44446b0c8e56988c34f7ff73ae904982b5fdda5#code",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://basescan.org/address/0xb44446b0c8e56988c34f7ff73ae904982b5fdda5#code",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://sourcify.dev/server/v2/contract/56/0xa9fa1b56f4d7bd25375c2d40b4c8e36a9509e603?fields=all",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://sourcify.dev/server/v2/contract/1/0xa9fa1b56f4d7bd25375c2d40b4c8e36a9509e603?fields=all",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://sourcify.dev/server/v2/contract/8453/0xa9fa1b56f4d7bd25375c2d40b4c8e36a9509e603?fields=all",
+      "httpStatus": 404
+    },
+    {
+      "url": "https://etherscan.io/address/0xa9fa1b56f4d7bd25375c2d40b4c8e36a9509e603#code",
+      "httpStatus": 200,
+      "result": "Explorer explicitly lists contract as Unverified"
+    },
+    {
+      "url": "https://basescan.org/address/0xa9fa1b56f4d7bd25375c2d40b4c8e36a9509e603#code",
+      "httpStatus": 200,
+      "result": "Explorer explicitly lists contract as Unverified"
+    },
+    {
+      "url": "https://etherscan.io/find-similar-contracts?a=0xa9fa1b56f4d7bd25375c2d40b4c8e36a9509e603&m=exact&verified=1",
+      "httpStatus": 403,
+      "result": "No retry or bypass"
+    },
+    {
+      "url": "https://basescan.org/find-similar-contracts?a=0xa9fa1b56f4d7bd25375c2d40b4c8e36a9509e603&m=exact&verified=1",
+      "httpStatus": 403,
+      "result": "No retry or bypass"
+    },
+    {
+      "url": "https://api.4byte.sourcify.dev/signature-database/v1/lookup?function=0xad43f73d&filter=true",
+      "httpStatus": 200,
+      "result": "No signature candidate"
+    },
+    {
+      "url": "https://api.routescan.io/v2/network/mainnet/evm/56/etherscan/api?module=contract&action=getsourcecode&address=0xa9fa1b56f4d7bd25375c2d40b4c8e36a9509e603",
+      "httpStatus": 200,
+      "result": "Business response chain not supported, not source retrieval success"
+    },
+    {
+      "url": "https://sourcify.dev/server/v2/contract/1/0x3d90f66B534Dd8482b181e24655A9e8265316BE9?fields=all",
+      "httpStatus": 200,
+      "result": "Official LiquidMesh router proxy source obtained; does not provide active implementation ABI"
+    },
+    {
+      "url": "https://etherscan.io/address/0x91a15f65366658a26d02ea649c3f509018a53cf5#code",
+      "httpStatus": 200,
+      "result": "Ethereum LiquidMesh implementation explicitly unverified"
+    },
+    {
+      "url": "https://sourcify.dev/server/v2/contract/56/0xc3460c075f5d8effae3a587aa83d633c7be86b46?fields=all",
+      "httpStatus": 404,
+      "result": "BSC current LiquidMesh implementation source unavailable"
+    }
+  ],
+  "apiMigrationSource": "https://docs.sourcify.dev/docs/api/",
+  "errorDefinitionSource": "https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v5.0.1/contracts/utils/Address.sol",
+  "artifacts": [
+    "evidence/devex/router-source-verification.json",
+    "evidence/devex/router-facet-research.json",
+    "evidence/devex/source-excerpts/binance-diamond/src/Diamond.sol"
+  ],
+  "limitations": [
+    "Verified cross-chain proxy execution code resolves the dispatcher identity, not the selected facet source or ABI.",
+    "Calldata head word equality is not proof of token spending, recipient behavior or enforced minimum output.",
+    "FailedInnerCall() identifies a generic empty-revert inner call; gas exhaustion and other causes remain unconfirmed in this research.",
+    "No new Binance quote/build/simulate, API credentials read, wallet signing, real approval or broadcast."
+  ]
+}

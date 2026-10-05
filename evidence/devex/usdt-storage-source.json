@@ -1,0 +1,121 @@
+{
+  "schema": "kinegate.usdt-storage-source.v1",
+  "mode": "VERIFIED_SOURCE_LOOKUP",
+  "readOnly": true,
+  "recordedAt": "2026-10-05T13:12:00.4071456Z",
+  "chainId": 56,
+  "contract": "0x55d398326f99059fF775485246999027B3197955",
+  "sourceUrl": "https://sourcify.dev/server/v2/contract/56/0x55d398326f99059fF775485246999027B3197955?fields=all",
+  "httpStatus": 200,
+  "contractName": "BEP20USDT",
+  "compilerVersion": "0.5.16+commit.9c3226ce",
+  "sourcifyRuntimeMatch": "match",
+  "sourceVerifiedAt": "2024-08-08T12:32:05Z",
+  "storageLayout": {
+    "types": {
+      "t_uint8": {
+        "label": "uint8",
+        "encoding": "inplace",
+        "numberOfBytes": "1"
+      },
+      "t_address": {
+        "label": "address",
+        "encoding": "inplace",
+        "numberOfBytes": "20"
+      },
+      "t_uint256": {
+        "label": "uint256",
+        "encoding": "inplace",
+        "numberOfBytes": "32"
+      },
+      "t_string_storage": {
+        "label": "string",
+        "encoding": "bytes",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "value": "t_uint256",
+        "encoding": "mapping",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+        "key": "t_address",
+        "label": "mapping(address => mapping(address => uint256))",
+        "value": "t_mapping(t_address,t_uint256)",
+        "encoding": "mapping",
+        "numberOfBytes": "32"
+      }
+    },
+    "storage": [
+      {
+        "slot": "0",
+        "type": "t_address",
+        "astId": 302,
+        "label": "_owner",
+        "offset": 0,
+        "contract": "BEP20USDT.sol:BEP20USDT"
+      },
+      {
+        "slot": "1",
+        "type": "t_mapping(t_address,t_uint256)",
+        "astId": 417,
+        "label": "_balances",
+        "offset": 0,
+        "contract": "BEP20USDT.sol:BEP20USDT"
+      },
+      {
+        "slot": "2",
+        "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+        "astId": 423,
+        "label": "_allowances",
+        "offset": 0,
+        "contract": "BEP20USDT.sol:BEP20USDT"
+      },
+      {
+        "slot": "3",
+        "type": "t_uint256",
+        "astId": 425,
+        "label": "_totalSupply",
+        "offset": 0,
+        "contract": "BEP20USDT.sol:BEP20USDT"
+      },
+      {
+        "slot": "4",
+        "type": "t_uint8",
+        "astId": 427,
+        "label": "_decimals",
+        "offset": 0,
+        "contract": "BEP20USDT.sol:BEP20USDT"
+      },
+      {
+        "slot": "5",
+        "type": "t_string_storage",
+        "astId": 429,
+        "label": "_symbol",
+        "offset": 0,
+        "contract": "BEP20USDT.sol:BEP20USDT"
+      },
+      {
+        "slot": "6",
+        "type": "t_string_storage",
+        "astId": 431,
+        "label": "_name",
+        "offset": 0,
+        "contract": "BEP20USDT.sol:BEP20USDT"
+      }
+    ]
+  },
+  "simulationOnlyFormulas": {
+    "balance": "keccak256(pad32(owner) || pad32(1))",
+    "allowance": "keccak256(pad32(spender) || keccak256(pad32(owner) || pad32(2)))"
+  },
+  "localOverridesMadeByThisResearch": false,
+  "sourceCompilationIndependentByThisAgent": false,
+  "limitations": [
+    "Storage layout returned by the verified-source service. Fresh independent compiler re-execution has not been performed in this additional lookup.",
+    "Formulas are for local/off-chain diagnostics only. This record contains no user address, balance, slot value, wallet key or funded action.",
+    "Source ABI/code do not authorize approval or transfer."
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "checkedAt": "2026-10-05T13:37:56.505941+00:00",
+  "final": "demo/kinegate-demo-polished.mp4",
+  "sha256": "92ca9590a560012e501fcd82f58ceb2c55365201b93f59a3cec1bcc77b4fd15e",
+  "sizeBytes": 33325757,
+  "durationSeconds": 133.816667,
+  "video": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "sample_aspect_ratio": "1:1",
+    "display_aspect_ratio": "16:9",
+    "r_frame_rate": "60/1",
+    "nb_frames": "8029",
+    "pix_fmt": "yuv420p"
+  },
+  "audio": {
+    "codec_name": "aac",
+    "sample_rate": "48000",
+    "channels": 2
+  },
+  "sourceHashes": {
+    "actualCaptureSha256": "128b53750ee4aa419d6520cebd859e41f85e3b4f587723559c7fb2c8e168e97a",
+    "neuralNarrationSha256": "f84ecd0a5a03eeade5bee2b471b14f38268b537f6d0476982d0d40a8c885f118",
+    "originalScoreSha256": "4fed574ac5db9a7d65de088b48021321e9826405fc052112949c41f67f495141"
+  },
+  "visualQA": {
+    "reviewedSeconds": [
+      5,
+      13,
+      22,
+      32,
+      46,
+      54,
+      63,
+      71,
+      80,
+      90,
+      98,
+      108,
+      116,
+      123,
+      130
+    ],
+    "contactSheet": "demo/polished/qa/contact-sheet.png",
+    "findings": "Fixed captions and mode labels remain in frame. Receipt disclaimer, historical quote limits and FAILED insufficient-balance simulation are readable. Editorial zoom intentionally crops peripheral panels; it does not fabricate state. No credentials or private wallet state were present in inspected source frames.",
+    "actualProductRecording": true,
+    "newSuccessfulTradeClaim": false,
+    "modePreserved": true
+  },
+  "audioQA": {
+    "auditoryListeningClaim": false,
+    "integratedMixLUFS": -16.4,
+    "truePeakDbFS": -1.6,
+    "duckedMusicIntegratedLUFS": -25.8,
+    "evidence": [
+      "demo/polished/qa/final-loudness.log",
+      "demo/polished/qa/music-loudness.log"
+    ],
+    "subjectiveSignOff": "Not independently auditioned; naturalness preference remains listener-dependent"
+  },
+  "decodeCheck": {
+    "fullVideoDecodedWithoutErrors": true
+  },
+  "hyperframes": {
+    "actual15SecondRender": "demo/hyperframes-sample.mp4",
+    "fullFinalExport": "Streaming FFmpeg from the authored camera plan; not claimed to be a full HyperFrames render",
+    "checkSections": {
+      "lint": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "info": 0
+      },
+      "runtime": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "info": 0
+      },
+      "layout": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "info": 33
+      },
+      "motion": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "info": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errors": 0,
+        "warnings": 0,
+        "info": 0
+      }
+    },
+    "rawCheck": "demo/polished/qa/check.json",
+    "intentionalOverlap": "Caption/chapter scene crossfade layers are explicitly marked; camera overflow is intentional."
+  },
+  "captions": {
+    "ass": "demo/polished/polished.ass",
+    "srt": "demo/kinegate-demo-polished.srt",
+    "timing": "Measured speech cue windows, with editorial phrase grouping; not per-word ASR"
+  },
+  "clickZoom": "demo/polished/zoom-matches.json; action starts are recorded, exact mouse-down telemetry was unavailable",
+  "publication": "No Git commit or public upload by this subagent"
+}

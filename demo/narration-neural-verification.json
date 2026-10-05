@@ -1,0 +1,21 @@
+{
+  "status": "PASS_TECHNICAL_AUDIO_CHECKS",
+  "voice": "en-US-AndrewNeural",
+  "provider": "Edge online Read Aloud via unmodified edge-tts 7.2.8",
+  "wav": "demo/kinegate-narration-neural.wav",
+  "aac": "demo/kinegate-narration-neural.m4a",
+  "wavDurationSeconds": 133.81,
+  "sampleRate": 48000,
+  "channels": 2,
+  "meanVolumeDb": -19.6,
+  "maxVolumeDb": -1.5,
+  "cues": 16,
+  "unalteredTempoCues": 11,
+  "maximumTempoFactor": 1.06359712230216,
+  "timing": "demo/narration-neural-timing.json",
+  "humanAudition": "NOT_VERIFIED_BY_AGENT: current agent environment explicitly does not support audio input. Audition MP3s are provided for real playback; do not claim subjective listening occurred.",
+  "speechDisclosure": "Opening sentence includes synthetic narration. No cloned human or judge voice.",
+  "fundsOrSignatures": "NONE",
+  "publicRelease": "NOT_PERFORMED",
+  "videoEdit": "Narration assets only; root video workflow owns final music and edit. Original silent actual capture remains unchanged."
+}

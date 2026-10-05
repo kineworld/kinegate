@@ -9,6 +9,13 @@ test-results/
 *.mp4
 evidence/local-api/
 *.zip
+*.wav
+*.m4a
+*.mp3
+work/
+demo/polished/project/gsap.min.js
+demo/polished/project/AGENTS.md
+demo/polished/project/CLAUDE.md
 docs/mission.md
 docs/approvals.md
 docs/state.md

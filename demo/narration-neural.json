@@ -1,0 +1,23 @@
+{
+  "voice":"en-US-AndrewNeural",
+  "rate":"-3%",
+  "disclosure":"Synthetic narration of an actual KineGate product recording; no human teammate or judge is impersonated.",
+  "segments":[
+    {"start":0.58,"end":10.59,"text":"Stock tokens look familiar. But a ticker and a good price don't tell you what you're buying. This is KineGate, with synthetic narration."},
+    {"start":10.59,"end":17.72,"text":"You're seeing the actual product. These examples are fixtures. The external API evidence is a recorded replay."},
+    {"start":17.72,"end":26.99,"text":"Start with fifty dollars. KineGate checks this exact issuer, amount, permission, and route, before any action."},
+    {"start":26.99,"end":35.05,"text":"That decision gets a receipt. Every reviewed input is bound together. Change the inputs, and the receipt no longer applies."},
+    {"start":35.05,"end":41.63,"text":"The local simulation is recorded once. It sends nothing to the blockchain."},
+    {"start":41.63,"end":50.27,"text":"Now change the amount. The old receipt turns invalid. We don't quietly manufacture another quote."},
+    {"start":50.27,"end":58.95,"text":"Over the weekend, the displayed price may be stale. This case waits for fresh evidence, rather than trusting the gap."},
+    {"start":58.95,"end":66.07,"text":"The same ticker can name a different issuer's claim. Those rights can't be treated as interchangeable."},
+    {"start":66.07,"end":74.79,"text":"Time matters, too. Advance this virtual clock by a minute, and the receipt expires. Fresh evidence is needed again."},
+    {"start":74.79,"end":84.38,"text":"We tested both approaches on the same sixteen fixtures. The price-only shortcut missed thirteen unsafe cases. KineGate blocked all thirteen."},
+    {"start":84.38,"end":94.16,"text":"Now the real integration evidence. Four recorded Binance calls succeeded. The issuer and contract match. Missing execution evidence stays unresolved."},
+    {"start":94.16,"end":103.81,"text":"This six dollar quote was actually returned. But it is historical evidence, not a current offer, or authorization to trade."},
+    {"start":103.81,"end":112.43,"text":"The real off-chain simulation failed: insufficient balance. The transaction was never approved, signed, or broadcast."},
+    {"start":112.43,"end":119.97,"text":"A pinned-block read confirms the token contract and its decimals. That proves existence, not a settled trade."},
+    {"start":119.97,"end":126.52,"text":"Settlement is unverified. Signing needs permission. A human must write the report."},
+    {"start":126.52,"end":133.68,"text":"Try it without a wallet. Inspect the receipts, tests, and limits. KineGate. Evidence before action."}
+  ]
+}

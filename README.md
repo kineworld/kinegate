@@ -4,7 +4,7 @@
 
 The no-wallet workspace is a complete **FIXTURE / local SIMULATION** experience: sixteen scenarios, thirteen deterministic checks, receipt export/import, clock expiry and a same-input comparison. It never signs or broadcasts. Four authenticated Binance RWA endpoints returned **HTTP200 / business code 0**. Inspect their recorded **REPLAY** in Evidence, or refresh locally. A separate 6 USDT quote succeeded with LiquidMesh / SWAP; its replay retains absent expiry/minimum-output fields and disabled trading. Independent timestamps and execution effects remain incomplete. Funded mainnet settlement remains unverified.
 
-**[Try the deployed demo](https://kineworld.github.io/kinegate/)** · **[Public source](https://github.com/kineworld/kinegate)** · **[2m14s actual demo video](https://github.com/kineworld/kinegate/releases/tag/v0.2.0)**. Anonymous browser smoke and GitHub CI passed. All submission gates are tracked in [the audit](docs/submission-audit.md).
+**[Try the deployed demo](https://kineworld.github.io/kinegate/)** · **[Public source](https://github.com/kineworld/kinegate)** · **[2m14s narrated demo](https://github.com/kineworld/kinegate/releases/tag/demo-polished-v1)**. The refreshed video adds disclosed synthetic English narration, an original ambient score, eased camera movements and transitions to the actual recording. Anonymous browser smoke and GitHub CI passed. All submission gates are tracked in [the audit](docs/submission-audit.md).
 
 ![Yellow/black workspace](evidence/desktop-yellow.png)
 

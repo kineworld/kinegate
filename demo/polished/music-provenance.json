@@ -1,0 +1,16 @@
+{
+  "title": "Evidence Before Action",
+  "durationSeconds": 133.68,
+  "bpm": 84,
+  "composition": "Original deterministic synthesis authored for KineGate with AI assistance.",
+  "sources": "Sine oscillators only; no recorded samples, third-party melodies or random noise.",
+  "harmony": "A minor / F major / C major / G major, with sparse diatonic motif.",
+  "tools": [
+    "Python",
+    "numpy",
+    "wave"
+  ],
+  "paidServicesUsed": false,
+  "attribution": "KineGate \u2014 original synthetic ambient score, AI-assisted composition.",
+  "licenseNote": "No third-party sampled recording is incorporated. This is a factual provenance statement, not legal clearance of every possible musical similarity."
+}

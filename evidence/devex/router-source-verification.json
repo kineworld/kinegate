@@ -1,0 +1,210 @@
+{
+  "schema": "kinegate.router-source-verification.v1",
+  "mode": "SOURCE_AND_LOCAL_COMPILATION",
+  "recordedAt": "2026-10-05T13:06:42.525Z",
+  "target": "0xB44446b0c8E56988c34f7Ff73Ae904982b5FdDA5",
+  "chainId": 56,
+  "sourceChainId": 1,
+  "sourceUrl": "https://sourcify.dev/server/v2/contract/1/0xB44446b0c8E56988c34f7Ff73Ae904982b5FdDA5?fields=all",
+  "sourceVerifiedAt": "2026-05-18T09:28:25Z",
+  "sourceContractName": "Diamond",
+  "compilerVersion": "0.8.23+commit.f704f362.Emscripten.clang",
+  "compilerUrl": "https://binaries.soliditylang.org/wasm/soljson-v0.8.23+commit.f704f362.js",
+  "compilerSha256": "9c681b165c8647867589c0a5ecdc8692637a935928a2b1bbea2ff4a1f4976985",
+  "compilerSettings": {
+    "viaIR": true,
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "libraries": {},
+    "optimizer": {
+      "runs": 200,
+      "enabled": true
+    },
+    "evmVersion": "shanghai",
+    "remappings": [
+      ":@1inch/limit-order-protocol-contract/contracts/=lib/limit-order-protocol/contracts/",
+      ":@1inch/solidity-utils/contracts/=lib/solidity-utils/contracts/",
+      ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+      ":ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+      ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+      ":forge-std/=lib/forge-std/src/",
+      ":limit-order-protocol/=lib/limit-order-protocol/contracts/",
+      ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+      ":solidity-utils/=lib/solidity-utils/contracts/"
+    ],
+    "outputSelection": {
+      "*": {
+        "*": [
+          "evm.deployedBytecode.object",
+          "abi",
+          "metadata"
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "compiledBytes": 180,
+    "bscBlock": "0x78097e5",
+    "fullByteForByteMatch": false,
+    "sourcifyEthereumBytecodeMatch": false,
+    "executionCodeMatchExcludingCbor": true,
+    "executionCodeBytes": 127,
+    "cborMetadataMatch": false,
+    "sha256": "e52db1edd484f98ed4fad9220a20c5c330eccdc17e3b9a92706c503ea784acee",
+    "comparisonIncludesCompilerMetadata": true
+  },
+  "storageNamespace": "com.binance.w3w.diamond.storage",
+  "selectorDispatch": {
+    "sourceMeaning": "LibDiamond.selectorToFacetAndPosition[msg.sig].facetAddress, then delegatecall",
+    "selectedSwapFacetSourceVerified": false
+  },
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_contractOwner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_diamondCutFacet",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "CalldataEmptyButInitNotZero",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FacetAddressIsNotZero",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FacetAddressIsZero",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FacetContainsNoCode",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FunctionAlreadyExists",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FunctionDoesNotExist",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FunctionIsImmutable",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "IncorrectFacetCutAction",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InitReverted",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InitZeroButCalldataNotEmpty",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NoSelectorsInFace",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "facetAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "enum IDiamondCut.FacetCutAction",
+              "name": "action",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes4[]",
+              "name": "functionSelectors",
+              "type": "bytes4[]"
+            }
+          ],
+          "indexed": false,
+          "internalType": "struct IDiamondCut.FacetCut[]",
+          "name": "_diamondCut",
+          "type": "tuple[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_init",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "_calldata",
+          "type": "bytes"
+        }
+      ],
+      "name": "DiamondCut",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "limitations": [
+    "Only Diamond dispatcher execution code matches the local compilation. CBOR metadata differs: this is not a full bytecode/metadata match; Sourcify labels this match, not perfect_match.",
+    "Its swap facet ABI and behavior require independent source verification.",
+    "Source namespace identifies the implementation namespace; it does not establish present operator key ownership or constitute an audit.",
+    "Dispatcher owner may add/replace/remove facets. Runtime equality alone does not fix the future selector implementation."
+  ]
+}

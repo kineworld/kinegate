@@ -1,0 +1,183 @@
+{
+  "exactMouseDownTelemetryAvailable": false,
+  "focusCoordinatesAreEditorial": true,
+  "source": "demo/recording.json and scripts/record-demo.mjs",
+  "matches": [
+    {
+      "scene": 1,
+      "recordedAction": "Opening hold",
+      "recordedSceneActionStart": 0.58,
+      "editorialRampStart": 1.13,
+      "editorialZoomHoldStart": 2.63,
+      "editorialZoomOutStart": 8.94,
+      "editorialZoomOutEnd": 10.34,
+      "captionCueStart": 0.58,
+      "captionCueEnd": 10.59
+    },
+    {
+      "scene": 2,
+      "recordedAction": "Focus amount",
+      "recordedSceneActionStart": 10.59,
+      "editorialRampStart": 11.14,
+      "editorialZoomHoldStart": 12.64,
+      "editorialZoomOutStart": 16.07,
+      "editorialZoomOutEnd": 17.47,
+      "captionCueStart": 10.59,
+      "captionCueEnd": 17.72
+    },
+    {
+      "scene": 3,
+      "recordedAction": "Run preflight and scroll decision",
+      "recordedSceneActionStart": 17.72,
+      "editorialRampStart": 18.27,
+      "editorialZoomHoldStart": 19.77,
+      "editorialZoomOutStart": 25.34,
+      "editorialZoomOutEnd": 26.74,
+      "captionCueStart": 17.72,
+      "captionCueEnd": 26.99
+    },
+    {
+      "scene": 4,
+      "recordedAction": "Scroll bound receipt",
+      "recordedSceneActionStart": 26.99,
+      "editorialRampStart": 27.54,
+      "editorialZoomHoldStart": 29.04,
+      "editorialZoomOutStart": 33.4,
+      "editorialZoomOutEnd": 34.8,
+      "captionCueStart": 26.99,
+      "captionCueEnd": 35.05
+    },
+    {
+      "scene": 5,
+      "recordedAction": "Run local simulation",
+      "recordedSceneActionStart": 35.05,
+      "editorialRampStart": 35.6,
+      "editorialZoomHoldStart": 37.1,
+      "editorialZoomOutStart": 39.98,
+      "editorialZoomOutEnd": 41.38,
+      "captionCueStart": 35.05,
+      "captionCueEnd": 41.63
+    },
+    {
+      "scene": 6,
+      "recordedAction": "Fill amount 51 and run",
+      "recordedSceneActionStart": 41.63,
+      "editorialRampStart": 42.18,
+      "editorialZoomHoldStart": 43.68,
+      "editorialZoomOutStart": 48.62,
+      "editorialZoomOutEnd": 50.02,
+      "captionCueStart": 41.63,
+      "captionCueEnd": 50.27
+    },
+    {
+      "scene": 7,
+      "recordedAction": "Select weekend and run",
+      "recordedSceneActionStart": 50.27,
+      "editorialRampStart": 50.82,
+      "editorialZoomHoldStart": 52.32,
+      "editorialZoomOutStart": 57.3,
+      "editorialZoomOutEnd": 58.7,
+      "captionCueStart": 50.27,
+      "captionCueEnd": 58.95
+    },
+    {
+      "scene": 8,
+      "recordedAction": "Select different issuer and run",
+      "recordedSceneActionStart": 58.95,
+      "editorialRampStart": 59.5,
+      "editorialZoomHoldStart": 61.0,
+      "editorialZoomOutStart": 64.42,
+      "editorialZoomOutEnd": 65.82,
+      "captionCueStart": 58.95,
+      "captionCueEnd": 66.07
+    },
+    {
+      "scene": 9,
+      "recordedAction": "Restore valid fixture, run and advance virtual clock",
+      "recordedSceneActionStart": 66.07,
+      "editorialRampStart": 66.62,
+      "editorialZoomHoldStart": 68.12,
+      "editorialZoomOutStart": 73.14,
+      "editorialZoomOutEnd": 74.54,
+      "captionCueStart": 66.07,
+      "captionCueEnd": 74.79
+    },
+    {
+      "scene": 10,
+      "recordedAction": "Select baseline study",
+      "recordedSceneActionStart": 74.79,
+      "editorialRampStart": 75.34,
+      "editorialZoomHoldStart": 76.84,
+      "editorialZoomOutStart": 82.73,
+      "editorialZoomOutEnd": 84.13,
+      "captionCueStart": 74.79,
+      "captionCueEnd": 84.38
+    },
+    {
+      "scene": 11,
+      "recordedAction": "Load recorded RWA evidence",
+      "recordedSceneActionStart": 84.38,
+      "editorialRampStart": 84.93,
+      "editorialZoomHoldStart": 86.43,
+      "editorialZoomOutStart": 92.51,
+      "editorialZoomOutEnd": 93.91,
+      "captionCueStart": 84.38,
+      "captionCueEnd": 94.16
+    },
+    {
+      "scene": 12,
+      "recordedAction": "Load recorded quote evidence",
+      "recordedSceneActionStart": 94.16,
+      "editorialRampStart": 94.71,
+      "editorialZoomHoldStart": 96.21,
+      "editorialZoomOutStart": 102.16,
+      "editorialZoomOutEnd": 103.56,
+      "captionCueStart": 94.16,
+      "captionCueEnd": 103.81
+    },
+    {
+      "scene": 13,
+      "recordedAction": "Load recorded failed simulation",
+      "recordedSceneActionStart": 103.81,
+      "editorialRampStart": 104.36,
+      "editorialZoomHoldStart": 105.86,
+      "editorialZoomOutStart": 110.78,
+      "editorialZoomOutEnd": 112.18,
+      "captionCueStart": 103.81,
+      "captionCueEnd": 112.43
+    },
+    {
+      "scene": 14,
+      "recordedAction": "Scroll pinned-block chain evidence",
+      "recordedSceneActionStart": 112.43,
+      "editorialRampStart": 112.98,
+      "editorialZoomHoldStart": 114.48,
+      "editorialZoomOutStart": 118.32,
+      "editorialZoomOutEnd": 119.72,
+      "captionCueStart": 112.43,
+      "captionCueEnd": 119.97
+    },
+    {
+      "scene": 15,
+      "recordedAction": "Scroll execution limitations",
+      "recordedSceneActionStart": 119.97,
+      "editorialRampStart": 120.52,
+      "editorialZoomHoldStart": 122.02,
+      "editorialZoomOutStart": 124.87,
+      "editorialZoomOutEnd": 126.27,
+      "captionCueStart": 119.97,
+      "captionCueEnd": 126.52
+    },
+    {
+      "scene": 16,
+      "recordedAction": "Return workspace and restore small fixture",
+      "recordedSceneActionStart": 126.52,
+      "editorialRampStart": 127.07,
+      "editorialZoomHoldStart": 128.57,
+      "editorialZoomOutStart": 132.03,
+      "editorialZoomOutEnd": 133.43,
+      "captionCueStart": 126.52,
+      "captionCueEnd": 133.68
+    }
+  ]
+}

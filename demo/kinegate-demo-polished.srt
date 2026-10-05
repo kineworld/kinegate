@@ -1,0 +1,131 @@
+1
+00:00:00,580 --> 00:00:06,520
+Stock tokens look familiar. But a ticker and a good price don't tell you what you're buying.
+
+2
+00:00:06,520 --> 00:00:08,620
+This is KineGate, with synthetic narration.
+
+3
+00:00:10,590 --> 00:00:14,270
+You're seeing the actual product. These examples are fixtures.
+
+4
+00:00:14,270 --> 00:00:17,540
+The external API evidence is a recorded replay.
+
+5
+00:00:17,720 --> 00:00:24,210
+Start with fifty dollars. KineGate checks this exact issuer, amount, permission, and route,
+
+6
+00:00:24,210 --> 00:00:25,710
+before any action.
+
+7
+00:00:26,990 --> 00:00:31,320
+That decision gets a receipt. Every reviewed input is bound together.
+
+8
+00:00:31,320 --> 00:00:34,870
+Change the inputs, and the receipt no longer applies.
+
+9
+00:00:35,050 --> 00:00:37,460
+The local simulation is recorded once.
+
+10
+00:00:37,460 --> 00:00:39,870
+It sends nothing to the blockchain.
+
+11
+00:00:41,630 --> 00:00:45,550
+Now change the amount. The old receipt turns invalid.
+
+12
+00:00:45,550 --> 00:00:48,160
+We don't quietly manufacture another quote.
+
+13
+00:00:50,270 --> 00:00:53,490
+Over the weekend, the displayed price may be stale.
+
+14
+00:00:53,490 --> 00:00:57,420
+This case waits for fresh evidence, rather than trusting the gap.
+
+15
+00:00:58,950 --> 00:01:02,340
+The same ticker can name a different issuer's claim.
+
+16
+00:01:02,340 --> 00:01:04,970
+Those rights can't be treated as interchangeable.
+
+17
+00:01:06,070 --> 00:01:12,060
+Time matters, too. Advance this virtual clock by a minute, and the receipt expires.
+
+18
+00:01:12,060 --> 00:01:14,210
+Fresh evidence is needed again.
+
+19
+00:01:14,790 --> 00:01:19,020
+We tested both approaches on the same sixteen fixtures.
+
+20
+00:01:19,020 --> 00:01:22,320
+The price-only shortcut missed thirteen unsafe cases.
+
+21
+00:01:22,320 --> 00:01:24,200
+KineGate blocked all thirteen.
+
+22
+00:01:24,380 --> 00:01:29,180
+Now the real integration evidence. Four recorded Binance calls succeeded.
+
+23
+00:01:29,180 --> 00:01:33,980
+The issuer and contract match. Missing execution evidence stays unresolved.
+
+24
+00:01:34,160 --> 00:01:36,900
+This six dollar quote was actually returned.
+
+25
+00:01:36,900 --> 00:01:41,980
+But it is historical evidence, not a current offer, or authorization to trade.
+
+26
+00:01:43,810 --> 00:01:47,710
+The real off-chain simulation failed: insufficient balance.
+
+27
+00:01:47,710 --> 00:01:52,160
+The transaction was never approved, signed, or broadcast.
+
+28
+00:01:52,430 --> 00:01:56,590
+A pinned-block read confirms the token contract and its decimals.
+
+29
+00:01:56,590 --> 00:01:59,510
+That proves existence, not a settled trade.
+
+30
+00:01:59,970 --> 00:02:02,790
+Settlement is unverified. Signing needs permission.
+
+31
+00:02:02,790 --> 00:02:05,610
+A human must write the report.
+
+32
+00:02:06,520 --> 00:02:11,640
+Try it without a wallet. Inspect the receipts, tests, and limits.
+
+33
+00:02:11,640 --> 00:02:13,500
+KineGate. Evidence before action.

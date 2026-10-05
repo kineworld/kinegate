@@ -1,0 +1,93 @@
+{
+  "schema": "kinegate.source-publication-audit.v1",
+  "mode": "LOCAL_FILE_REVIEW",
+  "observedAt": "2026-10-05T13:34:34.174Z",
+  "networkRequests": 0,
+  "checkedFiles": [
+    {
+      "file": "evidence/devex/router-facet-research.json",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    },
+    {
+      "file": "evidence/devex/router-source-research-status.json",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    },
+    {
+      "file": "evidence/devex/router-source-verification.json",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    },
+    {
+      "file": "evidence/devex/source-excerpts/binance-diamond/src/Diamond.sol",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    },
+    {
+      "file": "evidence/devex/source-excerpts/binance-diamond/src/Errors/GenericErrors.sol",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    },
+    {
+      "file": "evidence/devex/source-excerpts/binance-diamond/src/Interfaces/IDiamondCut.sol",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    },
+    {
+      "file": "evidence/devex/source-excerpts/binance-diamond/src/Libraries/LibBytes.sol",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    },
+    {
+      "file": "evidence/devex/source-excerpts/binance-diamond/src/Libraries/LibDiamond.sol",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    },
+    {
+      "file": "evidence/devex/source-excerpts/binance-diamond/src/Libraries/LibUtil.sol",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    },
+    {
+      "file": "evidence/devex/source-excerpts/LICENCE",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    },
+    {
+      "file": "evidence/devex/source-excerpts/official-underlying-market-type.ts",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    },
+    {
+      "file": "evidence/devex/source-excerpts/README.md",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    },
+    {
+      "file": "evidence/devex/usdt-storage-source.json",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    },
+    {
+      "file": "evidence/router-primary-source-review.md",
+      "privateValueMatches": 0,
+      "potentiallySensitiveJsonFields": 0
+    }
+  ],
+  "checkedCredentialCount": 2,
+  "privacyPassed": true,
+  "scope": "Requested public source records only. Checked the locally known wallet receiver, its unprefixed bytes, latest private quote ID, available credential environment values, and explicit sensitive JSON string fields. Source-code balance and allowance identifiers are not personal balance data.",
+  "sourceConclusions": {
+    "executionCodeBytesMatched": 127,
+    "cborMetadataBytesDifferent": 53,
+    "fullRuntimeMatch": false,
+    "verifiedSwapFacetSource": false,
+    "verifiedSwapFacetAbi": false
+  },
+  "licenseConclusions": {
+    "sdk": "Original Binance MIT LICENCE retained with SDK excerpt",
+    "diamond": "All six original source SPDX headers and saved Solidity metadata declare MIT",
+    "usdt": "No license established; full source excluded from publication; only source-derived storage facts and source URL remain public"
+  }
+}

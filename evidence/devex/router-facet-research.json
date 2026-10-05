@@ -1,0 +1,71 @@
+{
+  "schema": "kinegate.facet-research.v1",
+  "mode": "LOCAL_BYTECODE_AND_CALLDATA_ANALYSIS",
+  "recordedAt": "2026-10-05T13:08:57.645Z",
+  "sourceRouterEvidence": "evidence/devex/router-source-verification.json",
+  "implementation": "0xa9fa1b56f4d7bd25375c2d40b4c8e36a9509e603",
+  "implementationCodeBytes": 8622,
+  "verifiedFacetSource": false,
+  "verifiedFacetAbi": false,
+  "selector": "0xad43f73d",
+  "selectorAndErrorPushes": [
+    {
+      "pc": 80,
+      "op": 99,
+      "push": "ad43f73d"
+    },
+    {
+      "pc": 8117,
+      "op": 99,
+      "push": "0a12f521"
+    }
+  ],
+  "calldataSha256Only": "See prior redacted evidence; raw calldata remains private",
+  "headWordMatches": {
+    "inputToken": [
+      3
+    ],
+    "outputToken": [
+      5
+    ],
+    "amount": [
+      4
+    ],
+    "minimumOutput": [
+      6
+    ],
+    "vendor": [
+      2
+    ]
+  },
+  "dynamicTail": {
+    "argumentHeadWordIndex": 9,
+    "offset": 320,
+    "byteLength": 3364,
+    "firstFourBytes": "0x47ee97ff",
+    "boundedInsideCalldata": true
+  },
+  "candidateEncodingSignatures": [],
+  "candidateSignatureIsVerifiedAbi": false,
+  "error": {
+    "observed": "0x1425ea42",
+    "upstreamName": "FailedInnerCall()",
+    "primarySource": "https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v5.0.1/contracts/utils/Address.sol",
+    "optimizedPushValue": "0x0a12f521",
+    "shiftBits": 225,
+    "derivedSelector": "0x1425ea42",
+    "meaning": "In the upstream Address helper a low-level call failed with no revert data. This does not identify the originating internal reason or prove which upstream source version was compiled."
+  },
+  "assessment": {
+    "executionCodeProxyMatched": true,
+    "fullProxyMetadataMatched": false,
+    "facetAbiSemanticChecks": "UNVERIFIED",
+    "recipientBehavior": "UNVERIFIED",
+    "minimumOutputEnforcement": "UNVERIFIED"
+  },
+  "limitations": [
+    "The ten-word layout and primitive restrictions are inferred from dispatcher/calldata patterns; matching values and even a selector candidate do not prove parameter names or implementation semantics.",
+    "There is no ABI/source proof that a matching minimum-output word is enforced, or that the final recipient is msg.sender.",
+    "No new quote/build/simulation, wallet signature, approval or broadcast was performed in this research."
+  ]
+}
