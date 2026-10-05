@@ -1,0 +1,81 @@
+1
+00:00:00,580 --> 00:00:10,590
+KineGate: a ticker and a good-looking price are not enough. Bind the issuer, clocks
+and exact intention before acting.
+
+2
+00:00:10,590 --> 00:00:17,720
+Preflight uses FIXTURE data. Evidence includes REPLAY of real API acquisition. No
+wallet, signed transaction or broadcast; this is the actual yellow/black product.
+
+3
+00:00:17,720 --> 00:00:26,990
+One $50 intention. Thirteen deterministic checks cover identity, permission, clocks,
+balance, cost, vendor and effects.
+
+4
+00:00:26,990 --> 00:00:35,050
+The local receipt binds every input using canonical JSON and SHA-256. A hash proves
+internal consistency, not issuer authenticity.
+
+5
+00:00:35,050 --> 00:00:41,630
+Local simulation records this bound fixture once per browser session. No chain
+transaction is sent.
+
+6
+00:00:41,630 --> 00:00:50,270
+Change the amount to $51: the previous receipt becomes invalid. KineGate does not
+invent a new quote.
+
+7
+00:00:50,270 --> 00:00:58,950
+The weekend case waits: stale independent reference plus a closed underlying market.
+Closure is policy context, not a universal DEX ban.
+
+8
+00:00:58,950 --> 00:01:06,070
+Same ticker, different issuer: the exact intended claim does not match. A ticker
+cannot substitute for issuer-specific rights.
+
+9
+00:01:06,070 --> 00:01:14,790
+Restore a valid fixture, then advance the virtual clock 60 seconds: the receipt
+expires and dependent evidence must be refreshed.
+
+10
+00:01:14,790 --> 00:01:24,380
+Same sixteen authored fixtures: a simplified price-only rule accepts thirteen
+policy-unsafe cases; KineGate accepts none. This is not a real-world accuracy
+estimate.
+
+11
+00:01:24,380 --> 00:01:34,160
+REPLAY of four authenticated Binance RWA calls: HTTP200 and business code0. Exact
+AAPLon issuer and contract agree; absent execution evidence remains WAIT.
+
+12
+00:01:34,160 --> 00:01:43,810
+A real 6 USDT quote succeeded: LiquidMesh, actual mode SWAP. This is a recorded
+quote, with no declared expiry or minimum output and no trade authorization.
+
+13
+00:01:43,810 --> 00:01:52,430
+The unsigned SWAP builder and actual off-chain simulation returned HTTP200 and code0.
+Predicted execution FAILED: token balance insufficient. No signature, approval or
+broadcast.
+
+14
+00:01:52,430 --> 00:01:59,970
+The pinned-block BSC read matches current API-listed AAPLon: code, symbol, eighteen
+decimals. Contract existence does not prove liquidity or settlement.
+
+15
+00:01:59,970 --> 00:02:06,520
+Mainnet settlement remains unverified. Asset signing needs separate human
+authorization; the required DevEx report must be personally authored.
+
+16
+00:02:06,520 --> 00:02:13,810
+Run it without a wallet. Inspect the code, exported receipt, test evidence and
+documented limitations. Evidence before action.

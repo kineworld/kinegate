@@ -1,0 +1,25 @@
+{
+  "verifiedOnUtc": "2026-10-05",
+  "repository": "https://github.com/kineworld/kinegate",
+  "deployment": "https://kineworld.github.io/kinegate/",
+  "pagesState": "built",
+  "deploymentRun": "https://github.com/kineworld/kinegate/actions/runs/37305000877",
+  "ciRun": "https://github.com/kineworld/kinegate/actions/runs/37304959516",
+  "ciConclusion": "success",
+  "anonymousBrowserSmoke": {
+    "httpStatus": 200,
+    "decision": "Ready for local simulation",
+    "consoleErrors": [],
+    "developerCookies": false,
+    "wallet": false
+  },
+  "publicMode": "FIXTURE",
+  "serverCredentialsIncluded": false,
+  "videoRelease": "https://github.com/kineworld/kinegate/releases/tag/v0.2.0",
+  "videoDurationSeconds": 133.68,
+  "videoSizeBytes": 4705115,
+  "paidServicesAdded": false,
+  "limitation": "Public deployment is static, so authenticated API routes are intentionally unavailable. Accessibility checked at this timestamp, not guaranteed indefinitely through judging.",
+  "apiDataAcquisition": "LIVE authenticated four-endpoint RWA",
+  "publicEvidenceMode": "REPLAY of authenticated RWA, successful quote, and FAILED off-chain prediction"
+}

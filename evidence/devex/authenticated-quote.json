@@ -1,0 +1,46 @@
+{
+  "schema": "kinegate.quote-evidence.v1",
+  "mode": "LIVE",
+  "readOnly": true,
+  "observedAt": "2026-10-05T12:06:02.459Z",
+  "request": {
+    "endpoint": "/api/v1/dex/aggregator/quote",
+    "method": "GET",
+    "timestamp": "2026-10-05T12:06:00.631Z",
+    "chainId": "56",
+    "amount": "1000000000000000000",
+    "nominalAmountTokens": "1",
+    "fromTokenAddress": "0x55d398326f99059fF775485246999027B3197955",
+    "fromTokenSymbol": "USDT",
+    "fromTokenDecimals": 18,
+    "toTokenAddress": "0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4",
+    "toTokenSymbol": "AAPLon",
+    "receiver": "REDACTED"
+  },
+  "response": {
+    "httpStatus": 200,
+    "businessCode": 40375,
+    "serverTimestamp": 1791201962032,
+    "elapsedMs": 1826,
+    "dataShape": "null",
+    "routeCount": 0,
+    "routes": [],
+    "localError": null,
+    "businessReason": "ONDO_FROM_USD_AMOUNT_TOO_SMALL",
+    "message": "Minimum order amount is 5 USD.",
+    "minimumUsdReportedForThisRequest": "5",
+    "actualQuotesArrayReturned": false
+  },
+  "attempts": 1,
+  "limitations": [
+    "One read-only quote request; no approval, swap build, RFQ signing, order submission, transaction simulation, broadcast or funded execution.",
+    "One Binance-Peg USDT token is a nominal approximately USD1 input; no independent USD peg price was verified.",
+    "A quote is receiver-bound and may expire; receiver and quote identifier are redacted publicly.",
+    "Missing optional/expiry fields are recorded without inventing API guarantees.",
+    "This single input does not establish general liquidity or a successful trade.",
+    "HTTP200 is not quote success: business code40375 with data:null. No route/vendor/fee/executionMode response exists for this input.",
+    "The 5USD minimum was reported for this request; no global minimum is assumed and no larger input was requested."
+  ],
+  "settlementIdentityEvidence": "evidence/mainnet/settlement-usdt-readonly.json",
+  "officialErrorSource": "https://web3.binance.com/en/dev-docs/products/trading-api/error-codes"
+}

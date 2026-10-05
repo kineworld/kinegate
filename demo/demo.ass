@@ -1,0 +1,28 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1440
+PlayResY: 1000
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,Arial,24,&H00FFFFFF,&H00FFFFFF,&H00110E0B,&H00110E0B,0,0,0,0,100,100,0,0,3,1,0,2,40,40,18,1
+
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+Dialogue: 0,0:00:00.58,0:00:10.59,Default,,0,0,0,,KineGate: a ticker and a good-looking price are not enough. Bind the issuer, clocks and exact intention\Nbefore acting.
+Dialogue: 0,0:00:10.59,0:00:17.72,Default,,0,0,0,,Preflight uses FIXTURE data. Evidence includes REPLAY of real API acquisition. No wallet, signed\Ntransaction or broadcast; this is the actual yellow/black product.
+Dialogue: 0,0:00:17.72,0:00:26.99,Default,,0,0,0,,One $50 intention. Thirteen deterministic checks cover identity, permission, clocks, balance, cost,\Nvendor and effects.
+Dialogue: 0,0:00:26.99,0:00:35.05,Default,,0,0,0,,The local receipt binds every input using canonical JSON and SHA-256. A hash proves internal consistency,\Nnot issuer authenticity.
+Dialogue: 0,0:00:35.05,0:00:41.63,Default,,0,0,0,,Local simulation records this bound fixture once per browser session. No chain transaction is sent.
+Dialogue: 0,0:00:41.63,0:00:50.27,Default,,0,0,0,,Change the amount to $51: the previous receipt becomes invalid. KineGate does not invent a new quote.
+Dialogue: 0,0:00:50.27,0:00:58.95,Default,,0,0,0,,The weekend case waits: stale independent reference plus a closed underlying market. Closure is policy\Ncontext, not a universal DEX ban.
+Dialogue: 0,0:00:58.95,0:01:06.07,Default,,0,0,0,,Same ticker, different issuer: the exact intended claim does not match. A ticker cannot substitute for\Nissuer-specific rights.
+Dialogue: 0,0:01:06.07,0:01:14.79,Default,,0,0,0,,Restore a valid fixture, then advance the virtual clock 60 seconds: the receipt expires and dependent\Nevidence must be refreshed.
+Dialogue: 0,0:01:14.79,0:01:24.38,Default,,0,0,0,,Same sixteen authored fixtures: a simplified price-only rule accepts thirteen policy-unsafe cases;\NKineGate accepts none. This is not a real-world accuracy estimate.
+Dialogue: 0,0:01:24.38,0:01:34.16,Default,,0,0,0,,REPLAY of four authenticated Binance RWA calls: HTTP200 and business code0. Exact AAPLon issuer and\Ncontract agree; absent execution evidence remains WAIT.
+Dialogue: 0,0:01:34.16,0:01:43.81,Default,,0,0,0,,A real 6 USDT quote succeeded: LiquidMesh, actual mode SWAP. This is a recorded quote, with no declared\Nexpiry or minimum output and no trade authorization.
+Dialogue: 0,0:01:43.81,0:01:52.43,Default,,0,0,0,,The unsigned SWAP builder and actual off-chain simulation returned HTTP200 and code0. Predicted execution\NFAILED: token balance insufficient. No signature, approval or broadcast.
+Dialogue: 0,0:01:52.43,0:01:59.97,Default,,0,0,0,,The pinned-block BSC read matches current API-listed AAPLon: code, symbol, eighteen decimals. Contract\Nexistence does not prove liquidity or settlement.
+Dialogue: 0,0:01:59.97,0:02:06.52,Default,,0,0,0,,Mainnet settlement remains unverified. Asset signing needs separate human authorization; the required\NDevEx report must be personally authored.
+Dialogue: 0,0:02:06.52,0:02:13.81,Default,,0,0,0,,Run it without a wallet. Inspect the code, exported receipt, test evidence and documented limitations.\NEvidence before action.

@@ -53,10 +53,10 @@
     }
   ],
   "localTests": {
-    "command": "node --test tests/binance.test.mjs",
-    "pass": 7,
+    "command": "node --test tests/binance.test.mjs tests/windows-transport.test.mjs",
+    "pass": 15,
     "fail": 0,
-    "proves": "local adapter safety, canonical signing, bounded response parsing, success-envelope validation, quote input limits, and FIXTURE provenance only",
+    "proves": "local adapter safety, canonical signing, bounded response parsing, success-envelope validation, quote and unsigned builder limits, EVM branch rejection, and FIXTURE provenance only",
     "mode": "FIXTURE"
   },
   "typecheck": {
@@ -74,9 +74,11 @@
     "classification": "environment issue; not API issue"
   },
   "limitations": [
-    "No authenticated success captured.",
+    "No authenticated success was captured in this initial snapshot; see subsequentAuthenticatedEvidence for later success.",
     "No public stock-market quote is independently verified.",
     "No signing, spending, broadcast, trade receipt or reserves audit.",
-    "Personal eligibility remains unconfirmed."
-  ]
+    "Personal eligibility was unconfirmed at this initial snapshot; later personal confirmation is separate and does not prove issuer trading qualification."
+  ],
+  "subsequentAuthenticatedEvidence": "evidence/devex/authenticated-rwa.json",
+  "scope": "Historical probes captured at capturedAtUtc; later successful calls are linked separately."
 }

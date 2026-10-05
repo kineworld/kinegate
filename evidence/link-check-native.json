@@ -1,0 +1,43 @@
+{
+  "tool": "Installed PowerShell7 Invoke-WebRequest, normal TLS",
+  "scope": "Six external product links; HTTP reachability, not content completeness or future accessibility",
+  "checkedAt": "2026-10-05T12:17:36.4353854Z",
+  "checks": [
+    {
+      "url": "https://docs.xstocks.fi/docs/product-legal-overview",
+      "httpStatus": 200,
+      "status": "PASS",
+      "elapsedMs": 1138
+    },
+    {
+      "url": "https://web3.binance.com/en/dev-docs/catalog/web3-wallet/api/rest-api/rwa-data",
+      "httpStatus": 202,
+      "status": "PASS",
+      "elapsedMs": 522
+    },
+    {
+      "url": "https://web3.binance.com/en/dev-docs/catalog/web3-wallet/api/rest-api/trading-api",
+      "httpStatus": 202,
+      "status": "PASS",
+      "elapsedMs": 440
+    },
+    {
+      "url": "https://ondo.finance/ondo-stocks",
+      "httpStatus": 200,
+      "status": "PASS",
+      "elapsedMs": 2406
+    },
+    {
+      "url": "https://web3.binance.com/en/dev-docs/catalog/web3-wallet/api/rest-api/transaction-api",
+      "httpStatus": 202,
+      "status": "PASS",
+      "elapsedMs": 788
+    },
+    {
+      "url": "https://docs.ondo.finance/global-markets",
+      "status": "NETWORK_UNVERIFIED",
+      "exceptionType": "TaskCanceledException",
+      "elapsedMs": 8139
+    }
+  ]
+}

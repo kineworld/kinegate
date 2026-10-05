@@ -1,0 +1,169 @@
+{
+  "schema": "kinegate.unsigned-swap-evidence.v1",
+  "mode": "LIVE",
+  "unsignedOnly": true,
+  "offChainOnly": true,
+  "startedAt": "2026-10-05T12:14:40.330Z",
+  "observedAt": "2026-10-05T12:15:42.558Z",
+  "observedAtSource": "Client completion after the last response or local failure",
+  "inputs": {
+    "chainId": "56",
+    "amount": "6000000000000000000",
+    "fromTokenAddress": "0x55d398326f99059fF775485246999027B3197955",
+    "toTokenAddress": "0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4",
+    "receiver": "REDACTED",
+    "quoteId": "REDACTED",
+    "slippagePercent": "0.5",
+    "approveTransaction": "false"
+  },
+  "requests": [
+    {
+      "mode": "LIVE",
+      "timestamp": "2026-10-05T12:14:40.331Z",
+      "endpoint": "/api/v1/dex/aggregator/quote",
+      "method": "GET",
+      "attempt": 1,
+      "httpStatus": 200,
+      "businessCode": 0,
+      "elapsedMs": 2131,
+      "parameterNames": [
+        "binanceChainId",
+        "amount",
+        "fromTokenAddress",
+        "toTokenAddress",
+        "userWalletAddress"
+      ]
+    },
+    {
+      "mode": "LIVE",
+      "timestamp": "2026-10-05T12:14:42.463Z",
+      "endpoint": "/api/v1/dex/aggregator/swap",
+      "method": "GET",
+      "attempt": 1,
+      "httpStatus": 200,
+      "businessCode": 0,
+      "elapsedMs": 1061,
+      "parameterNames": [
+        "binanceChainId",
+        "amount",
+        "fromTokenAddress",
+        "toTokenAddress",
+        "userWalletAddress",
+        "quoteId",
+        "slippagePercent",
+        "approveTransaction"
+      ]
+    },
+    {
+      "mode": "LIVE",
+      "timestamp": "2026-10-05T12:15:40.432Z",
+      "endpoint": "/api/v1/dex/pre-transaction/simulate",
+      "method": "POST",
+      "attempt": 1,
+      "httpStatus": 200,
+      "businessCode": 0,
+      "elapsedMs": 2126,
+      "parameterNames": []
+    }
+  ],
+  "quote": {
+    "returnedKeys": [
+      "quoteId",
+      "vendorName",
+      "executionMode",
+      "binanceChainId",
+      "fromTokenAmount",
+      "toTokenAmount",
+      "tradeFee",
+      "estimateGasFee",
+      "priceImpactPercent",
+      "router",
+      "fromToken",
+      "toToken",
+      "dexRouterList",
+      "approveTarget",
+      "isBest",
+      "feeAmount",
+      "feeToken",
+      "actualSwapAmount"
+    ],
+    "quoteIdPresent": true,
+    "vendorName": "LiquidMesh",
+    "executionMode": "SWAP",
+    "fromTokenAmount": "6000000000000000000",
+    "toTokenAmount": "18009576780489614",
+    "tradeFee": "0.02262293",
+    "estimateGasFee": "450000",
+    "priceImpactPercent": "0.0039040854"
+  },
+  "builder": {
+    "returnedKeys": [
+      "executionMode",
+      "routerResult",
+      "tx",
+      "rfq"
+    ],
+    "executionMode": "SWAP",
+    "rfqPresent": false,
+    "tx": {
+      "returnedKeys": [
+        "from",
+        "to",
+        "data",
+        "value",
+        "gas",
+        "gasPrice",
+        "maxPriorityFeePerGas",
+        "minReceiveAmount",
+        "slippagePercent",
+        "signatureData",
+        "computeUnitPrice",
+        "computeUnitLimit"
+      ],
+      "from": "REDACTED",
+      "to": "0xB44446b0c8E56988c34f7Ff73Ae904982b5FdDA5",
+      "value": "0",
+      "data": "REDACTED",
+      "calldataBytes": 2756,
+      "gas": "450000",
+      "gasPrice": "66475545",
+      "maxPriorityFeePerGas": "66475545",
+      "minReceiveAmount": "17919528896587165",
+      "slippagePercent": "0.5",
+      "signatureDataCount": null,
+      "signatureDataState": "null (no approval calldata returned)"
+    }
+  },
+  "simulation": {
+    "returnedKeys": [
+      "status",
+      "failReason",
+      "balanceChanges",
+      "allowanceChanges"
+    ],
+    "status": "FAILED",
+    "failReason": "execution reverted: BEP20: transfer amount exceeds balance",
+    "balanceChangeCount": 0,
+    "allowanceChangeCount": 0
+  },
+  "stage": "COMPLETE",
+  "errorCode": null,
+  "fundsSpent": "0",
+  "walletSignatures": 0,
+  "approvals": 0,
+  "broadcasts": 0,
+  "limitations": [
+    "One fresh 6-token quote, one unsigned builder at most, and one off-chain EVM simulation at most; no retries or alternate vendors.",
+    "API HMAC authentication is distinct from a wallet signature. No wallet key is loaded or used.",
+    "Receiver, quoteId, calldata and account-specific changes are withheld publicly; complete responses are ignored private local evidence.",
+    "A SWAP quote does not guarantee the builder mode; actual mode controls whether EVM simulation applies.",
+    "No vendor spender or transaction destination becomes trusted through this observation.",
+    "A predicted simulation outcome does not establish execution or receiver control."
+  ],
+  "localValidationHistory": [
+    {
+      "code": "INVALID_UNSIGNED_SWAP",
+      "reason": "Initial local guard rejected signatureData:null; corrected empty-value handling before any simulation."
+    }
+  ]
+}

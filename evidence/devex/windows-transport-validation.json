@@ -1,0 +1,81 @@
+{
+  "kind": "transport validation facts",
+  "capturedAtUtc": "2026-10-05T20:01:29.0559526+08:00",
+  "newImplementationLiveApiCalls": 11,
+  "secretFilesRead": false,
+  "dependency": {
+    "existingInstallation": true,
+    "name": "PowerShell",
+    "version": "7.6.5",
+    "minimumVersion": "7.5"
+  },
+  "validation": {
+    "fail": 0,
+    "includesActualLocalProcess": true,
+    "mode": "FIXTURE",
+    "pass": 15,
+    "powerShellSyntax": "PASS",
+    "typecheck": "PASS",
+    "skipped": 0,
+    "command": "node --test tests/binance.test.mjs tests/windows-transport.test.mjs",
+    "localProcessNetworkCalls": 0
+  },
+  "priorObservations": [
+    {
+      "httpStatus": null,
+      "transport": "Node fetch",
+      "source": "root coordinator message",
+      "independentlyRepeatedByThisAgent": false,
+      "outcome": "8 second timeout",
+      "classification": "environment transport failure"
+    },
+    {
+      "httpStatus": null,
+      "transport": "Node native HTTPS",
+      "source": "root coordinator message",
+      "independentlyRepeatedByThisAgent": false,
+      "outcome": "ECONNRESET",
+      "classification": "environment transport failure"
+    },
+    {
+      "httpStatus": null,
+      "transport": "curl",
+      "source": "root coordinator message",
+      "independentlyRepeatedByThisAgent": false,
+      "outcome": "TLS connection reset",
+      "classification": "environment transport failure"
+    },
+    {
+      "outcome": "Invalid API Key",
+      "apiCode": 40101,
+      "source": "root coordinator message",
+      "classification": "Credential roles had been reversed during import (root coordinator finding), not an API service defect; corrected import and bridge later returned API code0.",
+      "httpStatus": 401,
+      "transport": "PowerShell Invoke-WebRequest",
+      "approximateElapsedMs": 650,
+      "independentlyRepeatedByThisAgent": false
+    }
+  ],
+  "limitations": [
+    "Invoke-WebRequest buffers body before local size check; stdout and Node protocol are capped at 1 MiB.",
+    "Prior transport observations are attributed coordinator evidence; raw credential-bearing logs were not read or published.",
+    "No claim of a universal Node bug or Binance outage.",
+    "Read-only RWA code0; quote1/5 code40375; quote6 and fresh6 code0/SWAP; unsigned builder code0/SWAP; off-chain simulate code0 but prediction FAILED: BEP20 transfer amount exceeds balance. No approval, wallet signature, broadcast or funded execution."
+  ],
+  "correction": {
+    "rootCause": "PowerShell ConvertFrom-Json converts ISO timestamp string into DateTime by default; local header validation failed before HTTP",
+    "stage": "REQUEST_HEADERS",
+    "fix": "ConvertFrom-Json -DateKind String preserves signed timestamp bytes",
+    "regressionTest": "Actual installed PowerShell parses a public fixture ISO timestamp as exact String",
+    "liveEvidence": "evidence/devex/authenticated-rwa.json",
+    "liveHttpStatus": 200,
+    "liveBusinessCode": 0
+  },
+  "quoteEvidence": [
+    "evidence/devex/authenticated-quote.json",
+    "evidence/devex/authenticated-quote-5usdt.json",
+    "evidence/devex/authenticated-quote-6usdt.json"
+  ],
+  "updatedAt": "2026-10-05T12:16:56.2244608Z",
+  "unsignedEvidence": "evidence/devex/unsigned-swap-validation.json"
+}

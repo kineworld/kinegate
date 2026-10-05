@@ -8,7 +8,7 @@ Workflow: choose a scenario/issuer → inspect a requested spend → run preflig
 
 Must complete: deterministic integer arithmetic, issuer/chain checks, evidence freshness, slippage/cost/balance/permission gates, local fixture simulation with distinct labels, receipt integrity and expiry, scenario comparison, documented Binance client, honest API failure, keyboard/mobile UI, tests and source provenance.
 
-Optional: authenticated read-only snapshots and unsigned Transaction API simulation after valid credentials and qualification. Live purchase requires separate bounded human signing authorization and runtime verification. No claim of completion without actual API/mainnet evidence.
+Completed enhancement: authenticated RWA inspection with exact catalog/price/profile/market identity and ratio checks, replay clock expiry, and visible missing execution evidence. Optional: unsigned Transaction API simulation only for a real EVM transaction after applicable qualification. Live purchase requires separate bounded human signing authorization and runtime verification. No claim of completion without actual API/mainnet evidence.
 
 Not doing: predictions, profitable arbitrage claims, automated custody, real-wallet operations in a public demo, issuer equivalence, LLM permission overrides, pay-per-call, unnecessary agent integrations.
 
@@ -16,4 +16,4 @@ Scoring evidence: technical—client signing tests, timeout/retry/error paths, d
 
 Dependencies: official authenticated API and issuer information. Missing key/eligibility blocks LIVE; fixture remains accessible. Unknown schemas remain raw and untrusted rather than guessed. Missing/ambiguous data fails closed. Mainnet spending budget remains 0.
 
-Strongest objection: a preflight checklist is easy to copy and not enough alone to win. The differentiated contribution must be the tested evidence-bound receipt and invalidation semantics, and actual API depth remains the largest gap until credentials are provided.
+Strongest objection: a preflight checklist is easy to copy and not enough alone to win. The differentiated contribution must be the tested evidence-bound receipt and invalidation semantics, and actual RFQ lifecycle and mainnet settlement remain the largest gap after successful authenticated metadata acquisition.

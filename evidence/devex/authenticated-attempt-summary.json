@@ -1,0 +1,45 @@
+{
+  "dateUtc": "2026-10-05",
+  "mode": "LIVE",
+  "assetSigning": false,
+  "credentialValuesExported": false,
+  "endpoint": "/build/api/v1/dex/market/rwa/tokens?binanceChainId=56",
+  "attempts": [
+    {
+      "transport": "Node fetch",
+      "outcome": "NETWORK_OR_TIMEOUT",
+      "timeoutMs": 8000
+    },
+    {
+      "transport": "Node fetch IPv4 preference",
+      "outcome": "NETWORK_OR_TIMEOUT",
+      "timeoutMs": 8000
+    },
+    {
+      "transport": "Native Node HTTPS IPv4 connectivity probe",
+      "outcome": "ECONNRESET",
+      "authenticated": false
+    },
+    {
+      "transport": "curl connectivity probe",
+      "outcome": "TLS connection reset",
+      "authenticated": false
+    },
+    {
+      "transport": "PowerShell Invoke-WebRequest signed GET",
+      "httpStatus": 401,
+      "apiCode": 40101,
+      "message": "Invalid API Key",
+      "elapsedMs": 629
+    },
+    {
+      "transport": "PowerShell signed GET after labeled-role correction",
+      "httpStatus": 200,
+      "apiCode": 0,
+      "elapsedMs": 915,
+      "catalogCount": 488
+    }
+  ],
+  "conclusion": "The earlier HTTP401/API40101 resulted from our local importer assigning the Secret to the API Key field. Correcting the explicit labels produced HTTP200/code0. This was an operator configuration error, not evidence that the user credential was invalid. Native Node connectivity was a separate local transport problem; the production Windows bridge subsequently returned four successful read-only endpoints.",
+  "reproduction": "Use explicit OC_API_KEY / OC_SECRET_KEY roles in an ignored local .env. Windows PowerShell 7.5+ JSON parsing must preserve the ISO timestamp as a string. See authenticated-rwa.json and windows-transport.md. No credentials or signatures are published."
+}

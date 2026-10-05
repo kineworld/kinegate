@@ -1,0 +1,16 @@
+{
+  "verifiedAt": "2026-10-05T12:05:42.856Z",
+  "mode": "LIVE",
+  "readOnly": true,
+  "base": "http://127.0.0.1:4173",
+  "tool": "isolated browser / Playwright",
+  "status": "LIVE · WAIT · AAPLon / ondo · acquired 2026-10-05T12:05:42.663Z. Signing and broadcast disabled.",
+  "checks": "Exact issuer / contract\nPASS\n\nCatalog, price, profile and market agree on BSC, issuer and contract.\n\nAcquisition clock\nPASS\n\nLIVE observation acquired 0s ago. Refresh after 30s; acquisition is distinct from a price as-of time.\n\nToken price clock\nPASS\n\nUses tokenPriceUpdatedAt only. referencePrice is derived token value per share, not an independent stock quote.\n\nShare conversion\nPASS\n\nThe exact decimal ratio must agree between catalog and issuer profile. No one-token-equals-one-share assumption.\n\nUnderlying market context\nPASS\n\nMarket status is context. A closed underlying exchange is not a universal ban on secondary token trading.\n\nIndependent reference clock\nWAIT\n\nNo independently timestamped underlying price is established.\n\nIssuer trading qualification\nWAIT\n\nAPI access does not establish this person's issuer or venue trading eligibility.\n\nAmount-bound executable quote\nWAIT\n\nA real eligible receiver and fresh RFQ quote are still required; no amount, vendor, minimum output or expiry is invented.\n\nAllowance / balance / settlement effects\nWAIT\n\nNo wallet balance, quote-selected spender, bounded approval or RFQ settlement proof is established by RWA data.",
+  "wallet": false,
+  "canSign": false,
+  "canBroadcast": false,
+  "consoleErrors": [],
+  "narrowViewportWidth": 360,
+  "noHorizontalOverflow": true,
+  "limitations": "One real read-only UI refresh. Not a quote, RFQ simulation, issuer eligibility proof or chain trade."
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "kinegate.unsigned-swap-source.v1",
+  "mode": "SOURCE",
+  "runtimeEvidence": "evidence/devex/unsigned-swap-validation.json",
+  "sources": {
+    "tradingDocs": "https://web3.binance.com/en/dev-docs/catalog/web3-wallet/api/rest-api/trading-api",
+    "transactionDocs": "https://web3.binance.com/en/dev-docs/catalog/web3-wallet/api/rest-api/transaction-api",
+    "officialSdk": "https://github.com/binance/binance-web3-connector-js",
+    "commit": "a234ecedffcdded0e73c781344ea11bd6cf9c6ce",
+    "buildModule": "clients/web3-wallet/src/rest-api/modules/trading-api.ts",
+    "simulateModule": "clients/web3-wallet/src/rest-api/modules/transaction-api.ts",
+    "transactionType": "clients/web3-wallet/src/rest-api/types/build-swap-transaction-response-data-tx.ts",
+    "evmInputType": "clients/web3-wallet/src/rest-api/types/simulate-transactions-request-evm-tx.ts"
+  },
+  "build": {
+    "method": "GET",
+    "path": "/build/api/v1/dex/aggregator/swap",
+    "requiredQuery": ["binanceChainId", "amount", "fromTokenAddress", "toTokenAddress", "userWalletAddress", "quoteId"],
+    "requiredChoice": "slippagePercent or autoSlippage=true",
+    "localPolicy": {"chainId": "56", "amount": "6000000000000000000", "slippagePercent": "0.5", "approveTransaction": "false"},
+    "quoteTtl": "Official documentation says approximately 30 seconds; no exact guarantee inferred.",
+    "walletSignatureRequiredToBuild": false,
+    "apiHmacRequired": true,
+    "responseModeMustBeChecked": true,
+    "evmTransactionFields": ["from", "to", "data", "value", "gas", "gasPrice", "maxPriorityFeePerGas", "minReceiveAmount", "slippagePercent", "signatureData"]
+  },
+  "simulate": {
+    "method": "POST",
+    "path": "/build/api/v1/dex/pre-transaction/simulate",
+    "minimalEvmBody": {"binanceChainId": "56", "evmTx": {"from": "RECEIVER", "to": "BUILDER_DESTINATION", "value": "0", "data": "BUILDER_CALLDATA"}},
+    "exactlyOneChainPayload": true,
+    "rfqTypedDataIsEvmTransaction": false,
+    "walletSignatureRequiredToSimulate": false,
+    "apiHmacRequired": true,
+    "returnedPredictionFields": ["status", "failReason", "balanceChanges", "allowanceChanges"]
+  },
+  "sourceAndObservationDifferences": [
+    "Official Trading docs and generated types state equity/RWA routes always RFQ; the captured current AAPLon quote and builder both explicitly returned SWAP. This observation does not establish general behavior or diagnose the service.",
+    "The generated signatureData type is optional string[]; the actual approval-disabled builder returned null. Local validation accepts null/absent/empty array, rejects any nonempty approval payload.",
+    "Generated simulate module asserts evmTx, solTx and tronTx all exist, while its documentation says rendering-only required declarations and exactly one matching chain payload. The minimal adapter sends only evmTx for chain56 and the actual service accepted it."
+  ],
+  "safetyBoundary": "Construction and prediction only. No wallet key, allowance transaction, RFQ order, signature or broadcast; no auto-trust of spender/destination."
+}

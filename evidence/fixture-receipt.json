@@ -130,7 +130,7 @@
         "id": "reference",
         "label": "Independent reference clock",
         "status": "PASS",
-        "detail": "Underlying-market lastPrice is distinct from RWA referencePrice.",
+        "detail": "A derived RWA per-share reference cannot replace an independently timestamped stock quote.",
         "next": "Verified for this snapshot."
       },
       {
@@ -177,5 +177,5 @@
   "mode": "SIMULATION",
   "sourceMode": "FIXTURE",
   "executed": false,
-  "binding": "5670b5a0ea4450e44687d3c1d3d8772f636a7f3af4c47be25c6e481106eeaeb0"
+  "binding": "a43ef8af8ae57929e633a1dce3d757475340530532c79cb79981f1566659c08b"
 }

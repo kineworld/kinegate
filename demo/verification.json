@@ -1,0 +1,22 @@
+{
+  "verifiedAt": "2026-10-05T12:20:16.013Z",
+  "file": "kinegate-demo.mp4",
+  "durationSeconds": 133.68,
+  "sizeBytes": 4705115,
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 1440,
+      "height": 1000,
+      "pix_fmt": "yuv420p"
+    }
+  ],
+  "actualBrowserCapture": true,
+  "liveTrading": false,
+  "provenance": [
+    "FIXTURE",
+    "SIMULATION",
+    "REPLAY of LIVE read-only acquisition"
+  ],
+  "underFourMinutes": true
+}

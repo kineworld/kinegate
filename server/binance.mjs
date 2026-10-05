@@ -1,12 +1,15 @@
 import { createHmac, randomUUID } from 'node:crypto';
+import { windowsTransport } from './windows-transport.mjs';
 
 export const API_BASE = 'https://web3.binance.com';
 export const MAX_RESPONSE_BYTES = 1024 * 1024;
 export const VERIFIED_ASSETS = Object.freeze({
   AAPLB: '0x431a3bee82e2ca41e49895cbece5bb0f76a89b7a',
+  // Exact chain-56 match from authenticated current RWA catalog; provenance in evidence/devex/authenticated-rwa.json.
+  AAPLon: '0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4',
 });
 /** @typedef {{code:number,msg?:string,data:unknown,timestamp?:number}} OCResult */
-/** @typedef {{key?:string,secret?:string,eligible?:boolean,fetchFn?:typeof fetch,now?:()=>Date,sleep?:(ms:number)=>Promise<void>,onEvidence?:(e:Record<string,unknown>)=>void|Promise<void>}} ClientOptions */
+/** @typedef {{key?:string,secret?:string,eligible?:boolean,fetchFn?:typeof fetch,now?:()=>Date,sleep?:(ms:number)=>Promise<void>,onEvidence?:(e:Record<string,unknown>)=>void|Promise<void>,onResponse?:(endpoint:string,result:OCResult|null)=>void|Promise<void>}} ClientOptions */
 export class ApiError extends Error {
   /** @param {string} code @param {string} message @param {number} [status] */
   constructor(code, message, status = 503) { super(message); this.name = 'ApiError'; this.code = code; this.status = status; }
@@ -47,12 +50,26 @@ function isEnvelope(value) {
     && (record.msg === undefined || typeof record.msg === 'string')
     && (record.timestamp === undefined || (typeof record.timestamp === 'number' && Number.isFinite(record.timestamp)));
 }
+/** Validate only the unsigned zero-native-value EVM branch before off-chain simulation.
+ * No receiver ownership, spender trust or execution authorization is established.
+ * @param {unknown} data @param {string} receiver @returns {{from:string,to:string,value:string,data:string}} */
+export function validateUnsignedSwap(data, receiver) {
+  if (!data || typeof data !== 'object' || Array.isArray(data)) throw new ApiError('INVALID_UNSIGNED_SWAP', 'Builder did not return an object.', 400);
+  const result = /** @type {Record<string,unknown>} */ (data);
+  if (result.executionMode !== 'SWAP' || (result.rfq !== undefined && result.rfq !== null) || !result.tx || typeof result.tx !== 'object' || Array.isArray(result.tx)) throw new ApiError('INVALID_UNSIGNED_SWAP', 'Only the explicit unsigned SWAP branch can be EVM simulated.', 400);
+  const tx = /** @type {Record<string,unknown>} */ (result.tx);
+  if (typeof tx.from !== 'string' || !/^0x[\da-fA-F]{40}$/.test(tx.from) || tx.from.toLowerCase() !== receiver.toLowerCase()
+    || typeof tx.to !== 'string' || !/^0x[\da-fA-F]{40}$/.test(tx.to) || /^0x0{40}$/i.test(tx.to)
+    || tx.value !== '0' || typeof tx.data !== 'string' || !/^0x(?:[\da-fA-F]{2}){4,16384}$/.test(tx.data)
+    || (tx.signatureData !== undefined && tx.signatureData !== null && (!Array.isArray(tx.signatureData) || tx.signatureData.length !== 0))) throw new ApiError('INVALID_UNSIGNED_SWAP', 'Unsigned EVM fields must match receiver, contain bounded calldata and send zero native value without approval data.', 400);
+  return { from: tx.from, to: tx.to, value: '0', data: tx.data };
+}
 /** Original minimal HTTP adapter following Binance documentation; no SDK code copied. @param {ClientOptions} [options] */
 export function createBinanceClient(options = {}) {
   const key = options.key ?? process.env.OC_API_KEY ?? '';
   const secret = options.secret ?? process.env.OC_SECRET_KEY ?? '';
   const eligible = options.eligible ?? process.env.KINE_API_ELIGIBILITY_CONFIRMED === 'true';
-  const fetchFn = options.fetchFn ?? fetch;
+  const fetchFn = options.fetchFn ?? (process.platform === 'win32' ? windowsTransport : fetch);
   const mode = options.fetchFn ? 'FIXTURE' : 'LIVE';
   const now = options.now ?? (() => new Date());
   const sleep = options.sleep ?? (ms => new Promise(resolve => setTimeout(resolve, ms)));
@@ -60,11 +77,12 @@ export function createBinanceClient(options = {}) {
   async function request(method, endpoint, params = {}, payload) {
     if (!key || !secret) throw new ApiError('CREDENTIALS_MISSING', 'Configure local OC_API_KEY and OC_SECRET_KEY.');
     if (!eligible) throw new ApiError('ELIGIBILITY_UNCONFIRMED', 'A person must confirm API and asset eligibility before authenticated requests.');
-    if (!/^\/api\/v1\/dex\/(market\/rwa\/(tokens|price|underlying-profile|underlying-market)|aggregator\/quote|pre-transaction\/simulate)$/.test(endpoint)) throw new ApiError('ENDPOINT_DENIED', 'This adapter permits only documented read-only or off-chain simulation endpoints.', 400);
+    if (!/^\/api\/v1\/dex\/(market\/rwa\/(tokens|price|underlying-profile|underlying-market)|aggregator\/(quote|swap)|pre-transaction\/simulate)$/.test(endpoint)) throw new ApiError('ENDPOINT_DENIED', 'This adapter permits only documented read-only, unsigned building or off-chain simulation endpoints.', 400);
     const query = Object.entries(params).map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`).join('&');
     const path = '/build' + endpoint + (query ? '?' + query : '');
     const body = method === 'GET' ? '' : JSON.stringify(payload ?? {});
-    const maxAttempts = method === 'GET' ? 2 : 1;
+    // Quotes/builders are receiver-bound and short-lived: never silently repeat an input.
+    const maxAttempts = method === 'GET' && !/^\/api\/v1\/dex\/aggregator\//.test(endpoint) ? 2 : 1;
     for (let attempt = 1; attempt <= maxAttempts; attempt++) {
       const timestamp = now().toISOString();
       const started = performance.now();
@@ -72,9 +90,10 @@ export function createBinanceClient(options = {}) {
       let response;
       try {
         response = await fetchFn(API_BASE + path, { method, headers, ...(body ? { body } : {}), signal: AbortSignal.timeout(8000), redirect: 'error' });
-      } catch {
-        await options.onEvidence?.({ mode, timestamp, endpoint, method, attempt, elapsedMs: Math.round(performance.now() - started), outcome: 'NETWORK_OR_TIMEOUT', parameterNames: Object.keys(params) });
-        throw new ApiError('NETWORK_OR_TIMEOUT', 'External request failed or exceeded the 8 second timeout.');
+      } catch (error) {
+        const transportCode = error instanceof Error && /^WINDOWS_[A-Z_]{1,80}$/.test(error.message) ? error.message : null;
+        await options.onEvidence?.({ mode, timestamp, endpoint, method, attempt, elapsedMs: Math.round(performance.now() - started), outcome: 'NETWORK_OR_TIMEOUT', transportCode, parameterNames: Object.keys(params) });
+        throw new ApiError('NETWORK_OR_TIMEOUT', 'External request failed or exceeded the 8 second timeout.' + (transportCode ? ` ${transportCode}` : ''));
       }
       /** @type {OCResult | null} */ let result = null;
       try {
@@ -85,6 +104,8 @@ export function createBinanceClient(options = {}) {
         if (error instanceof ApiError) throw error;
         throw new ApiError('NETWORK_OR_TIMEOUT', 'Response body could not be read within the request limit.');
       }
+      // Opt-in CLI capture may contain receiver data; caller must store this only in ignored private evidence.
+      await options.onResponse?.(endpoint, result);
       await options.onEvidence?.({ mode, timestamp, endpoint, method, attempt, httpStatus: response.status, businessCode: result?.code ?? null, elapsedMs: Math.round(performance.now() - started), parameterNames: Object.keys(params) });
       const retryable = response.status === 429 || response.status >= 500 || result?.code === 42900 || result?.code === 50000 || result?.code === 50001;
       if (retryable && attempt < maxAttempts) {
@@ -120,6 +141,14 @@ export function createBinanceClient(options = {}) {
       if (input.fromTokenAddress.toLowerCase() === input.toTokenAddress.toLowerCase()) throw new ApiError('INVALID_QUOTE_INPUT', 'Quote token pair must differ.', 400);
       if (![input.fromTokenAddress, input.toTokenAddress].some(address => Object.values(VERIFIED_ASSETS).some(asset => asset.toLowerCase() === address.toLowerCase()))) throw new ApiError('ASSET_DENIED', 'Quote must include an RWA from the documented local contract allowlist.', 400);
       return request('GET', '/api/v1/dex/aggregator/quote', { binanceChainId: '56', amount: input.amount, fromTokenAddress: input.fromTokenAddress, toTokenAddress: input.toTokenAddress, userWalletAddress: input.userWalletAddress });
+    },
+    /** Narrow CLI only: unsigned 6 USDT -> AAPLon payload, never approval calldata or signing.
+     * @param {{amount:string,fromTokenAddress:string,toTokenAddress:string,userWalletAddress:string,quoteId:string,slippagePercent:string,approveTransaction:string}} input */
+    buildSwap: input => {
+      if (input.amount !== '6000000000000000000' || input.fromTokenAddress.toLowerCase() !== '0x55d398326f99059ff775485246999027b3197955' || input.toTokenAddress.toLowerCase() !== VERIFIED_ASSETS.AAPLon.toLowerCase()
+        || !/^0x[\da-fA-F]{40}$/.test(input.userWalletAddress) || /^0x0{40}$/i.test(input.userWalletAddress)
+        || !/^[\x21-\x7e]{1,512}$/.test(input.quoteId) || input.slippagePercent !== '0.5' || input.approveTransaction !== 'false') throw new ApiError('INVALID_BUILD_INPUT', 'Unsigned building is limited to 6 USDT to current AAPLon with 0.5% slippage and approval disabled.', 400);
+      return request('GET', '/api/v1/dex/aggregator/swap', { binanceChainId: '56', amount: input.amount, fromTokenAddress: input.fromTokenAddress, toTokenAddress: input.toTokenAddress, userWalletAddress: input.userWalletAddress, quoteId: input.quoteId, slippagePercent: '0.5', approveTransaction: 'false' });
     },
     /** CLI only, never RFQ typed data. @param {{from:string,to:string,value:string,data:string}} evmTx */
     simulate: evmTx => {

@@ -1,9 +1,9 @@
 {
-  "time": "2026-10-05T11:36:32.645Z",
+  "time": "2026-10-05T12:17:41.466Z",
   "base": "http://127.0.0.1:4173",
   "mode": "FIXTURE",
   "tool": "Playwright 1.63.0 + isolated headless Edge on Windows",
-  "sampleSize": 27,
+  "sampleSize": 30,
   "tests": [
     {
       "name": "Fixture banner and no wallet path",
@@ -102,7 +102,19 @@
       "status": "PASS"
     },
     {
-      "name": "Integration status honestly blocks credentials",
+      "name": "Integration configuration never implies signing or a filled trade",
+      "status": "PASS"
+    },
+    {
+      "name": "Recorded authenticated API replay preserves missing execution evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "Successful real quote replay retains actual mode and disables trading",
+      "status": "PASS"
+    },
+    {
+      "name": "Real off-chain failed simulation is never shown as an execution success",
       "status": "PASS"
     },
     {

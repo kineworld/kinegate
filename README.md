@@ -2,9 +2,9 @@
 
 **A ticker is only the beginning.** KineGate turns one tokenized-equity trade intention into an expiring preflight receipt bound to the issuer, exact amount, quote clocks, permissions and execution evidence. Edit a reviewed field and the old receipt becomes invalid.
 
-The no-wallet workspace is a complete **FIXTURE / local SIMULATION** experience: sixteen scenarios, thirteen deterministic checks, receipt export/import, clock expiry and a same-input comparison. It never signs or broadcasts. Actual Binance authenticated data and small funded mainnet settlement are still blocked pending authorized eligible credentials and human signing; the recorded BSC contract read is distinct from a trade.
+The no-wallet workspace is a complete **FIXTURE / local SIMULATION** experience: sixteen scenarios, thirteen deterministic checks, receipt export/import, clock expiry and a same-input comparison. It never signs or broadcasts. Four authenticated Binance RWA endpoints returned **HTTP200 / business code 0**. Inspect their recorded **REPLAY** in Evidence, or refresh locally. A separate 6 USDT quote succeeded with LiquidMesh / SWAP; its replay retains absent expiry/minimum-output fields and disabled trading. Independent timestamps and execution effects remain incomplete. Funded mainnet settlement remains unverified.
 
-Public repository and deployed demo links will be recorded here after verified publication. All submission gates are tracked in [the audit](docs/submission-audit.md).
+**[Try the deployed demo](https://kineworld.github.io/kinegate/)** · **[Public source](https://github.com/kineworld/kinegate)** · **[2m14s actual demo video](https://github.com/kineworld/kinegate/releases/tag/v0.2.0)**. Anonymous browser smoke and GitHub CI passed. All submission gates are tracked in [the audit](docs/submission-audit.md).
 
 ![Yellow/black workspace](evidence/desktop-yellow.png)
 
@@ -21,11 +21,14 @@ Open http://127.0.0.1:4173 . Run preflight on the $50 fixture, export its receip
 
 ## Evidence before action
 
-- [Test run](evidence/tests-run.txt): 38 unit/integration checks, including exact arithmetic, malformed policy, whitelist, tampering, clock expiry, signed-request bytes, bounded retry and local server protection.
-- [Browser evidence](evidence/browser-qa.json): 27 actual browser checks, all sixteen scenarios, recovery/import rejection, 360px layout and keyboard smoke. [Mobile screenshot](evidence/mobile-yellow.png).
+- [Test run](evidence/tests-run.txt): 49 unit/integration checks, including exact arithmetic, malformed policy, whitelist, tampering, clock expiry, signed-request bytes, bounded retry, native Windows timestamp preservation and local server protection.
+- [Browser evidence](evidence/browser-qa.json): 30 actual browser checks, all sixteen scenarios, real API replay, recovery/import rejection, 360px layout and keyboard smoke. [Mobile screenshot](evidence/mobile-yellow.png).
 - [Comparison](evidence/fixture-benchmark.json): 16 authored fixtures; simplified display-price comparator accepts 13 of 14 policy-unsafe cases, gate accepts 0. Constructed fault cases are not a real-world safety or profitability estimate.
 - [Independent review](evidence/review-independent.md): reproduced bugs and fixes, HTTP isolation checks, explicit limitations.
-- [Real read-only BSC acquisition](evidence/mainnet/bsc-readonly-probe.json): official-listed AAPLB contract code and decimals, no liquidity, eligibility or transaction claim.
+- [Authenticated acquisition](evidence/devex/authenticated-rwa.json): 488 BSC catalog records; current AAPLon identity, price, issuer profile and market. Four HTTP200/code0 responses, request times and latency; no execution claim.
+- [Unsigned execution check](evidence/devex/unsigned-swap-validation.json): fresh quote and unsigned SWAP build succeeded; actual off-chain simulation predicted FAILED from insufficient balance. No approval, signature or broadcast. [Bounded mainnet proposal](docs/mainnet-operation-pack.md).
+- [Actual quote acquisition](evidence/devex/authenticated-quote-6usdt.json): one HTTP200/code0 6 USDT → AAPLon route, actual mode SWAP. Earlier 1 and 5 USDT inputs returned 40375. Historical quote; no order or funded trade.
+- [Matching BSC acquisition](evidence/mainnet/current-api-asset-readonly.json): API-listed AAPLon contract code, symbol and 18 decimals at one pinned block. No liquidity, eligibility or transaction claim. The earlier campaign AAPLB address was not in this current catalog.
 - [Real no-key API response](evidence/devex/unauthenticated-probe.json): HTTP401/code40101, **not** successful data integration.
 - [Claims and their limits](docs/claims.md), [judging map](docs/judging.md), [rules](docs/rules.md).
 
@@ -35,7 +38,7 @@ The referencePrice field in RWA data is derived per-share token value; it must n
 
 Pure bigint checks in `src/engine.mjs`; original fixture dataset in `src/fixtures.mjs`; vanilla module UI; loopback Node server and minimal documented HMAC adapter. Public production build is static and excludes all credentials and the API server. Static hosting shows API unavailability explicitly.
 
-For authorized API reads, copy `.env.example` to ignored `.env`, configure `OC_API_KEY` and `OC_SECRET_KEY` locally, and personally confirm API/asset qualification before enabling its flag. Restart the server; `npm run probe -- status`, `npm run probe -- discovery`, `npm run probe -- asset`. Local endpoints: `/api/status`, `/api/discovery`, `/api/asset?address=<allowlisted-contract>`. RWA responses are raw inspection evidence and never silently authorize a receipt. No broadcast/signing route exists.
+For authorized API reads, copy `.env.example` to ignored `.env`, configure `OC_API_KEY` and `OC_SECRET_KEY` locally, and personally confirm API qualification before enabling its flag. Restart the server; `npm run probe -- status`, `npm run probe -- discovery`, `npm run probe -- asset 0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4`. Windows requires PowerShell 7.5+ (`pwsh.exe`); other systems use Node fetch. Local endpoints: `/api/status`, `/api/discovery`, `/api/asset?address=<allowlisted-contract>`. RWA inspection compares exact endpoint identity, ratio and clocks, and keeps absent trading evidence as WAIT. No broadcast/signing route exists. Issuer trading eligibility is a separate personal check.
 
 [API contract sources](docs/api-contracts.md) · [Architecture](docs/architecture.md) · [Safety](docs/security.md) · [Recovery and human reproduction](docs/devex-reproduction-guide.md) · [Open-source attribution](docs/attribution.md).
 
@@ -55,4 +58,4 @@ Type checking covers the engine, fixtures and request adapter; UI and server syn
 
 ## Competition readiness
 
-Not fully eligible for final submission yet: authenticated integration and funded mainnet demonstration are unverified, identity/qualification fields are human owned, and the official DevEx rule requires a personally authored report. [Actual form fields](docs/submission-fields.md), [human gates](docs/human-actions.md), [submission audit](docs/submission-audit.md). No registration or submission receipt exists. MIT-licensed original project; no issuer or Binance endorsement claimed.
+Not ready for final submission yet: the funded mainnet demonstration is unverified, identity/qualification fields are human owned, and the official DevEx rule requires a personally authored report. [Actual form fields](docs/submission-fields.md), [human gates](docs/human-actions.md), [submission audit](docs/submission-audit.md). No registration or submission receipt exists. MIT-licensed original project; no issuer or Binance endorsement claimed.

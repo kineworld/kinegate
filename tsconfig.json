@@ -11,5 +11,5 @@
     "types": ["node"],
     "skipLibCheck": true
   },
-  "include": ["src/engine.mjs", "src/fixtures.mjs", "server/binance.mjs"]
+  "include": ["src/engine.mjs", "src/fixtures.mjs", "src/live-evidence.mjs", "server/binance.mjs"]
 }

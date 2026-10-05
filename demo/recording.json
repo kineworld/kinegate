@@ -1,0 +1,89 @@
+{
+  "recordedAt": "2026-10-05T12:20:01.289Z",
+  "durationSeconds": 138.3,
+  "base": "http://127.0.0.1:4173",
+  "actualBrowser": true,
+  "liveTrading": false,
+  "cues": [
+    {
+      "start": 0.58,
+      "end": 10.59,
+      "text": "KineGate: a ticker and a good-looking price are not enough. Bind the issuer, clocks and exact intention before acting."
+    },
+    {
+      "start": 10.59,
+      "end": 17.72,
+      "text": "Preflight uses FIXTURE data. Evidence includes REPLAY of real API acquisition. No wallet, signed transaction or broadcast; this is the actual yellow/black product."
+    },
+    {
+      "start": 17.72,
+      "end": 26.99,
+      "text": "One $50 intention. Thirteen deterministic checks cover identity, permission, clocks, balance, cost, vendor and effects."
+    },
+    {
+      "start": 26.99,
+      "end": 35.05,
+      "text": "The local receipt binds every input using canonical JSON and SHA-256. A hash proves internal consistency, not issuer authenticity."
+    },
+    {
+      "start": 35.05,
+      "end": 41.63,
+      "text": "Local simulation records this bound fixture once per browser session. No chain transaction is sent."
+    },
+    {
+      "start": 41.63,
+      "end": 50.27,
+      "text": "Change the amount to $51: the previous receipt becomes invalid. KineGate does not invent a new quote."
+    },
+    {
+      "start": 50.27,
+      "end": 58.95,
+      "text": "The weekend case waits: stale independent reference plus a closed underlying market. Closure is policy context, not a universal DEX ban."
+    },
+    {
+      "start": 58.95,
+      "end": 66.07,
+      "text": "Same ticker, different issuer: the exact intended claim does not match. A ticker cannot substitute for issuer-specific rights."
+    },
+    {
+      "start": 66.07,
+      "end": 74.79,
+      "text": "Restore a valid fixture, then advance the virtual clock 60 seconds: the receipt expires and dependent evidence must be refreshed."
+    },
+    {
+      "start": 74.79,
+      "end": 84.38,
+      "text": "Same sixteen authored fixtures: a simplified price-only rule accepts thirteen policy-unsafe cases; KineGate accepts none. This is not a real-world accuracy estimate."
+    },
+    {
+      "start": 84.38,
+      "end": 94.16,
+      "text": "REPLAY of four authenticated Binance RWA calls: HTTP200 and business code0. Exact AAPLon issuer and contract agree; absent execution evidence remains WAIT."
+    },
+    {
+      "start": 94.16,
+      "end": 103.81,
+      "text": "A real 6 USDT quote succeeded: LiquidMesh, actual mode SWAP. This is a recorded quote, with no declared expiry or minimum output and no trade authorization."
+    },
+    {
+      "start": 103.81,
+      "end": 112.43,
+      "text": "The unsigned SWAP builder and actual off-chain simulation returned HTTP200 and code0. Predicted execution FAILED: token balance insufficient. No signature, approval or broadcast."
+    },
+    {
+      "start": 112.43,
+      "end": 119.97,
+      "text": "The pinned-block BSC read matches current API-listed AAPLon: code, symbol, eighteen decimals. Contract existence does not prove liquidity or settlement."
+    },
+    {
+      "start": 119.97,
+      "end": 126.52,
+      "text": "Mainnet settlement remains unverified. Asset signing needs separate human authorization; the required DevEx report must be personally authored."
+    },
+    {
+      "start": 126.52,
+      "end": 133.81,
+      "text": "Run it without a wallet. Inspect the code, exported receipt, test evidence and documented limitations. Evidence before action."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Binance Web3 integration contracts
 
-Checked 2026-10-05. These are implementation facts and reproduction inputs, not a human DevEx report. Authenticated success is **NOT_VERIFIED** because no authorized credentials are configured.
+Checked 2026-10-05. These are implementation facts and reproduction inputs, not a human DevEx report. After personal API qualification confirmation and correction of a local key/secret role inversion, four signed RWA calls returned HTTP200/code0. See evidence/devex/authenticated-rwa.json. The earlier 40101 was operator import error; the initial no-key probe remains distinct historical evidence. Actual RFQ settlement and asset spending are unverified.
 
 Official references: [authentication](https://web3.binance.com/en/dev-docs/authentication), [RWA API](https://web3.binance.com/en/dev-docs/catalog/web3-wallet/api/rest-api/rwa-data), [Trading flow](https://web3.binance.com/en/dev-docs/products/trading-api/integration-flow), [Transaction API](https://web3.binance.com/en/dev-docs/catalog/web3-wallet/api/rest-api/transaction-api).
 
@@ -54,9 +54,9 @@ Result `data`: `status` (`SUCCESS` / `FAILED`), nullable `failReason`, `balanceC
 
 | Direction | Needed capabilities | Actual verification | Limitation |
 |---|---|---|---|
-| Evidence-bound preflight | Quote, issuer metadata, valid EVM simulation where applicable | Official contract schemas plus local FIXTURE client tests | Authenticated quote/simulation BLOCKED_CREDENTIALS; RFQ requires a separate policy path |
-| Issuer passport | RWA tokens/profile, issuer terms, chain existence | One LIVE unauthenticated tokens request returned HTTP401/API40101; LIVE official BSC RPC confirmed AAPLB symbol/decimals/code | Profile data, reserves and user eligibility not verified |
-| Market-aware execution | Underlying-market status/time/reasons, freshness | Exact official response schema checked | LIVE market status BLOCKED_CREDENTIALS; do not fabricate a current open/closed result |
+| Evidence-bound preflight | Quote, issuer metadata, valid EVM simulation where applicable | Official contract schemas plus local FIXTURE client tests | Fresh quote with a real receiver and settlement effects still need verification; RFQ requires a separate policy path |
+| Issuer passport | RWA tokens/profile, issuer terms, chain existence | LIVE signed catalog/profile HTTP200/code0; pinned-block BSC code/symbol/decimals for matching current AAPLon | Profile is observed; reserves and personal issuer trading eligibility are not verified |
+| Market-aware execution | Underlying-market status/time/reasons, freshness | Exact official response schema checked | LIVE market status acquired; replay is not current status and no independently timestamped executable reference is established |
 
 ## Official source reuse and contract evidence
 
@@ -68,4 +68,12 @@ Official [JavaScript SDK](https://github.com/binance/binance-web3-connector-js),
 
 ## Implemented local surface
 
-`server/server.mjs` binds `127.0.0.1:4173`. GET `/api/status` returns boolean credential/eligibility state; `/api/discovery` caps the displayed token array at 100; `/api/asset?address=...` allows only documented AAPLB and fetches price, profile and market. Missing credentials return HTTP503 with machine error `CREDENTIALS_MISSING`. CLI `node scripts/probe.mjs quote <amount> <from> <to> <receiver>` fetches a read-only quote. No generic API proxy is exposed. Local request logs are ignored under `evidence/local-api/` and exclude secrets/signatures and value-bearing parameters. GET has at most two attempts with capped delay; auth/permission errors and POST simulation never retry.
+`server/server.mjs` binds `127.0.0.1:4173`. GET `/api/status` returns boolean credential/eligibility state; `/api/discovery` caps the displayed token array at 100; `/api/asset?address=...` allows documented assets and fetches price, profile and market. Missing credentials return HTTP503 with machine error `CREDENTIALS_MISSING`. CLI `node scripts/probe.mjs quote <amount> <from> <to> <receiver>` fetches a read-only quote. No generic API proxy is exposed. Local request logs are ignored under `evidence/local-api/` and exclude secrets/signatures and value-bearing parameters. GET has at most two attempts with capped delay; auth/permission errors and POST simulation never retry.
+
+## Current identity acquisition
+
+The authenticated chain-56 catalog captured 488 assets (442 Ondo, 46 bStock). The prior campaign AAPLB address was absent; it is retained only as historical provenance. Current exact AAPLon/Ondo address `0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4` was acquired from the signed catalog, agreed with price/profile/market identity and was checked separately at pinned BSC block `0x7808a02`. Code present, symbol AAPLon and 18 decimals are read-only facts, not liquidity or settlement. `src/live-evidence.mjs` compares exact identity/ratio/clocks and keeps missing quote/qualification/effects as WAIT. Stored evidence is REPLAY when viewed later; local refresh is LIVE.
+
+## Observed market field semantics
+
+The inspected official RWA SDK/schema declares marketData.referencePrice and related indicators, with no lastPrice field or independent exchange-quote as-of source. The captured AAPLon market data agrees with that declared field set. An earlier local assumption about a lastPrice field was incorrect; see `evidence/devex/underlying-market-schema-observation.json`, which preserves the official type excerpt and MIT license. This is a local documentation assumption corrected, not an API defect claim. The fixture's independently timestamped reference remains synthetic; the real inspector retains WAIT rather than deriving a trusted timestamp from the response envelope.
