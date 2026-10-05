@@ -15,3 +15,5 @@ Keep the personal public repo, Pages and video available through judging. Frozen
 ## Later owner settlement
 
 See [the live settlement supplement](mainnet-settlement.md). A real external-venue purchase is now confirmed, with an excessive-allowance exception and pending cleanup. Prior zero-asset-action statements describe earlier checkpoints. This does not establish a Binance Trading API execution or organizer acceptance.
+
+The later [approval cleanup](mainnet-settlement.md#confirmed-approval-cleanup) is now confirmed: allowance zero, balances unchanged, aggregate three-transaction gas within 0.0001 BNB. This does not retroactively validate the historical allowance cap or signing-time order evidence.

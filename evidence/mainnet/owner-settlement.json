@@ -49,17 +49,28 @@
     "inputCheck": "PASS",
     "allowanceMaximumUSDT": 6,
     "actualPCSAllowanceAtomic": "115792089237316195423570985008687907853269984665640564039451584007913129639935",
-    "allowanceCheck": "FAIL_EXCEEDS_AUTHORIZED_CAP",
+    "allowanceCheck": "HISTORICAL_CAP_FAILED_CURRENT_ALLOWANCE_ZERO",
     "slippageMaximumPercent": 0.5,
     "uiSlippagePercent": 0.1,
     "signingTimeExactSlippageCheck": "NOT_CAPTURED",
     "gasBudgetWei": "100000000000000",
     "observedReceiptGasBelowBudget": true,
-    "aggregateGasIncludingPendingRevocation": "NOT_FINAL"
+    "aggregateGasIncludingPendingRevocation": "NOT_FINAL",
+    "aggregateGasIncludingRevocation": {
+      "feeWei": "43655053832412",
+      "feeBNB": "0.000043655053832412",
+      "belowOriginalCap": true
+    }
   },
   "cleanup": {
     "pcsPermit2": "0x31c2F6fcFf4F8759b3Bd5Bf0e1084A055615c768",
-    "status": "REVOKE_REQUIRED_NOT_YET_CONFIRMED"
+    "status": "CONFIRMED_ALLOWANCE_ZERO",
+    "observedAt": "2026-10-05T17:56:45.9268370+00:00",
+    "transactionHash": "0xa5561739a7750a1a22deb209828d99bcc7353c90fac03299cd9b84dc588183c1",
+    "explorer": "https://bscscan.com/tx/0xa5561739a7750a1a22deb209828d99bcc7353c90fac03299cd9b84dc588183c1",
+    "confirmations": "161",
+    "allowanceAtomic": "0",
+    "tokenBalancesUnchanged": true
   },
   "agentSigned": false,
   "agentBroadcast": false,
@@ -67,7 +78,7 @@
   "binanceTradingAPISettlement": false,
   "limits": [
     "This confirms an owner-completed external-venue trade, not execution through the KineGate application or Binance Trading API.",
-    "The owner approved uint256-max before signing-time review was captured; the original 6-USDT allowance cap failed. Cleanup cannot make the historical authorization compliant.",
+    "The owner approved uint256-max before signing-time review was captured; the original 6-USDT allowance cap failed. A confirmed later zero-allowance revocation does not make the historical authorization compliant.",
     "Rounded UI quotes are not exact signed minimum-output or expiry evidence.",
     "A different Binance Permit2 allowance was also above the cap when read; its creation is not attributed to this trade. No unrelated approval is changed.",
     "A receipt does not establish competition acceptance or award eligibility."

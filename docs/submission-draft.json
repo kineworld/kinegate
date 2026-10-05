@@ -19,7 +19,6 @@
   "eligibilityInformation": "Human personally confirmed competition/API region and sanctions qualifications; reviewed registration declaration submitted with recorded confirmation. Issuer/venue qualifications for the bounded purchase were separately confirmed privately. Technical validation and personal signing remain required.",
   "blockingMissingRequirements": [
     "KineGate / Binance Trading API execution remains unverified; the later owner trade was external",
-    "Current excessive PCS USDT allowance needs owner revocation; historical allowance cap failed",
     "Exact signed slippage/expiry review was not captured"
   ],
   "demoVideoRelease": "https://github.com/zoahdev/kinegate/releases/tag/demo-polished-v1",
@@ -49,5 +48,8 @@
   "organizerAcceptance": "NOT_CONFIRMED",
   "submittedDescriptionHistorical": true,
   "laterMainnetEvidence": "docs/mainnet-settlement.md",
-  "laterMainnetTransactionHash": "0x16682557ce0e9cb0bb266b0795fe94f88cfacd8bb552630f8b3f23d2559854d4"
+  "laterMainnetTransactionHash": "0x16682557ce0e9cb0bb266b0795fe94f88cfacd8bb552630f8b3f23d2559854d4",
+  "laterAllowanceCleanup": "CONFIRMED_ZERO",
+  "officialProjectDescriptionAmended": false,
+  "amendmentLimitation": "Original submitted form confirmation exposes no response-edit control; original response retained. Supplement is available from its submitted public source URL."
 }
