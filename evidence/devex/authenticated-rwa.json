@@ -1,0 +1,203 @@
+{
+  "schema": "kinegate.rwa-evidence.v1",
+  "mode": "LIVE",
+  "readOnly": true,
+  "observedAt": "2026-10-05T12:00:13.194Z",
+  "asset": {
+    "binanceChainId": "56",
+    "tokenContractAddress": "0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4",
+    "platformId": "ondo",
+    "assetType": 1,
+    "tokenName": "Apple (Ondo)",
+    "tokenSymbol": "AAPLon",
+    "tokenLogoUrl": "https://onchainos.bnbstatic.com/images/web3-data/public/token/logos/F728DD7CABE8942D7CC78CDCF757A895.png",
+    "decimals": "18",
+    "underlyingTicker": "AAPL",
+    "underlyingName": "Apple Inc.",
+    "underlyingNameZh": "苹果",
+    "tokenToShareRatio": "1.003376073740221058",
+    "tags": [
+      "alpha"
+    ],
+    "statusInfo": {
+      "openState": true,
+      "marketStatus": "premarket",
+      "reasonCode": "TRADING",
+      "reasonMsg": null,
+      "nextOpenTime": 1791207060000,
+      "nextCloseTime": 1791206940000
+    },
+    "tokenPrice": "335.2220576966350922786414450397212",
+    "referencePrice": "334.0941312732814",
+    "volume24H": "11076076752.23869",
+    "marketCap": "4870918578333",
+    "peRatioTTM": "37.77"
+  },
+  "catalog": {
+    "timestamp": 1791201609676,
+    "count": 488,
+    "platformCounts": {
+      "ondo": 442,
+      "bstock": 46
+    },
+    "chainId": "56",
+    "apiCode": 0,
+    "oldCampaignAAPLBAddressPresent": false
+  },
+  "requests": [
+    {
+      "mode": "LIVE",
+      "timestamp": "2026-10-05T12:00:08.152Z",
+      "endpoint": "/api/v1/dex/market/rwa/tokens",
+      "method": "GET",
+      "attempt": 1,
+      "httpStatus": 200,
+      "businessCode": 0,
+      "elapsedMs": 2103,
+      "parameterNames": [
+        "binanceChainId"
+      ]
+    },
+    {
+      "mode": "LIVE",
+      "timestamp": "2026-10-05T12:00:10.256Z",
+      "endpoint": "/api/v1/dex/market/rwa/price",
+      "method": "GET",
+      "attempt": 1,
+      "httpStatus": 200,
+      "businessCode": 0,
+      "elapsedMs": 1264,
+      "parameterNames": [
+        "binanceChainId",
+        "tokenContractAddresses"
+      ]
+    },
+    {
+      "mode": "LIVE",
+      "timestamp": "2026-10-05T12:00:11.52Z",
+      "endpoint": "/api/v1/dex/market/rwa/underlying-profile",
+      "method": "GET",
+      "attempt": 1,
+      "httpStatus": 200,
+      "businessCode": 0,
+      "elapsedMs": 1046,
+      "parameterNames": [
+        "binanceChainId",
+        "tokenContractAddress"
+      ]
+    },
+    {
+      "mode": "LIVE",
+      "timestamp": "2026-10-05T12:00:12.566Z",
+      "endpoint": "/api/v1/dex/market/rwa/underlying-market",
+      "method": "GET",
+      "attempt": 1,
+      "httpStatus": 200,
+      "businessCode": 0,
+      "elapsedMs": 1047,
+      "parameterNames": [
+        "binanceChainId",
+        "tokenContractAddress"
+      ]
+    }
+  ],
+  "price": {
+    "code": 0,
+    "msg": "success",
+    "data": [
+      {
+        "binanceChainId": "56",
+        "tokenContractAddress": "0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4",
+        "platformId": "ondo",
+        "tokenPrice": "334.094131273281405682",
+        "referencePrice": "332.97",
+        "tokenPriceUpdatedAt": 1791201609517
+      }
+    ],
+    "timestamp": 1791201611071,
+    "success": true
+  },
+  "profile": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "binanceChainId": "56",
+      "tokenContractAddress": "0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4",
+      "platformId": "ondo",
+      "underlyingTicker": "AAPL",
+      "underlyingFullName": "Apple (Ondo)",
+      "assetType": 1,
+      "tokenToShareRatio": "1.003376073740221058",
+      "protections": {
+        "dailyAttestationReport": {
+          "supported": true,
+          "description": null,
+          "url": "https://onchainos.bnbstatic.com/images/web3-data/public/token/ondo/pdf/daily-2026-09-29.pdf"
+        },
+        "monthlyAttestationReport": {
+          "supported": true,
+          "description": null,
+          "url": "https://onchainos.bnbstatic.com/images/web3-data/public/token/ondo/pdf/monthly-2026-07.pdf"
+        }
+      },
+      "companyInfo": {
+        "ceo": "John Ternus",
+        "website": "https://www.apple.com",
+        "industry": "Technology",
+        "conceptsEn": [],
+        "conceptsCn": [],
+        "description": "Apple is among the largest companies in the world, with a broad portfolio of hardware and software products targeted at consumers and businesses. Apple's iPhone makes up a majority of the firm sales, and Apple's other products like Mac, iPad, and Watch are designed around the iPhone as the focal point of an expansive software ecosystem. Apple has progressively worked to add new applications, like streaming video, subscription bundles, and augmented reality. The firm designs its own software and semiconductors while working with subcontractors like Foxconn and TSMC to build its products and chips. Slightly less than half of Apple's sales come directly through its flagship stores, with a majority of sales coming indirectly through partnerships and distribution.",
+        "descriptionZh": "苹果是世界上最大的公司之一，拥有面向消费者和企业的广泛硬件和软件产品组合。苹果的iPhone占公司销售额的大部分，苹果的其他产品如Mac、iPad和Watch都是围绕iPhone设计的，iPhone作为一个庞大软件生态系统的核心。苹果不断努力增加新应用，如流媒体视频、订阅捆绑和增强现实。公司设计自己的软件和半导体，同时与富士康和台积电等分包商合作制造产品和芯片。苹果不到一半的销售额直接通过其旗舰店实现，大部分销售通过合作伙伴和分销渠道间接完成。"
+      }
+    },
+    "timestamp": 1791201612140,
+    "success": true
+  },
+  "market": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "binanceChainId": "56",
+      "tokenContractAddress": "0x390a684ef9cade28a7ad0dfa61ab1eb3842618c4",
+      "platformId": "ondo",
+      "assetType": 1,
+      "statusInfo": {
+        "openState": true,
+        "marketStatus": "premarket",
+        "reasonCode": "TRADING",
+        "reasonMsg": null,
+        "nextOpenTime": 1791207060000,
+        "nextCloseTime": 1791206940000
+      },
+      "marketData": {
+        "referencePrice": "331.709411",
+        "high52W": "345.34",
+        "low52W": "243.42",
+        "volumeShares24H": "33278552.153126",
+        "avgDailyVolume1Y": "48192827",
+        "totalShares": "14594180000",
+        "marketCap": "4870918578333",
+        "turnoverRate": "0.228",
+        "amplitude": "0.810500",
+        "dividendYield": "0.32",
+        "latestDividend": "0.270000",
+        "peRatioTTM": "37.77",
+        "pbRatio": "45.29"
+      }
+    },
+    "timestamp": 1791201613194,
+    "success": true
+  },
+  "limitations": [
+    "LIVE describes these captured read-only API calls. Viewing the saved file later is REPLAY.",
+    "No quote, RFQ signing, approval, EVM transaction simulation, submission, broadcast or confirmed trade was performed.",
+    "underlying-market does not declare a dedicated status updatedAt; acquisition and envelope timestamps are recorded without filling gaps.",
+    "referencePrice is a chain-price per-share conversion, not an independently verified official stock-market quote.",
+    "The prior campaign AAPLB address is not present in this current chain-56 catalog; it is not used as current API identity.",
+    "Protection supported flags and linked reports are provider declarations, not independently audited reserves or personal eligibility.",
+    "observedAt uses the maximum recorded server response timestamp. startedAt retains original client acquisition start. RecordedAt is artifact correction/save time, not data freshness."
+  ],
+  "startedAt": "2026-10-05T12:00:08.151Z",
+  "observedAtSource": "Maximum server response-envelope timestamp among captured catalog/price/profile/market; original client completion time was not separately saved.",
+  "recordedAt": "2026-10-05T12:02:26.0823852+00:00"
+}
