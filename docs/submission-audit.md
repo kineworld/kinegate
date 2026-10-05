@@ -27,4 +27,4 @@ Private registration/project field packs were prepared locally with the publishe
 
 Official forms/rules rechecked 2026-10-05 14:01 UTC: deadline and freeze unchanged; public GET schemas match the prior semantic inventory. See evidence/submission-recheck-2026-10-05.json and docs/submission-recheck.md. Registration, final human DevEx and project submission receipts remain absent; no completion checkbox or personal/legal declaration was entered.
 
-Native follow-up: evidence/mainnet/tight-slippage-native-comparison.json preserves a new 0.49% request and three controlled native results. Exact authorized 0.5% cap passes; this does not clear ABI/source, fresh execution or personal signature gates. All actual asset actions remain zero. Local verification is 57 tests / 33 browser checks.
+Native follow-up: evidence/mainnet/tight-slippage-native-comparison.json preserves a new 0.49% request and three controlled native results. Exact authorized 0.5% cap passes; this does not clear ABI/source, fresh execution or personal signature gates. All actual asset actions remain zero. Local verification is 58 tests / 33 browser checks.

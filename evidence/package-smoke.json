@@ -1,6 +1,6 @@
 {
   "schema": "kinegate.package-smoke.v1",
-  "verifiedAt": "2026-10-05T14:42:43.508Z",
+  "verifiedAt": "2026-10-05T14:51:49.044Z",
   "base": "http://127.0.0.1:4175",
   "httpStatus": 200,
   "anonymous": true,
@@ -15,5 +15,7 @@
   "apiAndEnvironmentPaths": 404,
   "narrowScreenNoOverflow": true,
   "consoleErrors": [],
+  "publishedSource": null,
+  "video": null,
   "limitation": "Actual isolated browser against the standalone local package, not an external deployment or mainnet transaction."
 }

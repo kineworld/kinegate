@@ -21,7 +21,7 @@ Open http://127.0.0.1:4173 . Run preflight on the $50 fixture, export its receip
 
 ## Evidence before action
 
-- [Test run](evidence/tests-run.txt): 57 unit/integration checks, including exact arithmetic, malformed policy, whitelist, tampering, clock expiry, signed-request bytes, bounded retry, native Windows timestamp preservation and local server protection.
+- [Test run](evidence/tests-run.txt): 58 unit/integration checks, including exact arithmetic, malformed policy, whitelist, tampering, clock expiry, signed-request bytes, bounded retry, native Windows timestamp preservation and local server protection.
 - [Browser evidence](evidence/browser-qa.json): 33 actual browser checks, all sixteen scenarios, real API replay, recovery/import rejection, 360px layout and keyboard smoke. [Mobile screenshot](evidence/mobile-yellow.png).
 - [Comparison](evidence/fixture-benchmark.json): 16 authored fixtures; simplified display-price comparator accepts 13 of 14 policy-unsafe cases, gate accepts 0. Constructed fault cases are not a real-world safety or profitability estimate.
 - [Independent review](evidence/review-independent.md): reproduced bugs and fixes, HTTP isolation checks, explicit limitations.
