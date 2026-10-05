@@ -93,7 +93,7 @@
     "routerTrust": "UNVERIFIED",
     "abiSemanticValidation": "UNVERIFIED",
     "executionReady": false,
-    "assetsAuthorizedOrMoved": false
+    "onChainApprovalsOrAssetTransfers": false
   },
   "limitations": [
     "API target/approveTarget equality does not establish independent spender provenance.",
