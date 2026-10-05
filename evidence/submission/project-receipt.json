@@ -1,0 +1,10 @@
+{
+  "schema": "kinegate.public-project-receipt.v1",
+  "observedAt": "2026-10-05T16:24:12.701Z",
+  "status": "RESPONSE_RECORDED",
+  "officialForm": "https://docs.google.com/forms/d/e/1FAIpQLSdMtogkNnWzkI6xUifE78Ks4TohOM1YuWMuNgV-UPLVnpHD4Q/viewform",
+  "confirmation": "您的回复已记录。",
+  "submitClickedOnce": true,
+  "privacy": "Identity fields, signed-in account and any response editing tokens withheld. Full review/receipt screenshots retained locally.",
+  "limits": "This confirms the form response was recorded, not organizer acceptance, compliance scoring, award eligibility or actual mainnet settlement."
+}

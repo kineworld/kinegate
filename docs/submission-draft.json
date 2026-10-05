@@ -1,5 +1,5 @@
 {
-  "status": "PREPARATION_ONLY_NOT_SUBMITTED",
+  "status": "RESPONSE_RECORDED_MAINNET_INCOMPLETE",
   "actualFormSource": "https://forms.gle/yToDUzaDMwWnq6R6A",
   "projectName": "KineGate",
   "contactEmail": null,
@@ -14,13 +14,11 @@
   "publicRepo": "https://github.com/zoahdev/kinegate",
   "demoVideo": "https://github.com/zoahdev/kinegate/releases/download/demo-polished-v1/kinegate-demo-polished.mp4",
   "deployedOrRunnableInstructions": "https://zoahdev.github.io/kinegate/ ; local: npm ci, npm start, open http://127.0.0.1:4173. No credentials or wallet needed for FIXTURE and recorded REPLAY. Standalone local package is available in v0.3.0 release.",
-  "humanDevExCompleted": false,
-  "legalDeclarations": "HUMAN_FINAL_CONFIRMATION_REQUIRED",
+  "humanDevExCompleted": true,
+  "legalDeclarations": "REVIEWED_REGISTRATION_DECLARATION_SUBMITTED",
   "eligibilityInformation": "Human personally confirmed competition/API region and sanctions qualifications; reviewed registration declaration submitted with recorded confirmation. Issuer/venue qualifications for the bounded purchase were separately confirmed privately. Technical validation and personal signing remain required.",
   "blockingMissingRequirements": [
-    "Small BSC mainnet demonstration: full router/facet review, fresh passing policy/effects, personal wallet signing and actual settlement remain incomplete",
-    "Human personally authored DevEx report and receipt",
-    "Final human project-form review and actual project submission receipt"
+    "Small BSC mainnet demonstration: full router/facet review, fresh passing policy/effects, personal wallet signing and actual settlement remain incomplete"
   ],
   "demoVideoRelease": "https://github.com/zoahdev/kinegate/releases/tag/demo-polished-v1",
   "demoVideoFacts": {
@@ -35,10 +33,16 @@
   "privateIdentityProvided": true,
   "publicIdentityValuesWithheld": true,
   "qualificationAndBoundedBudget": "CONFIRMED_PRIVATELY_DO_NOT_REPEAT_REQUEST",
-  "privateFieldPackStatus": "PROJECT_PREFILLED_IN_OFFICIAL_BROWSER_NOT_SUBMITTED",
+  "privateFieldPackStatus": "SUBMITTED_WITH_ACTUAL_RECEIPTS",
   "publicAccessStatus": "PASS_ANONYMOUS_PERSONAL_PUBLICATION",
   "deploymentStatus": "PASS_PERSONAL_PAGES_BROWSER",
   "videoAccessStatus": "PASS_ANONYMOUS_RELEASE_METADATA_AND_HEAD",
   "registrationStatus": "RESPONSE_RECORDED",
-  "registrationEvidence": "evidence/submission/registration-receipt.json"
+  "registrationEvidence": "evidence/submission/registration-receipt.json",
+  "devexStatus": "RESPONSE_RECORDED",
+  "devexEvidence": "evidence/submission/devex-receipt.json",
+  "devexScoringAcceptance": "NOT_CONFIRMED",
+  "projectStatus": "RESPONSE_RECORDED",
+  "projectEvidence": "evidence/submission/project-receipt.json",
+  "organizerAcceptance": "NOT_CONFIRMED"
 }

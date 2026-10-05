@@ -1,25 +1,13 @@
 # Remaining human actions
 
-Updated 2026-10-05. These statuses separate private information already supplied from final legal declarations and verified completion.
+Updated 2026-10-05T16:26:31.573Z.
 
-## Inputs already supplied privately
+Registration, DevEx and project submissions are complete as form responses: the actual confirmation pages were observed. Private screenshots and records are retained locally; public redacted receipts are under evidence/submission/. Do not submit duplicates. Organizer acceptance, report quality/AI-rule compliance scoring and award eligibility are not confirmed by a response receipt.
 
-The user logged into the developer portal, configured credentials locally, and personally confirmed competition/API region and sanctions qualification. Authenticated RWA data calls, quotes and unsigned SWAP builds have succeeded. Credentials remain private and ignored; no additional credential-entry request is needed.
+The human supplied the subjective ratings, opinions and requested-capability choices. They were mechanically transcribed; factual scope disclosures separately identify quotes/simulation, no actual trading, no depth sweep and no special market-hours test. No invented personal trading results were submitted.
 
-Contact identity, Binance API account identifier, team size/choice and authorized prize destination were supplied privately. Optional Telegram is left empty. Actual-schema registration/project fields have been prepared in an ignored local field pack; no prefill URL was opened or sent and no POST occurred. Public null identity fields mean deliberately withheld. Do not repeat identity or qualification requests.
+The actual small BSC trade is still incomplete. Qualification, wallet control and the bounded budget were already personally confirmed; do not ask them again. A real trade requires current full router/facet and ABI verification, fresh passing policy/effect checks and a concrete final wallet review. All captured unsigned quotes are historical and must not be signed. The final consequential financial signature must be performed personally. No wallet key should be sent in chat.
 
-The user also confirmed the bounded mainnet budget privately. The current boundaries and technical gates are maintained in `mainnet-operation-pack.md`; do not replace that confirmation with a new budget-zero statement or repeated authorization request. Issuer/venue eligibility at the moment of an actual trade and final form declarations remain distinct from prior personal qualification confirmation.
+No actual approval, wallet signature, broadcast or spending occurred. The public demo has no signing/broadcast capability. The original historical minimum still fails exact 0.5% arithmetic; a later 0.49% request passed the authorized exact 0.5% numerical bound in a counterfactual simulation only. The separate bounded Pancake path check did not produce a fully verified execution candidate and did not replace the Binance payload or change the thirteen gates.
 
-## Final report and form completion
-
-The human must personally author the final DevEx report from actual experience and submit it before truthfully confirming completion in the project form. The official rules reject AI-generated final reports. `devex-reproduction-guide.md` provides objective reproduction evidence, without final report prose, ratings or invented experience.
-
-Final eligibility/applicable-law declarations, separate Google Forms collected email or sign-in, and the DevEx completion checkbox were omitted from the private field pack. Registration, DevEx and project submission receipts are absent. No form completion is claimed without an actual receipt.
-
-## Access and execution blockers
-
-The human directed this competition project to move outside the company GitHub organization and become public. The repository is now zoahdev/kinegate, with verified anonymous personal Pages and public video download. Current evidence is accessibility-current.json / production-personal-smoke.json; the earlier company-host deployment is historical.
-
-The controlled BSC `eth_simulateV1` comparison at 14:21 UTC used an identical payload and parent block: 450,000 swap gas failed, 1,183,991 succeeded using 935,818 gas, and a doubled-minimum control failed. These calls include a counterfactual exact approval. Actual approvals, wallet signatures, broadcasts and funds spent remain zero. Saved minimum output fails the exact 0.5% slippage boundary because of floor rounding; router/facet source and full ABI verification remain incomplete. This evidence does not establish a settled small mainnet purchase. The no-wallet product cannot sign or broadcast.
-
-A later fresh0.49%request meets the authorized exact0.5%cap in counterfactual simulation; see evidence/mainnet/tight-slippage-native-comparison.json. The original0.5%historical minimum remains blocked. ABI/source verification, fresh personal execution review and actual settlement remain incomplete; no repeated qualification/budget confirmation is requested.
+Keep the personal public repo, Pages and video available through judging. Frozen v0.3.0 archives retain their documented source commit; later submission-receipt documentation does not imply that archive source was rebuilt.

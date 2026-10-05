@@ -9,7 +9,7 @@
 - No mainnet execution, transaction hash, volume, user adoption, savings or return is claimed.
 - Public static app has no signing/broadcast surface: code and execution-surface lint. No blanket security certification claimed.
 - Receipt SHA-256 is tamper evidence for the serialized payload, not an issuer signature or trusted oracle proof.
-- Final DevEx is not generated. Human report remains BLOCKED_BY_DEVEX_RULE until a human authors and submits their own experience.
+- DevEx form response was recorded after the human supplied literal opinions, ratings and choices and explicitly instructed submission. Mechanical transcription and separately labelled factual test-scope disclosures were used; no invented trading experience or subjective narrative. See evidence/submission/devex-receipt.json. Receipt does not establish organizer acceptance of report quality or AI-use compliance.
 - Public source, static deployment and actual 133.816667-second polished video exist: evidence/deployment.json. Anonymous browser reached HTTP200 and ran fixture preflight. This does not satisfy live trade requirements.
 - Person confirmed API/competition qualification; four signed RWA endpoints returned HTTP200/code0: authenticated-rwa.json. Earlier 40101 came from our key/secret role inversion, corrected locally. Windows JSON timestamp conversion was separately fixed and regression tested. No secret values exported.
 - Exact current AAPLon identity agrees across four endpoints and pinned-block BSC reads: current-api-asset-readonly.json. The old campaign AAPLB address was absent from the current catalog.

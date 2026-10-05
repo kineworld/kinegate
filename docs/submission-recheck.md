@@ -1,5 +1,8 @@
 # Submission preparation recheck
 
+Current checkpoint 2026-10-05T16:25:26.077Z: registration, DevEx and project forms each have an observed response-recorded confirmation. Redacted receipts: evidence/submission/registration-receipt.json, devex-receipt.json and project-receipt.json. Ordinary field inventory below includes historical preparation checkpoints. No organizer acceptance/scoring or real trade is inferred. Mainnet execution remains incomplete; the submitted description explicitly discloses that limit.
+
+
 Verified 2026-10-05, approximately 13:51–14:01 UTC. Read-only research; no form answers, login, personal/legal declarations, final DevEx narrative, organizer communication or response submission.
 
 ## Current official requirements
@@ -35,10 +38,10 @@ Registration is separate from project submission and asks for the API account id
 | Repo | [Personal public repository](https://github.com/zoahdev/kinegate), anonymous access verified |
 | Video | Public [direct polished MP4](https://github.com/zoahdev/kinegate/releases/download/demo-polished-v1/kinegate-demo-polished.mp4) and [release page](https://github.com/zoahdev/kinegate/releases/tag/demo-polished-v1); local artifact 133.816667 seconds, 1080p/60fps, disclosed synthetic narration; anonymous release access and matching digest verified |
 | Deployment/run | [Personal Pages product](https://zoahdev.github.io/kinegate/) HTTP200 and anonymous browser smoke passed; local `npm ci`, `npm start` fixture experience needs no credentials or wallet |
-| DevEx confirmation | False: personally authored report and actual receipt remain missing |
+| DevEx confirmation | Subsequently checked only after the actual DevEx confirmation; project submission then recorded |
 
 Team/account/contact/prize details were subsequently supplied privately, and personal qualification/bounded budget already confirmed. Registration was subsequently submitted after the concrete human review; the official confirmation displayed response recorded. Its redacted evidence is in evidence/submission/registration-receipt.json. The latest controlled native simulation succeeds at the bounded higher gas limit, and a fresh builder request of0.49% met the unchanged exact authorized0.5% cap in a second controlled comparison. Incomplete source/facet ABI, fresh final checks and personal signing remain blockers; no actual transaction or settlement occurred. Prior qualification/budget confirmations are not final form declarations. The prior visibility block is resolved: personal public repository, Pages and release downloads were anonymously verified. The final submitted commit must be frozen at the deadline and links kept available through October 23.
 
 Subsequent preparation updated objective mapping/status and created an ignored private field pack from supplied identity and published schema IDs. Legal declarations and the DevEx checkbox remain omitted; no private value appears in these public documents. The frozen polished MP4 was not edited, and no Git commit, form opening or response submission was made.
 
-Later publication resolution: owner explicitly requested moving KineGate outside the company organization and publishing under the personal account. Current source zoahdev/kinegate and personal Pages/video were anonymously verified; earlier visibility-block notes describe that historical check. This publication resolution is separate from registration. A later reviewed registration submission has a recorded confirmation; DevEx and project receipts remain absent.
+Later publication resolution: owner explicitly requested moving KineGate outside the company organization and publishing under the personal account. Current source zoahdev/kinegate and personal Pages/video were anonymously verified; earlier visibility-block notes describe that historical check. This publication resolution is separate from registration. A later reviewed registration submission has a recorded confirmation; Later DevEx and project confirmations were both recorded; see evidence/submission/ receipts.

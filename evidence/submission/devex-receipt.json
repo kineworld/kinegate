@@ -1,0 +1,10 @@
+{
+  "schema": "kinegate.public-devex-receipt.v1",
+  "observedAt": "2026-10-05T16:20:21.227Z",
+  "status": "RESPONSE_RECORDED",
+  "officialForm": "https://docs.google.com/forms/d/e/1FAIpQLSfBkyWAYZ5JjzzUXRHlRgi7TjAIPUCkxPtV81eJgyBmGfrJiQ/viewform",
+  "confirmation": "Thanks a lot for filing the Developer Experience Report!",
+  "submitClickedOnce": true,
+  "privacy": "Identity fields, signed-in account and any response editing tokens withheld. Full review/receipt screenshots retained locally.",
+  "limits": "This confirms the form response was recorded, not organizer acceptance, compliance scoring, award eligibility or actual mainnet settlement."
+}
