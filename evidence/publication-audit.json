@@ -1,7 +1,7 @@
 {
-  "time": "2026-10-05T15:38:38.902Z",
+  "time": "2026-10-05T15:53:22.655Z",
   "status": "PASS",
-  "trackedFiles": 159,
+  "trackedFiles": 160,
   "findings": [],
   "limitations": "Bounded pattern scan and explicit private-file exclusions; not proof that all secrets or personal information are absent. Images visually inspected separately. Dependency license inventory in docs/attribution.md."
 }

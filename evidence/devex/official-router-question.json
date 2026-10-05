@@ -1,0 +1,13 @@
+{
+  "schema": "kinegate.technical-question-receipt.v1",
+  "verifiedAt": "2026-10-05T15:48:29.631Z",
+  "url": "https://github.com/binance/binance-web3-connector-js/issues/7",
+  "title": "Documentation: verify BSC aggregator SWAP deployment and receiver/minOut ABI",
+  "author": "zoahdev",
+  "state": "OPEN",
+  "createdAt": "2026-10-05T15:43:07Z",
+  "bodyMatchesReviewed": true,
+  "bodySha256": "5aea3f66c41300dacd494a370d50d45d8a6c5a5b3a140afa05740d3d31008258",
+  "scope": "Human authorized the displayed technical question and destination. Posted once. No credentials, user identity, receiver, balances, quote IDs or complete calldata included.",
+  "limits": "A documentation request, not official deployment verification or permission to execute. No maintainer answer observed during this verification."
+}
