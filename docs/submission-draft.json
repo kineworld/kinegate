@@ -20,7 +20,7 @@
   "blockingMissingRequirements": [
     "Small BSC mainnet demonstration: full router/facet review, fresh passing policy/effects, personal wallet signing and actual settlement remain incomplete",
     "Human personally authored DevEx report and receipt",
-    "Final human form declarations and actual registration/project submission receipts"
+    "Final human project-form review and actual project submission receipt"
   ],
   "demoVideoRelease": "https://github.com/zoahdev/kinegate/releases/tag/demo-polished-v1",
   "demoVideoFacts": {
@@ -38,5 +38,7 @@
   "privateFieldPackStatus": "PREPARED_LOCALLY_NOT_PUBLISHED_NOT_SUBMITTED",
   "publicAccessStatus": "PASS_ANONYMOUS_PERSONAL_PUBLICATION",
   "deploymentStatus": "PASS_PERSONAL_PAGES_BROWSER",
-  "videoAccessStatus": "PASS_ANONYMOUS_RELEASE_METADATA_AND_HEAD"
+  "videoAccessStatus": "PASS_ANONYMOUS_RELEASE_METADATA_AND_HEAD",
+  "registrationStatus": "RESPONSE_RECORDED",
+  "registrationEvidence": "evidence/submission/registration-receipt.json"
 }

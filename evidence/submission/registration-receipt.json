@@ -1,0 +1,9 @@
+{
+  "schema": "kinegate.public-registration-receipt.v1",
+  "observedAt": "2026-10-05T15:26:44.672Z",
+  "status": "RESPONSE_RECORDED",
+  "officialForm": "https://docs.google.com/forms/d/e/1FAIpQLScV9gD2wo4LBOI5IXqAX6P-Q3UeSwlChvAM3rHAAPtu6vISOA/viewform",
+  "observation": "Actual signed-in browser confirmation page displayed response recorded after the reviewed registration was submitted.",
+  "privacy": "Contact/account identifiers, draft URL and response editing token withheld. Full screenshot and edit link retained locally only.",
+  "limits": "This is hackathon registration, not project submission, DevEx submission, organizer acceptance, rate-limit uplift confirmation or mainnet settlement."
+}
