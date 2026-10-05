@@ -43,9 +43,9 @@ Do not check the legal/eligibility declaration based on assumptions. The actual 
 | Telegram | Short text | No | Optional human @handle |
 | Product, audience, used APIs and stock assets | Paragraph | Yes | Evidence-backed product summary |
 | Applicable track(s) | Checkboxes | Yes | Main tokenized-stock track; Wallet/Skills special; Agent Studio special; select supported claims only |
-| Public code repository | Paragraph | Yes | Current repository is PRIVATE: BLOCKED_BY_VISIBILITY_CHANGE; must be public at submission and through judging |
-| Demo video URL | Short text | Yes | Local 133.816667-second polished artifact exists; historical release URL currently lacks anonymous access after visibility change |
-| Deployment URL or runnable judge instructions | Paragraph | Yes | Current Pages disabled/API404; local run instructions prepared, anonymous deployment access blocked |
+| Public code repository | Paragraph | Yes | Personal public repository verified anonymously; keep public through judging |
+| Demo video URL | Short text | Yes | 133.816667-second polished video is publicly downloadable; release digest matches the local artifact |
+| Deployment URL or runnable judge instructions | Paragraph | Yes | Personal Pages HTTP200 and actual anonymous browser smoke passed; standalone local package also available |
 | DevEx completion confirmation | Checkbox | Yes | Only after a real report receipt exists |
 
 The form is one page. The required video field overrides the project's assumption that a video could be skipped; official homepage wording remains inconsistent. The prize identity field accepts a Binance UID as an alternative to the wallet address. A transaction hash is not requested as its own field; include verified evidence in the product/repo where appropriate.
@@ -107,8 +107,8 @@ Required text does not authorize invented experience. Where no failure or trade 
 
 ## Handoff and blockers
 
-Product summary, repository/video references and local run instructions are prepared. Contact identity, account/UID, team choice and prize destination were supplied privately; public null values deliberately withhold them. Personal qualification and bounded budget were already confirmed, so do not repeat those requests. The private registration/project field pack omits final eligibility/legal declarations and the DevEx completion checkbox. Human experience answers, the personally authored final DevEx and actual form receipts remain required. Current repository PRIVATE/Pages disabled state blocks judged public access; historical successful deployment evidence is stale.
+Product summary, repository/video references and local run instructions are prepared. Contact identity, account/UID, team choice and prize destination were supplied privately; public null values deliberately withhold them. Personal qualification and bounded budget were already confirmed, so do not repeat those requests. The private registration/project field pack omits final eligibility/legal declarations and the DevEx completion checkbox. Human experience answers, the personally authored final DevEx and actual form receipts remain required. The earlier visibility blocker is resolved by transfer to the personal public account; no other company repository was changed.
 
-Status: NOT_REGISTERED, DEVEX_NOT_SUBMITTED, PROJECT_NOT_SUBMITTED. No receipt exists. Live Google Forms validation, sign-in requirements, CAPTCHA behavior, closed-form handling and subsequent pages were not interactively tested; published definitions are readable without authentication, but that does not prove unauthenticated submission is possible. Do not use this inventory to bypass login or legal confirmations.
+Status: NOT_REGISTERED, DEVEX_NOT_SUBMITTED, PROJECT_NOT_SUBMITTED. No receipt exists. The actual registration page was observed in the signed-in browser. The matching account and seven fields were visible. The initial fill timed out. Recovery through the official prefill link and draft-choice dialog completed all five prepared fields; the actual DOM and full-page private screenshot verified them. Final eligibility declaration and Submit remain pending a concrete human review. CAPTCHA, final validation, DevEx traversal and successful submission remain unverified. Do not use this inventory to bypass login or legal confirmations.
 
 Current publication links after the owner-requested transfer: https://github.com/zoahdev/kinegate ; https://zoahdev.github.io/kinegate/ ; https://github.com/zoahdev/kinegate/releases/tag/demo-polished-v1 . Anonymous page and video download metadata verified. Identity/prefill data stays in the private local pack. No form response was sent.

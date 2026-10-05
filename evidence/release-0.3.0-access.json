@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-05T15:19:39.611Z",
+  "sourceCommit": "f54bab129f60c174c9ee5fc10947309c02bd78fd",
+  "release": "https://github.com/zoahdev/kinegate/releases/tag/v0.3.0",
+  "authenticatedMetadata": "GitHub asset sizes and SHA256 digests matched local artifacts",
+  "anonymousHead": [
+    {
+      "name": "kinegate-v0.3.0-source.zip",
+      "status": 200,
+      "contentLength": 4025173
+    },
+    {
+      "name": "kinegate-v0.3.0-demo-app.zip",
+      "status": 200,
+      "contentLength": 51905
+    },
+    {
+      "name": "kinegate-v0.3.0-deliverables.json",
+      "status": 200,
+      "contentLength": 795
+    }
+  ],
+  "limitation": "HEAD verifies download accessibility and size, not anonymous full-body digest. Matching release digests were checked using GitHub API metadata."
+}
